@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    background-image: url(/img/imagemfundo.svg);
+
+}
+
+.header{
+    width: 100%;
+    background-color: rgba(238, 96, 16, 0.86);
+    height: 102px;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 35px;
+}
+
+div .button{
+    padding: 25px;
+    cursor: pointer;
+}
+
+.button a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}

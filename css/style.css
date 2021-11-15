@@ -41,7 +41,7 @@ div .button {
 }
 
 .msg {
-    padding: 400px 300px 150px 400px;  
+    padding: 300px 300px 200px 400px;  
 }
 
 .msg h1{
@@ -99,6 +99,17 @@ div .button {
 .rede-social a{
     padding: 20px;
 }
+
+.logo-grande img{
+    padding-left: 31%;
+    margin: 20px 20px;
+}
+
+.form {
+    text-align: center;
+    color: white;
+}
+
 
 
 

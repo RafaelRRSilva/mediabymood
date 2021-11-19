@@ -1,0 +1,63 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-grande img{
+  height: 180px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+  color: white;
+  background-color: #ee6010;
+  opacity: 86%;
+  width: 720px;
+  height: 530px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-form {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-buttons {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.campo-form {
+  border: solid white 2px;
+  background-color: #ee6010;
+  width: 274px;
+  height: 52px;
+  border-radius: 17px;
+}
+
+::placeholder {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+.entrar-btn {
+  border: solid white 2px;
+  background-color: #ee6010;
+  width: 274px;
+  height: 52px;
+  border-radius: 17px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}

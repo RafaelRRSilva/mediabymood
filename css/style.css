@@ -19,7 +19,7 @@ body {
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .logo{
@@ -29,6 +29,11 @@ body {
 div .button {
     padding: 25px;
     cursor: pointer;
+    margin-left: auto;
+}
+
+.button {
+    font-family: 'Baumans', cursive;
 }
 
 .button a {
@@ -40,33 +45,6 @@ div .button {
     border-radius: 20px;
 }
 
-.msg {
-    padding: 300px 300px 200px 400px;  
-}
-
-.msg h1{
-    color: white;
-    font-size: 80px;
-    background-color: rgba(255, 255, 255, .25); 
-    font-style: italic;  
-    font-weight: bold;
-}
-
-.button-cadastro {
-    text-align: center;
-    padding-top: 0;
-   
-}
-
-.button-cadastro a{
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 36px;
-    color: white;
-    border-radius: 30px;
-    background-color: rgba(238, 96, 16);
-}
-
 .footer {
     position: fixed;
     width: 100%;
@@ -75,11 +53,14 @@ div .button {
     bottom: 0;
 }
 
-.nav {
-    padding-right: 800px;
+.nav-footer {
+    font-family: 'Athiti', sans-serif;
+    padding-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.nav ul li {
+.nav-footer ul li {
     display: inline-block;
     text-decoration: none;
     letter-spacing: 1px;
@@ -87,32 +68,16 @@ div .button {
     font-size: 30px;
 }
 
-.nav a {
+.nav-footer a {
     text-decoration: none;
     color: white;
 }
 
 .rede-social {
     padding: 30px;
+    margin-left: auto;
 }
 
 .rede-social a{
     padding: 20px;
 }
-
-.logo-grande img{
-    padding-left: 31%;
-    margin: 20px 20px;
-}
-
-.form {
-    text-align: center;
-    color: white;
-}
-
-
-
-
-
-
-

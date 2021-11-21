@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div {
+    background-color: rgba(238, 96, 16, 0.86);
+    width: 800px;
+    height: 680px;
+    border-radius: 40px;
+}

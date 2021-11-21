@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ptbr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/css/cadastro.css">
     <title>MediabyMood</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -20,8 +22,21 @@
         </div>
     </header>
     <main>
-        <div>
-            
+        <div class="form">
+            <label for="Nome">Nome*</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome">
+            <label for="Sobrenome">Sobrenome*</label>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome">
+            <label for="E-mail">E-mail*</label>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <label for="Senha">Senha*</label>
+            <input type="password" name="senha" id="password" placeholder="Digite a senha">
+            <label for="Corfirmar senha">Confirmar senha*</label>
+            <input type="password" name="corfirmar senha" id="confirmar-password" placeholder="Confirme a senha">
+            <div class="button">
+                <button type="submit" id="button">Registrar Gratuitamente</button>
+            </div>
+
         </div>
 
     </main>
@@ -46,4 +61,5 @@
         </div>
     </footer>
 </body>
+
 </html>

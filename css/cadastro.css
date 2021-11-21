@@ -1,14 +1,50 @@
 main {
     display: flex;
     height: 100vh;
-    flex-direction: column;
+    
     justify-content: center;
     align-items: center;
 }
 
 main > div {
+    
     background-color: rgba(238, 96, 16, 0.86);
     width: 800px;
     height: 680px;
     border-radius: 40px;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 80px ;
+    justify-content: space-between;
+    color: white;
+    font-size: 24px;
+}
+
+input {
+    height: 40px;
+    border-radius: 30px;
+    border: transparent;
+}
+
+::placeholder {
+    padding-left: 20px;
+    
+}
+
+button {
+    display: flex;
+    background-color: rgba(238, 96, 16, 0.86);
+    height: 40px;
+    width: 300px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+
 }

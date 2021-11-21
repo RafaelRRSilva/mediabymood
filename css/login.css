@@ -1,0 +1,135 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content:stretch;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo-grande img{
+  height: 180px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+  color: white;
+  background-color: rgba(238, 96, 16, 0.86);
+  border-radius: 40px;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-form {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.texto-form > a {
+  text-decoration: none;
+  color: #1c0221;
+  transition: all 0.25s;
+}
+
+.texto-form > a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.form-buttons {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.campo-form {
+  border: solid white 2px;
+  background-color: rgba(238, 96, 16, 0.86);
+  width: 274px;
+  height: 52px;
+  border-radius: 17px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.25s;
+}
+
+.campo-form:hover {
+  background-color: rgb(173, 70, 10);
+}
+
+.form-buttons > a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: all 0.25s;
+}
+
+.form-buttons > a:hover {
+  color: #1c0221;
+}
+
+#lembre-se {
+  width: 36px;
+}
+
+.form-buttons > span {
+  display: flex;
+  align-items: center;
+  transition: all 0.25s;
+}
+
+.form-buttons > span:hover {
+  color: #1c0221;
+}
+
+.form img {
+  transition: all 0.25s;
+}
+
+.form img:hover{
+  box-shadow: 2px 2px 2px #1c0221;
+}
+
+span > button {
+  border: none;
+  background-color: rgba(238, 96, 16, 0.86);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.last-span {
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+.entrar-btn {
+  border: solid white 2px;
+  background-color: rgba(238, 96, 16, 0.86);
+  width: 274px;
+  height: 52px;
+  border-radius: 17px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.entrar-btn:hover {
+  background-color: rgb(173, 70, 10);
+}

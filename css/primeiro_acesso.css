@@ -1,0 +1,117 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(238, 96, 16, 0.86);
+    height: 102px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    padding: 35px;
+}
+
+div .button {
+    padding: 25px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.button {
+    font-family: 'Baumans', cursive;
+}
+
+.button a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.nav {
+    padding-top: 200px;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.carrossel {
+    display: flex;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 800px;
+    width: 800px;
+}
+
+.container-carrosel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.img {
+    object-fit: cover;
+    height: 800px;
+    width: 800px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(238, 96, 16, 0.86);
+    height: 127.94px;
+    bottom: 0;
+}
+
+.nav-footer {
+    font-family: 'Athiti', sans-serif;
+    padding-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nav-footer ul li {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 0 30px;
+    font-size: 30px;
+}
+
+.nav-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.rede-social {
+    padding: 30px;
+    margin-left: auto;
+}
+
+.rede-social a{
+    padding: 20px;
+}

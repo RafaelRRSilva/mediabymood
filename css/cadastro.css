@@ -27,15 +27,33 @@ input {
     padding-left: 20px;   
 }
 
-button {
+.button-registro {
     display: flex;
     background-color: rgba(238, 96, 16, 0.86);
     height: 40px;
     width: 300px;
     font-size: 18px;
-    justify-content: center;
+    margin: 0 auto;
     align-items: center;
     border-radius: 30px;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.button-registro:hover {
+    background-color: rgb(173, 70, 10);  
+}
+
+#button-registro {
+    background-color: rgba(238, 96, 16, 0);
+    height: 40px;
+    width: 300px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

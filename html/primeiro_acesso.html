@@ -7,12 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/primeiro_acesso.css">
     <script src="/script.js" defer></script>
+
+     <!-- fontes B612, Baumans e Athiti -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Athiti&family=B612:ital,wght@1,700&family=Baumans&display=swap&family=Roboto&display=swap" rel="stylesheet">
+ 
+
     <title>MediabyMood</title>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
+            <div class="logo">
+                <img src="/img/logo01(branco).png" alt="MediabyMood">
+            </div>
+            <div class="barra-busca">
+                <input type="text" name="buscar" id="buscar">
+                <button><img src="/img/Lupa.png" alt="lupa"></button>
+                <label for="buscar">Buscar</label>
+            </div>
             <div class="button">
                 <a href="/html/login.html">Entrar</a>
             </div>
@@ -20,18 +35,33 @@
     </header>
 
     <main>
-        <div class="nav">
-            <h1 class="msg01">Navegue e descubra<br>
-                filmes e séries como<br>
-                nunca antes...</h1>
-        </div>
-        <div class="carrossel">
-            <div class="container-carrossel" id="img">
-                <img src="/img/Home.png" alt="">
-                <img src="/img/Pagina do Login.png" alt="">
-                <img src="/img/Página de cadastro.png" alt="">
+        <div class="tela-passo">
+            <h2 class="msg">Navegue e descubra<br>
+                <strong>filmes</strong> e <strong>séries</strong> como<br>
+                nunca antes...</h2>
+            <div class="carrossel">
+                <div class="container-carrossel" id="img">
+                    <img src="/img/Home.png" alt="">
+                    <img src="/img/Pagina do Login.png" alt="">
+                    <img src="/img/Página de cadastro.png" alt="">
+                </div>
             </div>
         </div>
+
+        <div class="tela-passo">
+            <img src="/img/2do passo.png" alt="imagem 2do passo">
+            <h2 class="msg">Escolha um <br> <strong>estado de humor</strong> e passaremos uma <strong>indicação...</strong></h2>
+        </div>
+
+        <div class="tela-passo">
+            <div class="msg-btn">
+                <h2 class="msg">Não convenceu? <br>
+                Nos conte <strong>quão perto</strong> estamos e passaremos uma <strong>nova indicação</strong>!</h2>
+                <button>Começar</button>
+            </div>
+            <img src="/img/3ro passo.png" alt="imagem 3ro passo">
+        </div>
+
     </main>
 
     <footer class="footer">

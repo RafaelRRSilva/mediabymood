@@ -1,73 +1,66 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/cadastro.css">
     <link rel="stylesheet" href="/css/escolha-estado.css">
     <title>MediabyMood</title>
 
     <!-- fontes B612, Baumans e Athiti -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Athiti&family=B612:ital,wght@1,700&family=Baumans&display=swap&family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Athiti&family=B612:ital,wght@1,700&family=Baumans&display=swap&family=Roboto&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <main>
-        <section>
-            <article class="container-humor">
-                <div class="humor-msg">
-                    <p>Olá, (usuário)! Selecione um humor para receber uma indicação aleatória de acordo com essa emoção</p>
-                </div>
-                <section class="filtros-humor">
-                    <form action="">
-                        <select name="plataforma" id="plataforma">
-                            <option selected disabled>Plataforma</option>
-                            <option value="netflix">Netflix</option>
-                            <option value="amazon">Amazon Prime</option>
-                            <option value="disney">Disney Plus</option>
-                            <option value="hbo">HBO Max</option>
-                        </select>
-                        <select name="genero" id="genero">
-                            <option selected disabled>Gênero</option>
-                            <option value="acao">Ação</option>
-                            <option value="comedia">Comedia</option>
-                            <option value="romance">Romance</option>
-                        </select>
-                        <select name="ano" id="ano">
-                            <option selected disabled>Ano de lançamento</option>
-                        </select>
-                        <select name="avaliacao" id="avaliacao">
-                            <option selected disabled>Avaliação</option>
-                        </select>
-                        <select name="classificacao" id="classificacao">
-                            <option selected disabled>Classificação</option>
-                        </select>
-                        <select name="?" id="?">
-                            <option selected disabled></option>
-                        </select>
-                        <button>Gerar escolha!</button>
-                    </form>
-                    <div class="humores">
-                        <img src="/img/humores/Triunfo.png" alt="triunfo">
-                        <img src="/img/humores/Medo.png" alt="medo">
-                        <img src="/img/humores/Raiva.png" alt="raiva">
-                        <img src="/img/humores/Surpresa.png" alt="surpresa">
-                        <img src="/img/humores/Nostalgia.png" alt="nostalgia">
-                        <img src="/img/humores/Admiração.png" alt="admiração">
-                    </div>
-                </section>
-            </article>
-        </section>
-
-        <section class="servicos-str">
-
-        </section>
+        <div class="humor-msg">
+            <p>Olá, (usuário)! Selecione um humor para receber uma indicação aleatória de acordo com essa emoção</p>
+        </div>
+        <div class="container-humor"></div>
+        <div class="filtros-humor">
+            <select name="plataforma" id="plataforma">
+                <option selected disabled>Plataforma</option>
+                <option value="netflix">Netflix</option>
+                <option value="amazon">Amazon Prime</option>
+                <option value="disney">Disney Plus</option>
+                <option value="hbo">HBO Max</option>
+            </select>
+            <select name="genero" id="genero">
+                <option selected disabled>Gênero</option>
+                <option value="acao">Ação</option>
+                <option value="comedia">Comedia</option>
+                <option value="romance">Romance</option>
+            </select>
+            <select name="ano" id="ano">
+                <option selected disabled>Ano de lançamento</option>
+            </select>
+            <select name="avaliacao" id="avaliacao">
+                <option selected disabled>Avaliação</option>
+            </select>
+            <select name="classificacao" id="classificacao">
+                <option selected disabled>Classificação</option>
+            </select>
+            <select name="?" id="?">
+                <option selected disabled></option>
+            </select>
+            <button>Gerar escolha!</button>
+        </div>
+        </div>
+        <div class="humores">
+            <img src="/img/humores/Triunfo.png" alt="triunfo">
+            <img src="/img/humores/Medo.png" alt="medo">
+            <img src="/img/humores/Raiva.png" alt="raiva"><br>  
+            <img src="/img/humores/Surpresa.png" alt="surpresa">
+            <img src="/img/humores/Nostalgia.png" alt="nostalgia">
+            <img src="/img/humores/Admiração.png" alt="admiração">
+        </div>
 
     </main>
     <footer class="footer">

@@ -1,14 +1,17 @@
+
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;   
     width: 100%;
-    /* background-image: url(/img/imagemfundo.svg); */
+    background-image: url(/img/imagemfundo.svg);
 }
 
 .header {
@@ -51,6 +54,7 @@ div .button {
 
 .footer {
     position: fixed;
+    margin-top: auto;
     width: 100%;
     background-color: rgba(238, 96, 16, 0.86);
     height: 127.94px;

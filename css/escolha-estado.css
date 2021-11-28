@@ -1,9 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 main {
+    
     background-color: rgba(255, 255, 255, 0.9);
     width: 2230px;
     height: 930px;
@@ -13,7 +15,6 @@ main {
 }
 
 .humor-msg{
-    /* display: inline-block; */
     font-size: 40px;
     color: white;
     background-color: rgba(238, 96, 16, 0.86);
@@ -27,33 +28,36 @@ p {
 }
 
 .filtros-humor {
-    display: inline-block;
+    float: left;
     background-color: rgba(238, 96, 16, 0.86);
-    width: 400px;
+    width: 300px;
     height: 600px;
     margin-left: 80px;
-    padding: 100px;
-    border-radius: 20px; 
-    /* align-items: center;    
-    align-content: center; */
+    border-radius: 20px;   
 }
 
 select {
-    
     width: 250px;
     height: 50px;
     margin: 20px;
     font-size: 20px;
     border-radius: 20px;
-    text-align: center;
+    text-align: center;   
 }
 
-.humores {
-    display: inline-block;
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px 10px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 200px;
 }
 
 .humores img { 
-    padding: 20px 140px;
+    padding: 10px 140px;
 }
 
  

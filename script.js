@@ -1,16 +1,16 @@
-const imgs = document.getElementById("img");
-const img = document.querySelectorAll("#img img");
+// const imgs = document.getElementById("img");
+// const img = document.querySelectorAll("#img img");
 
-let idx = 0;
+// let idx = 0;
 
-function carrossel() {
-    id++;
+// function carrossel() {
+//     id++;
 
-    if(idx > img.length - 1){
-        idx = 0
-    }
+//     if(idx > img.length - 1){
+//         idx = 0
+//     }
 
-    imgs.style.transform = `translateX(${-idx * 800}px)`;
-}
+//     imgs.style.transform = ´translateX(${-idx * 800}px)´;
+// }
 
-setInterval(carrossel, 3000);
+// setInterval(carrossel, 3000);

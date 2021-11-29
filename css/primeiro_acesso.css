@@ -15,8 +15,8 @@ body {
     width: 100%;
     background-color: rgba(238, 96, 16, 0.86);
     height: 102px;
-    display: flex;
-    flex-direction: row-reverse;
+    /* display: flex; */
+    /* flex-direction: row-reverse; */
 }
 
 .barra-busca {
@@ -111,16 +111,16 @@ main {
 }
 
 .msg-btn > button {
-  border: none;
-  font-size: 32px;
-  font-family: B612;
-  width: 217px;
-  height: 80px;
-  border-radius: 15px;
-  background-color: rgba(238, 96, 16);
-  color: white;
-  cursor: pointer;
-  margin: 60px 0;
+    border: none;
+    font-size: 32px;
+    font-family: B612;
+    width: 217px;
+    height: 80px;
+    border-radius: 15px;
+    background-color: rgba(238, 96, 16);
+    color: white;
+    cursor: pointer;
+     margin: 60px 0;
 }
 
 .carrossel {
@@ -128,19 +128,19 @@ main {
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
     height: 800px;
-    width: 800px;
+    width: 1250px;
 }
 
 .container-carrosel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
+    width: 300%;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
-.img {
-    object-fit: cover;
+.items {
     height: 800px;
-    width: 800px;
+    width: 1250px;
 }
 
 .footer {

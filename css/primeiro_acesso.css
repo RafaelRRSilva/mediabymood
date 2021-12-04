@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 300vh;
+}
+
 body {
   width: 100%;
   background-color: #fff;
@@ -83,7 +87,7 @@ div .button {
 
 main {
   display: flex;
-  height: 300vh;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;

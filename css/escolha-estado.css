@@ -5,35 +5,44 @@
 }
 
 main {
-    
     background-color: rgba(255, 255, 255, 0.9);
-    width: 2230px;
-    height: 930px;
+    border-radius: 30px;
+    max-width: 1850px;
+    height: 80vh;
     margin: 40px;
-    align-content: center;
+    justify-content: center;
     align-items: center;
+    margin: 5vh auto;
 }
 
 .humor-msg{
     font-size: 40px;
+    font-family: 'B612', sans-serif;
     color: white;
     background-color: rgba(238, 96, 16, 0.86);
-    margin: 80px;
+    margin: 25px auto;
     padding: 30px;
-    border-radius: 20px; 
+    border-radius: 20px;
+    width: 95%;
 }
 
-p {
-    text-align: center;
+.humor-msg > p {
+    font-family: 'B612', sans-serif;
+}
+
+main > section {
+    display: flex;
+    justify-content: left;
 }
 
 .filtros-humor {
-    float: left;
+    display: flex;
+    flex-direction: column;
     background-color: rgba(238, 96, 16, 0.86);
     width: 300px;
     height: 600px;
-    margin-left: 80px;
-    border-radius: 20px;   
+    border-radius: 20px;
+    margin: 0 50px;
 }
 
 select {
@@ -41,23 +50,31 @@ select {
     height: 50px;
     margin: 20px;
     font-size: 20px;
-    border-radius: 20px;
-    text-align: center;   
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    font-family: 'Baumans', cursive;
+    font-size: 24px;
 }
 
 button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px 10px;
-    height: 50px;
-    font-size: 20px;
+    background-color: rgba(238, 96, 16, 0.86);
+    color: #fff;
+    border: #fff solid 3px;
+    margin: 0 auto;
+    font-size: 36px;
     border-radius: 20px;
     width: 200px;
+    font-family: 'B612', sans-serif;
 }
 
-.humores img { 
-    padding: 10px 140px;
+.humores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    width: 80%;
 }
 
- 
+.humores > img {
+    margin: 0 auto;
+}

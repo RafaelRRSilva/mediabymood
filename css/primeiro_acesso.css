@@ -123,24 +123,22 @@ main {
      margin: 60px 0;
 }
 
-.carrossel {
-    display: flex;
+section {
+    display: block;
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
     height: 800px;
     width: 1250px;
 }
 
-.container-carrosel {
-    width: 300%;
-    animation-name: animacao;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-}
-
-.items {
+.container-carrossel {
+    display: flex;
+    overflow: hidden;
     height: 800px;
     width: 1250px;
+    animation-name: animacao;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
 
 .footer {

@@ -7,7 +7,7 @@ main {
 }
 
 .logo-grande img{
-  /* height: 180px; */
+  max-height: 240px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -17,7 +17,9 @@ form {
   color: white;
   background-color: rgba(238, 96, 16, 0.86);
   border-radius: 40px;
-  width: 720px;
+  width: 80vw;
+  max-width: 720px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
 }

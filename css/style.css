@@ -9,7 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100%;   
+    height: 100%;
     width: 100%;
     background-image: url(/img/imagemfundo.svg);
 }
@@ -18,7 +18,7 @@ body {
     position: fixed;
     width: 100%;
     background-color: rgba(238, 96, 16, 0.86);
-    height: 102px;
+    height: 100px;
 }
 
 .container {
@@ -38,10 +38,6 @@ div .button {
     margin-left: auto;
 }
 
-.button {
-    font-family: 'Baumans', cursive;
-}
-
 .button a {
     padding: 10px 30px;
     text-decoration: none;
@@ -50,6 +46,11 @@ div .button {
     border: 1px solid white;
     border-radius: 20px;
     font-family: Athiti;
+    transition: all 0.25s;
+}
+
+.button a:hover {
+    background-color: rgba(190, 79, 15, 0.86);
 }
 
 .footer {
@@ -57,7 +58,7 @@ div .button {
     margin-top: auto;
     width: 100%;
     background-color: rgba(238, 96, 16, 0.86);
-    height: 127.94px;
+    height: 120px;
     bottom: 0;
 }
 
@@ -79,6 +80,15 @@ div .button {
 .nav-footer a {
     text-decoration: none;
     color: white;
+    position: relative;
+    bottom: 0;
+    text-shadow: 0 0 0 none;
+    transition: all 0.25s;
+}
+
+.nav-footer a:hover {
+    bottom: 8px;
+    text-shadow: 0 0 8px #fff;
 }
 
 .rede-social {
@@ -88,4 +98,32 @@ div .button {
 
 .rede-social a{
     padding: 20px;
+}
+
+.rede-social a > img {
+    position: relative;
+    bottom: 0;
+    transition: all 0.25s;
+}
+
+.rede-social a > img:hover {
+    bottom: 8px;
+}
+
+@media (max-width: 1150px) {
+
+
+    /*
+    .nav-footer a {
+        font-size: 24px;
+    }
+*/
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div .button {
+        margin-left: 0;
+    }
 }

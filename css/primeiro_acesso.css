@@ -1,128 +1,133 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 300vh;
 }
 
 body {
-    width: 100%;
-    background-color: #fff;
+  width: 100%;
+  background-color: #fff;
 }
 
 .header {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(238, 96, 16, 0.86);
-    height: 102px;
-    /* display: flex; */
-    /* flex-direction: row-reverse; */
+  position: fixed;
+  width: 100%;
+  background-color: rgba(238, 96, 16, 0.86);
+  height: 102px;
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
 }
 
 .barra-busca {
-    display: flex;
-    margin-right: 30px;
-    margin-left: auto;
-    align-items: center;
+  display: flex;
+  margin-right: 30px;
+  margin-left: auto;
+  align-items: center;
 }
 
 .barra-busca > input {
-    height: 50px;
-    width: 600px;
-    border: none;
-    border-radius: 15px;
-    font-size: 24px;
-    padding: 0 10px;
+  height: 50px;
+  width: 600px;
+  border: none;
+  border-radius: 15px;
+  font-size: 24px;
+  padding: 0 10px;
 }
 
 .barra-busca > button {
-    border: none;
-    background-color: #fff;
-    position: relative;
-    right: 45px;
-    cursor: pointer;
+  border: none;
+  background-color: #fff;
+  position: relative;
+  right: 45px;
+  cursor: pointer;
 }
 
 .barra-busca > label {
-    font-family: Athiti;
-    font-size: 30px;
-    color: 9F3E07;
+  font-family: Athiti;
+  font-size: 30px;
+  color: 9f3e07;
 }
 
 .button a {
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 35px;
-    color: white;
-    border: 1px solid white;
-    border-radius: 20px;
-    font-family: Athiti;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 35px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-family: Athiti;
 }
 
 .container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .logo {
-    padding: 35px;
-    justify-self: flex-end;
+  padding: 35px;
+  justify-self: flex-end;
 }
 
 div .button {
-    padding: 25px;
-    cursor: pointer;
+  padding: 25px;
+  cursor: pointer;
 }
 
 .nav {
-    padding-top: 200px;
+  padding-top: 200px;
 }
 
 main {
-    display: flex;
-    height: 300vh;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .tela-passo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .msg {
-    font-family: Athiti;
-    font-size: 72px;
-    color: #1C0221;
-    max-width: 700px;
-    margin: 0 75px;
+  font-family: Athiti;
+  font-size: 72px;
+  color: #1c0221;
+  max-width: 700px;
+  margin: 0 75px;
 }
 
 .msg-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .msg-btn > button {
-    border: none;
-    font-size: 32px;
-    font-family: B612;
-    width: 217px;
-    height: 80px;
-    border-radius: 15px;
-    background-color: rgba(238, 96, 16);
-    color: white;
-    cursor: pointer;
-     margin: 60px 0;
+  border: none;
+  font-size: 32px;
+  font-family: B612;
+  width: 217px;
+  height: 80px;
+  border-radius: 15px;
+  background-color: rgba(238, 96, 16);
+  color: white;
+  cursor: pointer;
+  margin: 60px 0;
 }
 
+<<<<<<< HEAD
 section {
     display: block;
     box-shadow: 2px 2px 4px black;
@@ -139,41 +144,77 @@ section {
     animation-name: animacao;
     animation-duration: 15s;
     animation-iteration-count: infinite;
+=======
+.carrossel {
+  display: flex;
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+  height: 800px;
+  width: 1250px;
+}
+
+.container-carrosel {
+  width: 300%;
+  animation-name: animacao;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.items {
+  height: 800px;
+  width: 1250px;
+>>>>>>> a8552e4d6978c59a312e86925c0ba8cda53576b3
 }
 
 .footer {
-    position: relative;
-    width: 100%;
-    background-color: rgba(238, 96, 16, 0.86);
-    height: 127.94px;
-    bottom: 0;
+  position: relative;
+  width: 100%;
+  background-color: rgba(238, 96, 16, 0.86);
+  height: 127.94px;
+  bottom: 0;
 }
 
 .nav-footer {
-    font-family: 'Athiti', sans-serif;
-    padding-right: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  font-family: "Athiti", sans-serif;
+  padding-right: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .nav-footer ul li {
-    display: inline-block;
-    text-decoration: none;
-    letter-spacing: 1px;
-    padding: 0 30px;
-    font-size: 30px;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 0 30px;
+  font-size: 30px;
 }
 
 .nav-footer a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .rede-social {
-    padding: 30px;
-    margin-left: auto;
+  padding: 30px;
+  margin-left: auto;
 }
 
-.rede-social a{
-    padding: 20px;
+.rede-social a {
+  padding: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(238, 96, 16, 0.86);
+  border-radius: 16px;
 }

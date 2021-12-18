@@ -5,8 +5,9 @@ const app = express();
 // Importações da pasta routes
 const rotasIndex = require('./routes/index')
 
-//Configurando EJS como o View Engine
+//Configurando Express: EJS como View Engine, pasta Public
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 
 // Definição de rotas

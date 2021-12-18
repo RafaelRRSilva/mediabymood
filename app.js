@@ -11,11 +11,7 @@ app.use(express.static('public'));
 
 
 // Definição de rotas
-app.get('/', (req,res) => {
-  res.send('Olá mundo!');
-});
-
-app.use('/index', rotasIndex);
+app.use('/', rotasIndex);
 
 
 // Levantando o servidor

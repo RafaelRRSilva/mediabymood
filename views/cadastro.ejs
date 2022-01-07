@@ -1,72 +1,29 @@
-<!DOCTYPE html>
-<html lang="ptbr">
+<%- include('./partials/head') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/cadastro.css">
-    <title>MediabyMood</title>
+    <body>
+        <%- include('./partials/header') %>
 
-    <!-- fontes B612, Baumans e Athiti -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Athiti&family=B612&family=Baumans&family=Roboto&display=swap" rel="stylesheet">
+            <main>
+                <div class="form">
+                    <label for="Nome">Nome*</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome">
+                    <label for="Sobrenome">Sobrenome*</label>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome">
+                    <label for="E-mail">E-mail*</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <label for="Senha">Senha*</label>
+                    <input type="password" name="senha" id="password" placeholder="Digite a senha">
+                    <label for="Corfirmar senha">Confirmar senha*</label>
+                    <input type="password" name="corfirmar senha" id="confirmar-password"
+                        placeholder="Confirme a senha">
+                    <div class="button-registro">
+                        <button type="submit" id="button-registro">Registrar Gratuitamente</button>
+                    </div>
+                </div>
+            </main>
 
-</head>
+            <%- include('./partials/footer') %>
 
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="/img/logo01(branco).png" alt="MediabyMood">
-            </div>
-            <div class="button">
-                <a href="/html/login.html">Entrar</a>
-            </div>
-        </div>
-      </header>
+    </body>
 
-    <main>
-        <div class="form">
-            <label for="Nome">Nome*</label>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome">
-            <label for="Sobrenome">Sobrenome*</label>
-            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome">
-            <label for="E-mail">E-mail*</label>
-            <input type="email" name="email" id="email" placeholder="E-mail">
-            <label for="Senha">Senha*</label>
-            <input type="password" name="senha" id="password" placeholder="Digite a senha">
-            <label for="Corfirmar senha">Confirmar senha*</label>
-            <input type="password" name="corfirmar senha" id="confirmar-password" placeholder="Confirme a senha">
-            <div class="button-registro">
-                <button type="submit" id="button-registro">Registrar Gratuitamente</button>
-            </div>
-
-        </div>
-
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="logo">
-                <img src="/img/logo01(branco).png" alt="MediabyMood">
-            </div>
-            <div class="nav-footer">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Contato</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                </ul>
-            </div>
-            <div class="rede-social">
-                <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
-                <a href=""><img src="/img/Instagram.png" alt="Instagram"></a>
-                <a href=""><img src="/img/Twitter.png" alt="Twitter"></a>
-                <a href=""><img src="/img/Whatsapp.png" alt="Whatsapp"></a>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+    </html>

@@ -9,10 +9,8 @@ const rotasIndex = require('./routes/index')
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-
 // Definição de rotas
 app.use('/', rotasIndex);
-
 
 // Levantando o servidor
 app.listen(3000, ()=> console.log('Servidor rodando...'));

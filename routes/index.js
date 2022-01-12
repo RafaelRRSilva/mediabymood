@@ -3,7 +3,6 @@ const router = express.Router();
 const indexController = require('../controllers/indexController');
 
 router.get('/', indexController.home);
-router.get('/cadastro', indexController.cadastro);
-router.get('/login', indexController.login);
+router.get('/primeiro_acesso', indexController.primeiro_acesso);
 
 module.exports = router;

@@ -1,14 +1,21 @@
 // Importando o Express
 const express = require('express');
+const session = require('express-session');
 const app = express();
 
 // Importações da pasta routes
 const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
 
-//Configurando Express: EJS como View Engine, pasta Public
+// Configurando Express: EJS como View Engine, pasta Public
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+
+// Configurando o processamento de formulários
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+app.use(session({secret:"SEGREDO"}))
 
 // Definição de rotas
 app.use('/', rotasIndex);

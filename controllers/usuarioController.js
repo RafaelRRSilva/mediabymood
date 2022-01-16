@@ -1,10 +1,41 @@
+const usuarios = require('../database/usuarios.json');
+const fs = require('fs');
+const {validationResult} = require('express-validator')
+
 module.exports = {
+
   cadastro: (req, res) => {
     res.render('cadastro');
+
   },
+
+  store: (req, res) => {
+
+    const id = usuarios[usuarios.length -1].id +1;
+    const nome = req.body.nome;
+    const sobrenome = req.body.sobrenome;
+    const email = req.body.email;
+    const senha = req.body.senha;
+    const confirmarsenha = req.body.confirmarsenha;
+    const usuario = {id, nome, sobrenome, email, senha, confirmarsenha};
+
+    usuarios.push(usuario);
+
+    fs.writeFileSync(
+      __dirname + '/../database/usuarios.json',
+      JSON.stringify(usuarios, null, 4),
+      {flag:'w'}
+    );
+
+    res.redirect('/')
+
+  },
+
   showlogin: (req, res) => {
-    res.render('login');
+    res.render('login'); 
+
   },
+
   login: (req, res) => {
     const {email, senha} = req.body;
 
@@ -20,4 +51,5 @@ module.exports = {
 
     res.redirect('/primeiro_acesso')
   }
+  
 }

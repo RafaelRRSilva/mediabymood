@@ -1,11 +1,13 @@
 // Importando o Express
 const express = require('express');
 const session = require('express-session');
-const app = express();
 
-// Importações da pasta routes
+// Importando o roteador
 const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
+
+// Criar servidor
+const app = express();
 
 // Configurando Express: EJS como View Engine, pasta Public
 app.set('view engine', 'ejs');
@@ -22,4 +24,4 @@ app.use('/', rotasIndex);
 app.use('/', rotasUsuario);
 
 // Levantando o servidor
-app.listen(3000, ()=> console.log('Servidor rodando...'));
+app.listen(3000, ()=> console.log('Servidor rodando na porta: localhost3000'));

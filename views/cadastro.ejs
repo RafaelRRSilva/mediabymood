@@ -4,8 +4,8 @@
         <%- include('./partials/header') %>
 
             <main>
-                <div class="form">
-                    <label for="Nome">Nome*</label>
+                <form class="form" action="cadastro" method="post" enctype="multipart/form-data>
+                        <label for=" Nome">Nome*</label>
                     <input type="text" name="nome" id="nome" placeholder="Digite o nome">
                     <label for="Sobrenome">Sobrenome*</label>
                     <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome">
@@ -19,7 +19,7 @@
                     <div class="button-registro">
                         <button type="submit" id="button-registro">Registrar Gratuitamente</button>
                     </div>
-                </div>
+                </form>
             </main>
 
             <%- include('./partials/footer') %>

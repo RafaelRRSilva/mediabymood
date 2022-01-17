@@ -12,11 +12,7 @@ module.exports = {
   store: (req, res) => {
 
     const id = usuarios[usuarios.length -1].id +1;
-    const nome = req.body.nome;
-    const sobrenome = req.body.sobrenome;
-    const email = req.body.email;
-    const senha = req.body.senha;
-    const confirmarsenha = req.body.confirmarsenha;
+    const {nome, sobrenome, email, senha, confirmarsenha} = req.body;
     const usuario = {id, nome, sobrenome, email, senha, confirmarsenha};
 
     usuarios.push(usuario);

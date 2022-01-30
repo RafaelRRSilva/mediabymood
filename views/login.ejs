@@ -50,7 +50,9 @@
             </div>
         </form>
     </main>
-
+    <%if(error) { %>
+        <div class="alert-error"><%= error %></div>
+    <%} %>
     <%- include('./partials/footer') %>
 </body>
 

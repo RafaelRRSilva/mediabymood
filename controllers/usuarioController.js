@@ -5,6 +5,7 @@ const {validationResult} = require('express-validator')
 module.exports = {
 
   cadastro: (req, res) => {
+
     res.render('cadastro');
 
   },
@@ -28,7 +29,7 @@ module.exports = {
   },
 
   showlogin: (req, res) => {
-    res.render('login'); 
+    res.render('login', {error:null}); 
 
   },
 
@@ -40,7 +41,8 @@ module.exports = {
     const usuario = usuarios.find(p => p.email == email && p.senha == senha);
 
     if(usuario === undefined){
-      return res.send("Senha ou e-mail inválidos")
+      return res.render('login', {error:"Login/Senha inválidos"});
+      // return res.send("Senha ou e-mail inválidos")
     }
 
     req.session.usuario = usuario;

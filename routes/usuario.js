@@ -5,6 +5,7 @@ const usuarioController = require('../controllers/usuarioController');
 router.get('/cadastro', usuarioController.cadastro);
 router.post('/cadastro', usuarioController.store);
 router.get('/login', usuarioController.showlogin);
-router.post('/login', usuarioController.login)
+router.post('/login', usuarioController.login);
+router.get('/escolha_estado', usuarioController.estadoDeHumor)
 
 module.exports = router;

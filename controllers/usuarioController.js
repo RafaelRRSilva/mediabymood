@@ -48,6 +48,9 @@ module.exports = {
     req.session.usuario = usuario;
 
     res.redirect('/primeiro_acesso')
+  },
+
+  estadoDeHumor: (req, res) => {
+    res.render('escolha_estado');
   }
-  
 }

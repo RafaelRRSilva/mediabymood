@@ -1,9 +1,57 @@
-
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
 .indicacao_conteiner {
   background-color:crimson;
+  width: 1080px;
+  height: 658px;
+  border-radius: 10px;
+  margin: 10px;
+
 }
 
 .humor_conteiner {
-  background-color: darkgreen;
+  background-color: rgba(255, 255, 255, .9);
+  width: 220px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.humor_conteiner > h3 {
+  font-family: 'Baumans', 'cursive';
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 5px 8px;
+}
+
+.humor_conteiner > img {
+  width: 80%;
+}
+
+.humor_conteiner > p {
+  background-color: darkgrey;
+  width: 60%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-family: 'B612', 'sans-serif';
+  font-size: 1.5rem;
+}
+
+.humor_conteiner > div {
+  background-color: darkgrey;
+  width: 90%;
+  text-align: center;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-family: 'B612', 'sans-serif';
+  font-size: 1.25rem;
+  cursor: pointer;
 }

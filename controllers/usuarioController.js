@@ -52,5 +52,9 @@ module.exports = {
 
   estadoDeHumor: (req, res) => {
     res.render('escolha_estado');
+  },
+
+  indicacao: (req, res) => {
+    res.render('indicacao');
   }
 }

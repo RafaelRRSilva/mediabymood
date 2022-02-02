@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>MediabyMood</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/escolha-estado.css">
+    <link rel="stylesheet" href="../css/indicacao.css">
+
+    <!-- fontes B612, Baumans e Athiti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti&family=B612&family=Baumans&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <main>
+      <form class="filtros-humor">
+        <select name="plataforma" id="plataforma">
+            <option selected disabled>Plataforma</option>
+            <option value="netflix">Netflix</option>
+            <option value="amazon">Amazon Prime</option>
+            <option value="disney">Disney Plus</option>
+            <option value="hbo">HBO Max</option>
+        </select>
+        <select name="genero" id="genero">
+            <option selected disabled>Gênero</option>
+            <option value="acao">Ação</option>
+            <option value="comedia">Comedia</option>
+            <option value="romance">Romance</option>
+        </select>
+        <select name="ano" id="ano">
+            <option selected disabled>Ano de lançamento</option>
+        </select>
+        <select name="avaliacao" id="avaliacao">
+            <option selected disabled>Avaliação</option>
+        </select>
+        <select name="classificacao" id="classificacao">
+            <option selected disabled>Classificação</option>
+        </select>
+        <select name="?" id="?">
+            <option selected disabled></option>
+        </select>
+        <button id="button">Gerar escolha!</button>
+    </form>
+
+    <div class="indicacao_conteiner">
+      <h2>Indicação</h2>
+    </div>
+
+    <div class="humor_conteiner">
+      <h3>Estado de humor atual</h3>
+    </div>
+
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

@@ -26,12 +26,16 @@ main {
   max-width: 200px;
   grid-area: img;
   padding: 5px;
+  align-self: center;
 }
 
 .filme_info_geral {
   grid-area: info;
   background-color: aqua;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .filme_resumo {
@@ -46,10 +50,25 @@ main {
   padding: 5px;
 }
 
+.btn_pergunta > div {
+  background-color: brown;
+  text-align: center;
+  background-color: #ee6010;
+  width: 150px;
+  height: 85px;
+  margin: auto;
+}
+
 .btn_escala {
   grid-area: esc;
   background-color: bisque;
   padding: 5px;
+}
+
+.btn_escala > ul {
+  margin: 10px 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
 }
 
 /* Barra de humor */

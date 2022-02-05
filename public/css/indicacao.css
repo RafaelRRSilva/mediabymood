@@ -46,6 +46,9 @@ main {
 
 .btn_pergunta {
   grid-area: prg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: blueviolet;
   padding: 5px;
 }
@@ -56,19 +59,138 @@ main {
   background-color: #ee6010;
   width: 150px;
   height: 85px;
-  margin: auto;
 }
 
 .btn_escala {
   grid-area: esc;
   background-color: bisque;
   padding: 5px;
+  display: flex;
+  position: relative;
 }
 
 .btn_escala > ul {
-  margin: 10px 50px;
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  align-content: center;
+}
+
+.btn_escala > ul > li {
+  text-align: center;
+  list-style-type: none;
+  /* border: solid black 2px; */
+  z-index: 2;
+}
+
+.btn_escala > ul > li > button {
+  border: solid white 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#btn_01 {
+  background-color: #1083EE;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+#btn_01:hover {
+  border: solid white 4px;
+}
+
+#label_01 {
+  color:#3f3f3f;
+  font-family: "B612", "open sans";
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#label_01:hover {
+  color: #1083EE;
+  /* text-shadow: 1px 1px 2px #000000; */
+}
+
+
+#btn_02 {
+  background-color: #10C6EE;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+#btn_02:hover {
+  border: solid white 4px;
+}
+
+#label_02 {
+  color:#3f3f3f;
+  font-family: "B612", "open sans";
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#label_02:hover {
+  color: #10C6EE;
+}
+
+#btn_03 {
+  background-color: #EEBD10;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+#btn_03:hover {
+  border: solid white 4px;
+}
+
+#label_03 {
+  color:#3f3f3f;
+  font-family: "B612", "open sans";
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#label_03:hover {
+  color: #EEBD10;
+}
+
+#btn_04 {
+  background-color: #EE6010;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+#btn_04:hover {
+  border: solid white 4px;
+}
+
+#label_04 {
+  color:#3f3f3f;
+  font-family: "B612", "open sans";
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#label_04:hover {
+  color: #EE6010;
+}
+
+.btn_escala > hr {
+  border: solid white 5px;
+  position: absolute;
+  width: 75%;
+  margin-left: 12%;
+  top: 36%;
 }
 
 /* Barra de humor */

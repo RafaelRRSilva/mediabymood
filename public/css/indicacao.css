@@ -15,15 +15,41 @@ main {
   display: grid;
   grid-template-columns: 1fr 4.5fr;
   grid-template-rows: 1fr 3fr 2fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
   grid-template-areas:
     "img info"
     "img resumo"
-    "";
+    "prg esc";
 }
 
 .indicacao_conteiner > img {
-  width: 200px;
+  max-width: 200px;
+  grid-area: img;
+  padding: 5px;
+}
+
+.filme_info_geral {
+  grid-area: info;
+  background-color: aqua;
+  padding: 5px;
+}
+
+.filme_resumo {
+  grid-area: resumo;
+  background-color: aquamarine;
+  padding: 5px;
+}
+
+.btn_pergunta {
+  grid-area: prg;
+  background-color: blueviolet;
+  padding: 5px;
+}
+
+.btn_escala {
+  grid-area: esc;
+  background-color: bisque;
+  padding: 5px;
 }
 
 /* Barra de humor */

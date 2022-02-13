@@ -9,7 +9,8 @@ main {
 .indicacao_conteiner {
   background-color:crimson;
   width: 1080px;
-  height: 658px;
+  /* height: 658px; */
+  height: 558px;
   border-radius: 10px;
   margin: 10px;
   display: grid;

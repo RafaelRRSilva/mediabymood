@@ -73,3 +73,11 @@ input {
     border: none;
     cursor: pointer;
 }
+
+.feedback{
+	background-color: black;
+	color: white;
+    font-size: 40px;
+    border-radius: 17px;
+	text-align: center;
+}

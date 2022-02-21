@@ -48,20 +48,26 @@ module.exports = {
     const usuario = usuarios.find(p => p.email == email && p.senha == senha);
 
     if (usuario === undefined) {
+
       return res.render('login', { error: "Login/Senha inválidos" });
-      // return res.send("Senha ou e-mail inválidos")
+      
     }
 
     req.session.usuario = usuario;
 
     res.redirect('/primeiro_acesso')
-  },
-
-  estadoDeHumor: (req, res) => {
-    res.render('escolha_estado');
-  },
-
-  indicacao: (req, res) => {
-    res.render('indicacao');
   }
+
+  // primeiro_acesso: (req,res) => {
+  //   res.render('primeiro_acesso');
+  // },
+
+  // estadoDeHumor: (req, res) => {
+  //   res.render('escolha_estado');
+  // },
+
+  // indicacao: (req, res) => {
+  //   res.render('indicacao');
+  // }
+
 }

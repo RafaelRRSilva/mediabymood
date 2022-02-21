@@ -122,9 +122,15 @@ main {
   height: 80px;
   border-radius: 15px;
   background-color: rgba(238, 96, 16);
+  /* color: white;
+  cursor: pointer; */
+  margin: 60px 0;
+}
+
+.msg-btn > button > a {
   color: white;
   cursor: pointer;
-  margin: 60px 0;
+  text-decoration: none;
 }
 
 section {

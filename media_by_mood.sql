@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema media_by_mood
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema media_by_mood
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `media_by_mood` DEFAULT CHARACTER SET utf8 ;
+USE `media_by_mood` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`filmes`
+-- Table `media_by_mood`.`filmes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`filmes` (
+CREATE TABLE IF NOT EXISTS `media_by_mood`.`filmes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(100) NOT NULL,
   `ano` INT NOT NULL,
@@ -26,15 +26,14 @@ CREATE TABLE IF NOT EXISTS `mydb`.`filmes` (
   `imagem` VARCHAR(150) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `nome_UNIQUE` (`titulo` ASC) VISIBLE,
-  UNIQUE INDEX `resumo_UNIQUE` (`resumo` ASC) VISIBLE,
   UNIQUE INDEX `imagem_UNIQUE` (`imagem` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`usuarios`
+-- Table `media_by_mood`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`usuarios` (
+CREATE TABLE IF NOT EXISTS `media_by_mood`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(120) NOT NULL,
   `e-mail` VARCHAR(120) NOT NULL,
@@ -46,9 +45,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`filmes_has_usuarios`
+-- Table `media_by_mood`.`filmes_has_usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`filmes_has_usuarios` (
+CREATE TABLE IF NOT EXISTS `media_by_mood`.`filmes_has_usuarios` (
   `filmes_id` INT NOT NULL,
   `usuarios_id` INT NOT NULL,
   `avaliacao` TINYINT NOT NULL,
@@ -57,21 +56,21 @@ CREATE TABLE IF NOT EXISTS `mydb`.`filmes_has_usuarios` (
   INDEX `fk_filmes_has_usuarios_filmes_idx` (`filmes_id` ASC) VISIBLE,
   CONSTRAINT `fk_filmes_has_usuarios_filmes`
     FOREIGN KEY (`filmes_id`)
-    REFERENCES `mydb`.`filmes` (`id`)
+    REFERENCES `media_by_mood`.`filmes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_filmes_has_usuarios_usuarios1`
     FOREIGN KEY (`usuarios_id`)
-    REFERENCES `mydb`.`usuarios` (`id`)
+    REFERENCES `media_by_mood`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`humores`
+-- Table `media_by_mood`.`humores`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`humores` (
+CREATE TABLE IF NOT EXISTS `media_by_mood`.`humores` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
@@ -80,9 +79,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`filmes_has_humores`
+-- Table `media_by_mood`.`filmes_has_humores`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`filmes_has_humores` (
+CREATE TABLE IF NOT EXISTS `media_by_mood`.`filmes_has_humores` (
   `filmes_id` INT NOT NULL,
   `humores_id` INT NOT NULL,
   `nivel` INT NOT NULL,
@@ -91,12 +90,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`filmes_has_humores` (
   INDEX `fk_filmes_has_humores_filmes1_idx` (`filmes_id` ASC) VISIBLE,
   CONSTRAINT `fk_filmes_has_humores_filmes1`
     FOREIGN KEY (`filmes_id`)
-    REFERENCES `mydb`.`filmes` (`id`)
+    REFERENCES `media_by_mood`.`filmes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_filmes_has_humores_humores1`
     FOREIGN KEY (`humores_id`)
-    REFERENCES `mydb`.`humores` (`id`)
+    REFERENCES `media_by_mood`.`humores` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

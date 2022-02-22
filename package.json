@@ -10,7 +10,10 @@
     "express-validation": "^3.0.8",
     "express-validator": "^6.14.0",
     "g": "^2.0.1",
-    "nodemon": "^2.0.15"
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.16.2",
+    "sequelize-cli": "^6.4.1"
   },
   "scripts": {
     "start": "nodemon app.js",

@@ -9,7 +9,7 @@ main {
 .msg-home {
   font-family: 'B612', sans-serif;
   border-radius: 15px;
-  background-image: linear-gradient(rgba(250,250,250,0.75), rgba(250,250,250,0));
+  background-image: linear-gradient(rgba(250, 250, 250, 0.431), rgba(250,250,250,0));
   width: 1095px;
   height: 191px;
   margin-bottom: 100px;
@@ -34,7 +34,7 @@ main {
   width: 312px;
   height: 68px;
   border-radius: 30px;
-  background-color: rgba(238, 96, 16);
+  background-color: rgba(223, 195, 35, 0.904);
   text-decoration: none;
   color: white;
   transition: all 0.25s;

@@ -17,7 +17,7 @@ module.exports = {
 
     if (errors.isEmpty()) {
 
-      const { nome, email, senha, confirmarsenha } = req.body;
+      let { nome, email, senha, confirmarsenha } = req.body;
 
       /*const id = usuarios[usuarios.length - 1].id + 1;
       const usuario = { id, nome, sobrenome, email, senha, confirmarsenha };
@@ -26,9 +26,11 @@ module.exports = {
 
       fs.writeFileSync(__dirname + '/../database/usuarios.json', JSON.stringify(usuarios, null, 4), { flag: 'w' });*/
 
-      let usuarioNovo = await Usuario.create({
+      let usuario = await Usuario.create({
         nome, email, senha
-      })
+      }).then(
+        data => console.log('Usuario ' + data + ' cadastrado com sucesso!')
+      )
 
       res.redirect('/')
 

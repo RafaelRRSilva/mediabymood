@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS `media_by_mood`.`filmes` (
   `resumo` TEXT NOT NULL,
   `imagem` VARCHAR(150) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `nome_UNIQUE` (`titulo` ASC) VISIBLE,
-  UNIQUE INDEX `imagem_UNIQUE` (`imagem` ASC) VISIBLE)
+  UNIQUE INDEX `nome_UNIQUE` (`titulo`),
+  UNIQUE INDEX `imagem_UNIQUE` (`imagem`))
 ENGINE = InnoDB;
 
 
@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `media_by_mood`.`usuarios` (
   `e-mail` VARCHAR(120) NOT NULL,
   `senha` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `e-mail_UNIQUE` (`e-mail` ASC) VISIBLE,
-  UNIQUE INDEX `senha_UNIQUE` (`senha` ASC) VISIBLE)
+  UNIQUE INDEX `e-mail_UNIQUE` (`e-mail`),
+  UNIQUE INDEX `senha_UNIQUE` (`senha`))
 ENGINE = InnoDB;
 
 
@@ -52,8 +52,8 @@ CREATE TABLE IF NOT EXISTS `media_by_mood`.`filmes_has_usuarios` (
   `usuarios_id` INT NOT NULL,
   `avaliacao` TINYINT NOT NULL,
   PRIMARY KEY (`filmes_id`, `usuarios_id`),
-  INDEX `fk_filmes_has_usuarios_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
-  INDEX `fk_filmes_has_usuarios_filmes_idx` (`filmes_id` ASC) VISIBLE,
+  INDEX `fk_filmes_has_usuarios_usuarios1_idx` (`usuarios_id`),
+  INDEX `fk_filmes_has_usuarios_filmes_idx` (`filmes_id`),
   CONSTRAINT `fk_filmes_has_usuarios_filmes`
     FOREIGN KEY (`filmes_id`)
     REFERENCES `media_by_mood`.`filmes` (`id`)
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `media_by_mood`.`humores` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `nome_UNIQUE` (`nome` ASC) VISIBLE)
+  UNIQUE INDEX `nome_UNIQUE` (`nome`))
 ENGINE = InnoDB;
 
 
@@ -86,8 +86,8 @@ CREATE TABLE IF NOT EXISTS `media_by_mood`.`filmes_has_humores` (
   `humores_id` INT NOT NULL,
   `nivel` INT NOT NULL,
   PRIMARY KEY (`filmes_id`, `humores_id`),
-  INDEX `fk_filmes_has_humores_humores1_idx` (`humores_id` ASC) VISIBLE,
-  INDEX `fk_filmes_has_humores_filmes1_idx` (`filmes_id` ASC) VISIBLE,
+  INDEX `fk_filmes_has_humores_humores1_idx` (`humores_id`),
+  INDEX `fk_filmes_has_humores_filmes1_idx` (`filmes_id`),
   CONSTRAINT `fk_filmes_has_humores_filmes1`
     FOREIGN KEY (`filmes_id`)
     REFERENCES `media_by_mood`.`filmes` (`id`)

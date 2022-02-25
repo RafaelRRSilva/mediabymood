@@ -51,10 +51,14 @@ module.exports = {
 
     const { email, senha } = req.body;
 
-    const usuarios = await Usuario.findAll();
+    const usuario = await Usuario.findOne({
+      where:{
+        email:email
+      }
+    })
+    .catch(console.trace)
 
-    const usuario = usuarios.find(p => p.email == email && p.senha == senha);
-
+  
     if (usuario === undefined) {
 
       return res.render('login', { error: "Login/Senha inválidos" });

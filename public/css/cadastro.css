@@ -31,8 +31,6 @@ input {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-decoration: none;
-    text-align: center;
-    color: #fff;
 }
 
 ::placeholder {
@@ -81,3 +79,21 @@ input {
     border-radius: 17px;
 	text-align: center;
 }
+@media (max-width:50vh){}
+@media (max-width:350px){
+    
+
+    form{
+        display: flex;
+        background-color: rgba(238, 96, 16, 0.86);
+        width: 250px;
+        height: 190px;
+        margin-bottom: 2px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 8px 16px;
+        color: white;
+        font-size: 10px;
+        border-radius: 10px;   
+    }
+    }

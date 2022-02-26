@@ -95,6 +95,7 @@ main {
 
 .tela-passo {
   display: flex;
+  padding-top: 80px;
   justify-content: center;
   align-items: center;
 }
@@ -137,15 +138,19 @@ section {
     display: block;
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
-    height: 800px;
-    width: 1250px;
+    /* height: 800px;
+    width: 1250px; */
+    height: 600px;
+    width: 1000px;
 }
 
 .container-carrossel {
     display: flex;
     overflow: hidden;
-    height: 800px;
-    width: 1250px;
+    /* height: 820px;
+    width: 1250px; */
+    height: 600px;
+    width: 1000px;
     animation-name: animacao;
     animation-duration: 15s;
     animation-iteration-count: infinite;

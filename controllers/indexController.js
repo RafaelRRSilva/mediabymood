@@ -14,6 +14,10 @@ const controller = {
 
   indicacao: (req, res) => {
     res.render('indicacao');
+  },
+
+  contato: (req,res) => {
+    res.render('contato');
   }
 
 }

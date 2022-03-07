@@ -19,13 +19,22 @@ main {
     border-radius: 40px;   
 }
 
+.errMsg {
+    font-size: 0.8rem;
+}
+
+label {
+    margin-top: 5px;
+}
+
 input {
     /* height: 40px; */
     /* border-radius: 30px; */
     background-color: rgba(238, 96, 16, 0.86);
     height: 52px;
     border-radius: 17px;
-    margin-bottom: 10px;
+    padding: 8px;
+    /* margin-bottom: 10px; */
     /* border: transparent; */
     border: solid white 2px;
     font-family: 'Roboto', sans-serif;

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>MediabyMood</title>
     <link rel="stylesheet" href="/css/comofunciona.css">
-    <link rel="stylesheet" href="/css/stylesemfundo.css">
+    
     <!-- fontes B612, Baumans e Athiti -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,17 +22,16 @@
     <%- include('./partials/header') %>
 
     <main>
-        <img class="fundo" src="/img/fundomenor.png" alt="">
-        
-        <div class="msg-home">
-            <h1>Quer saber como funciona?
-                É bem simples....</h1>
+<div class="vivido">
+    <div class="conteudo">
+        <div class="item1">
+        <img class="fundo" src="/img/fundomenor2.png" alt="">
         </div>
-        <div class="texto-msg"> 
-        <img class="humor" src="/img/humorgif.gif" alt="hm">
+    <div class="texto-msg"> 
+        <img class="humor" src="/img/humor2.gif" alt="hm">
 
-       
-
+    </div>
+      <div class="Item2">
         <h2>Nossa missão no MediabyMood é te ajudar <br>a escolher 
         filme que se encaixe no seu estado de humor...<br>
         Então faça seu cadastro e escolha seu humor. <br>
@@ -40,9 +39,16 @@
        a gente vai conhecer o que você gosta de assistir <br>
        em cada estado de humor,e então poderemos indicar <br>
        filmes cada  vez mais de acordo com a seu perfil.</h2>
-    </div>
-        
-        <a class="button-cadastro" href="cadastro">Cadastre-se</a>
+      </div>
+              <div class="b-cadastro">
+         <a class="b-cadastro" href="cadastro">Cadastre-se</a>
+           </div>
+           <div class="b-estado">
+         <a class="b-estado" href="escolha_estado">Escolha Seu Humor</a>
+            </div>
+        </div>
+</div>
+
     </main>
 
     <%- include('./partials/footer') %>

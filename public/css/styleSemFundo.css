@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 html{
-
+  
     height: 100%;
 }
 
@@ -16,8 +16,8 @@ html{
     width: 100%;
     background-color: rgba(215, 211, 240, 0.794);
     box-shadow:  3px 10px 8px  rgba(53, 54, 54, 0.74);
-    height: 100px;
     margin-bottom: 2%;
+
 }
 
 .container {
@@ -64,10 +64,11 @@ div .button {
     /* position: fixed; */
     margin-top: auto;
     width: 100%;
-    background-color: rgba(215, 211, 240, 0.794);
+    background-color: rgba(215, 211, 240, 0.589);
     box-shadow:  30px 10px 8px 20px rgba(53, 54, 54, 0.74);
     height: 120px;
     bottom: 0;
+  
 }
 
 .nav-footer {

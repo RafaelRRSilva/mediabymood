@@ -13,30 +13,27 @@ module.exports = {
 
   store: async (req, res) => {
 
-    const errors = validationResult(req);
+    let errors = validationResult(req);
+
+    console.log('Controller funcionando')
 
     if (errors.isEmpty()) {
 
-      let { nome, email, senha, confirmarsenha } = req.body;
+      console.log('Sem erros')
 
-      /*const id = usuarios[usuarios.length - 1].id + 1;
-      const usuario = { id, nome, sobrenome, email, senha, confirmarsenha };
+      // let novoUsuario = req.body;
+      // console.log(novoUsuario)
 
-      usuarios.push(usuario);
-
-      fs.writeFileSync(__dirname + '/../database/usuarios.json', JSON.stringify(usuarios, null, 4), { flag: 'w' });*/
-
-      let usuario = await Usuario.create({
-        nome, email, senha
-      }).then(
-        data => console.log('Usuario ' + data + ' cadastrado com sucesso!')
+      let {nome, email, senha} = req.body;
+      let novoUsuario = await Usuario.create(
+        {nome, email, senha}
       )
 
-      res.redirect('/')
+      res.redirect('/login')
 
     } else {
 
-      res.render('cadastro', { errors: errors.mapped() })
+      res.render('cadastro', {errors:errors.mapped(), old:req.body})
 
     }
   },

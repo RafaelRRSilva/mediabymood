@@ -4,17 +4,38 @@
         <%- include('./partials/header') %>
 
             <main>
-                <form class="form" action="cadastro" method="post" enctype="multipart/form-data">
+                <!-- <form class="form" action="cadastro" method="post" enctype="multipart/form-data"> -->
+                <form class="form" action="cadastro" method="post">
                     <label for="nome">Nome*</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o nome">
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome" value="<%= locals.old && old.nome %>">
+                    <% if (locals.errors && errors.nome) { %>
+                        <p class="errMsg"><%= errors.nome.msg %></p>
+                    <% } %>
+                    <br>
+
                     <!-- <label for="sobrenome">Sobrenome*</label>
                     <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome"> -->
                     <label for="email">E-mail*</label>
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                    <label for="password">Senha*</label>
-                    <input type="password" name="senha" id="password" placeholder="Digite a senha">
-                    <label for="Corfirmar senha">Confirmar senha*</label>
-                    <input type="password" name="corfirmar senha" id="confirmar-password" placeholder="Confirme a senha">
+                    <input type="email" name="email" id="email" placeholder="E-mail" value="<%= locals.old && old.email %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="errMsg"><%= errors.email.msg %></p>
+                    <% } %>
+                    <br>
+
+                    <label for="senha">Senha*</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite a senha">
+                    <% if (locals.errors && errors.senha) { %>
+                        <p class="errMsg"><%= errors.senha.msg %></p>
+                    <% } %>
+                    <br>
+
+                    <label for="confirmar-password">Confirmar senha*</label>
+                    <input type="password" name="confirmarSenha" id="confirmar-password" placeholder="Confirme a senha">
+                    <% if (locals.errors && errors.confirmarSenha) { %>
+                        <p class="errMsg"><%= errors.confirmarSenha.msg %></p>
+                    <% } %>
+                    <br>
+
                     <div class="button-registro">
                         <button type="submit" id="button-registro">Registrar Gratuitamente</button>
                     </div>

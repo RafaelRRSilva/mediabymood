@@ -9,14 +9,7 @@ html{
 
     height: 100%;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background-image: url(/img/fundo.png);
 
-}
 
 .header {
     /* position: fixed; */
@@ -89,7 +82,7 @@ div .button {
     text-decoration: none;
     letter-spacing: 1px;
     padding: 0 30px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .nav-footer a {
@@ -107,12 +100,12 @@ div .button {
 }
 
 .rede-social {
-    padding: 30px;
-    margin-left: auto;
+ padding-left: 0ch;
+    margin-left: 1px;
 }
 
 .rede-social a{
-    padding: 20px;
+    padding: 10px;
 }
 
 .rede-social a > img {

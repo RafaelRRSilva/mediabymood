@@ -11,28 +11,25 @@
     <!-- fontes B612, Baumans e Athiti -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+  <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/estado.css">
 </head>
 
 <body>
     <%- include('./partials/header') %>
-    <main class="main-escolha-estado">
-    <div class="vivido">
-         <div class="conteudo">
-                <div class="item1">
-                <img class="fundo" src="/img/fundomenor.png" alt="">
+    <main>
+        <div class="geral" >
+            <div class="conteudo" >
+                <div class="banerfundo">
+                    <img class="fundo" src="/img/fundomenor.png" alt="">
+                 </div>
+                 <div class="msg-inicial">
+                    <p>
+                     Olá, <strong> Usuário </strong>! Selecione um humor para receber uma
+                     indicação aleatória de acordo com essa emoção
+                    </p>
                 </div>
-            
-              
-                   
-                
-        <div class="humor-msg">
-            <p>
-                Olá, <strong> Usuário </strong>! Selecione um humor para receber uma
-                indicação aleatória de acordo com essa emoção
-            </p>
-        </div>
+     <div class="filtros">
         <section>
             <form class="filtros-humor">
                 <select name="plataforma" id="plataforma">
@@ -57,42 +54,50 @@
                 <select name="classificacao" id="classificacao">
                     <option selected disabled>Classificação</option>
                 </select>
-                <select name="?" id="?">
-                    <option selected disabled></option>
+                <select name="Nacionalidade" id="pais">
+                    <option selected disabled>Nacionalidade</option>
                 </select>
                 <button id="button">Gerar escolha!</button>
             </form>
-
-            <article class="humores">
-                <div>
-                    <img src="/img/humores/Triunfo.svg" alt="triunfo" />
-                    <p class="triunfo">Triunfo</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Medo.svg" alt="medo" />
-                    <p>Medo</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Raiva.svg" alt="raiva" />
-                    <p>Raiva</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Surpresa.svg" alt="surpresa" />
-                    <p>Surpresa</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Nostalgia.svg" alt="nostalgia" />
-                    <p>Nostalgia</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Admiração.svg" alt="admiração" />
-                    <p>Admiração</p>
-                </div>
-            </article>
         </section>
+
+
+     </div>
+     <div class="caras">
+        <div class="item1">
+            <img src="/img/humores/humor6.png" alt="triunfo" />
+            <p class="todos">Triunfo</p>
+              </div>
+            <div class="item2">
+             <img src="/img/humores/humor7.png" alt="medo" />
+             <p class="todos">Medo</p>
+               </div>
+              <div class="item3">
+                  <img src="/img/humores/humor4.png" alt="raiva" />
+                  <p class="todos">Raiva</p>
+                </div>
+             <div class="item4">
+               <img src="/img/humores/humor1.png" alt="surpresa" />
+               <p class="todos">Surpresa</p>
+             </div>
+                   <div class="item5">
+                     <img src="/img/humores/humor5.png" alt="nostalgia" />
+                     <p class="todos">Nostalgia</p>
+                   </div>
+                     <div class="item6">
+                         <img src="/img/humores/humor9.png" alt="admiração" />
+                         <p class="todos">Apaixonado</p>
+                        </div>
+                        <div class="item7">
+                            <img src="/img/humores/humor2.png" alt="admiração" />
+                            <p class="todos">Alegre</p>
+                        </div>
+     </div>
+            </div>
+        </div>
     </main>
-    </div>
-</div>
+
+
     <%- include('./partials/footer') %>
 </body>
 

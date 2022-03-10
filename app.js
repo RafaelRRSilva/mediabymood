@@ -8,7 +8,7 @@ const createError = require('http-errors');
 // Importando o roteador
 const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
-
+const rotasFilme = require('./routes/filme.Routes');
 // Criar servidor
 const app = express();
 
@@ -26,6 +26,7 @@ app.use(session({secret:"SEGREDO"}))
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/', rotasUsuario);
+app.use('/filme',rotasFilme);
 
 
 app.use(function (req, res, next) {

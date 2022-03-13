@@ -35,11 +35,12 @@ main > section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 500px;
+    height: 450px;
     background-color: rgba(238, 96, 16, 0.86);
     border-radius: 20px;
-    margin: 0 24px;
-    max-height: 100%;
+    /* margin: 0 24px; */
+    /* max-height: 100%; */
+    margin: 30px;
 }
 
 select {

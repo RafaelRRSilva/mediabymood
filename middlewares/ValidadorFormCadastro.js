@@ -1,4 +1,4 @@
-const {check} = require('express-validator');
+const { check } = require('express-validator');
 
 const validacoes = [
     check('nome')
@@ -15,10 +15,16 @@ const validacoes = [
         .isEmail().withMessage('Precisa ser um e-mail válido'),
 
     check('senha')
-        .notEmpty().withMessage('O campe de senha precisa ser preenchido'),
+        .notEmpty().withMessage('O campo de senha precisa ser preenchido'),
 
     check('confirmarSenha')
-        .notEmpty().withMessage('O campo de confirmar senha precisa ser preenchido')
+        .notEmpty().withMessage('O campo de confirmar senha precisa ser preenchido').bail()
+        .custom((value, { req }) => {
+        if (value !== req.body.senha) {
+          throw new Error('Senhas não conferem')
+        }
+        return true;
+    }),
 ];
 
 module.exports = validacoes;

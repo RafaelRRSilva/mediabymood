@@ -19,8 +19,6 @@ body {
   width: 100%;
   background-color: rgba(238, 96, 16, 0.86);
   height: 102px;
-  /* display: flex; */
-  /* flex-direction: row-reverse; */
 }
 
 .barra-busca {
@@ -88,6 +86,7 @@ div .button {
 main {
   display: flex;
   height: 100%;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -102,10 +101,11 @@ main {
 
 .msg {
   font-family: Athiti;
-  font-size: 72px;
+  /* font-size: 72px; */
+  font-size: 50px;
   color: #1c0221;
   max-width: 700px;
-  margin: 0 75px;
+  margin: 0 100px;
 }
 
 .msg-btn {
@@ -135,11 +135,9 @@ main {
 }
 
 section {
-    display: block;
+    display: flex;
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
-    /* height: 800px;
-    width: 1250px; */
     height: 600px;
     width: 1000px;
 }
@@ -147,8 +145,6 @@ section {
 .container-carrossel {
     display: flex;
     overflow: hidden;
-    /* height: 820px;
-    width: 1250px; */
     height: 600px;
     width: 1000px;
     animation-name: animacao;
@@ -160,8 +156,8 @@ section {
   display: flex;
   box-shadow: 2px 2px 4px black;
   overflow: hidden;
-  height: 800px;
-  width: 1250px;
+  height: 400px;
+  width: 800px;
 }
 
 .container-carrosel {
@@ -171,17 +167,17 @@ section {
   animation-iteration-count: infinite;
 }
 
-.items {
+/* .items {
   height: 800px;
   width: 1250px;
-}
+} */
 
 .footer {
-  position: relative;
+  position: flex;
   width: 100%;
   background-color: rgba(238, 96, 16, 0.86);
   height: 127.94px;
-  bottom: 0;
+  padding-bottom: 0;
 }
 
 .nav-footer {

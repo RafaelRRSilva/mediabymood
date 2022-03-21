@@ -2,7 +2,7 @@
 
       .geral{
         display: flex;
-        background-color: rgba(10, 95, 21, 0.815);
+        background-color: rgba(210, 241, 214, 0.815);
 
       }
 
@@ -10,13 +10,13 @@
         display: grid;
         grid-template-areas:
       'A A A A'
-      'H H C C'
+      'H H H C'
       'M M M M'
-      'E E E E';
+      'J T E P';
       grid-gap: 1px;
    
       width: 100%;
-      background-color:rgba(245, 235, 245, 0.815);
+      background-color:rgba(161, 159, 159, 0.37);
   }
     
     /* SOMENTE UMA COR DE FUNDO NOS DIVS DA COLUNA DA ESQUERDA, PARA VER QUE AS IMAGENS NÃO ESTÃO NA MESMA PROPORÇÃO DOS BLOCOS */
@@ -36,7 +36,7 @@
       margin-top: 30px;
     }
     
-    .humor-msg{
+    .msg-inicial{
       /* font-size: 40px; */
       font-size: 30px;
       font-family: 'B612', sans-serif;
@@ -46,72 +46,24 @@
   display: grid;
   grid-area: C;
       border-radius: 20px;
-      width: 450px;
+      width: 400px;
+      padding: 10px;
      
   }
   .caras{
     display: grid;
     grid-area: M;
-
+margin-top: 30px;
+width: 96%;
   }
     .humor1{
       display:grid;
-      width: 100%;
-      height: 150px;
-      grid-area: M;
-      background-color: #fff;
-    }
-    .humor2{
-      display:grid;
-      width: 150px;
-      height: 150px;
-      grid-area: M;
-      margin-left: 160px;
-      margin-bottom: 150PX;
-      background-color: #fff;
-    }
-    .humor3{
-      display:grid;
-      width: 60px;
-      height: 60px;
-      grid-area: M;
-      background-color: #fff;
-    }
-    .humor4{
-      display:flex;
-      width: 100px;
-      height: 100px;
-      grid-area: M;
-      background-color: #fff;
      
-    }
-    .humor5{
-    display: grid;
-      width: 100px;
-      height: 100px;
-   grid-area: M;
-
-     
-      background-color: #fff; 
-    }
-    .humor6{
-      display:grid;
-      width: 100px;
-      height: 100px;
-     grid-area: M;
-  
-      background-color: #fff;
-   
-    }
-    .humor7{
-      display:grid;
-      width: 100px;
-      height: 100px;
       grid-area: M;
-      background-color: #fff;
+      background-color: rgb(179, 174, 174);
     }
-    
-    .msg-inicial > p.todos {
+ 
+     p.todos {
         font-family: 'B612', sans-serif;
     }
 
@@ -145,37 +97,98 @@
         margin: 10px auto;
         font-size: 36px;
         border-radius: 20px;
-        width: 200px;
+        width: 300px;
         font-family: 'B612', sans-serif;
     }
+p.todos{
+  font-family: 'B612', sans-serif;
+  font-size: 15px;
+}
 
-    p.todos {
-     
-        text-align: center;
-        justify-content: center;
-        width: 40%;
-        border-radius: 15px;
-        margin: 5px auto;
-        padding: 4px 10px;
-        font-family: 'B612', 'sans-serif';
-        font-size: 1.5rem;
-    }
-    
-     div:nth-child(1) p.todos{
+     p.todos{
         background-color: #A640CA;
-        color: #fff;
-       display: grid;
-        bottom: 60px;
-grid-area: E;
+        width: 75px;
+        height: 45px;
         transition: all 0.25s;
+padding: 2px;
+        border-radius: 15px;
+        color: #fff;
     }
-    
-    div:nth-child(1) p.todos:hover{
+p.todos:hover{
         background-color: #A640CA;
         color: #fff;
-       display: grid;
-       grid-area: E;
-        bottom: 0px;
+       
     }
+    .item1{
+      display:grid;
+      grid-area: J;
     
-   
+      margin-left: 10px;
+     
+
+    }
+    .item2{
+      display:grid;
+      grid-area: J;
+     
+      margin-left: 110px;
+    }
+    .item3{
+      display:grid;
+      grid-area: J;
+      margin-left: 220px;
+  
+    }
+    .item4{
+      display:grid;
+      grid-area:J;
+      
+      margin-left: 330px;
+    }
+    .item5{
+      display:grid;
+      grid-area:J;
+      margin-left: 420px;
+
+    }
+    .item6{
+      display:grid;
+      grid-area: J;
+margin-left: 530px;
+    }
+    .item7{
+      display:grid;
+      grid-area: T;
+      margin-left: 10px;
+    }
+    .item8{
+      display:grid;
+      grid-area: T;
+      margin-left: 130px;
+    }
+    .item9{
+      display:grid;
+      grid-area: T;
+      margin-left: 220px;
+    }
+    .item10{
+      display:grid;
+      grid-area: P;
+
+    }
+    .item11{
+      display:grid;
+      grid-area: P;
+      margin-left: 110px;
+    }
+    .item12{
+      display:grid;
+      grid-area: P;
+      margin-left: 210px;
+    }
+    .item13{
+      display:grid;
+      grid-area: P;   
+       margin-left: 330px;
+  
+    }

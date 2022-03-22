@@ -3,7 +3,7 @@
       .geral{
         display: flex;
         background-color: rgba(210, 241, 214, 0.815);
-
+width: 100%;
       }
 
       .conteudo{
@@ -13,8 +13,7 @@
       'H H H C'
       'M M M M'
       'J T E P';
-      grid-gap: 1px;
-   
+
       width: 100%;
       background-color:rgba(161, 159, 159, 0.37);
   }
@@ -24,7 +23,8 @@
     .banerfundo{
         display: grid;
           grid-area: A;
-        
+        width: fit-content;
+        box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
         }
 
      
@@ -34,38 +34,40 @@
       display: grid;
       grid-area:H ;
       margin-top: 30px;
+
     }
     
     .msg-inicial{
       /* font-size: 40px; */
       font-size: 30px;
       font-family: 'B612', sans-serif;
-      color: white;
-      background-color: rgba(215, 211, 240, 0.794);
-    margin-top: 30px;
-  display: grid;
-  grid-area: C;
-      border-radius: 20px;
+      color: rgb(85, 84, 84);
+      background-color: rgba(228, 211, 240, 0.794);
+       margin-top: 30px;
+      display: grid;
+      grid-area: C;
+      border-radius: 10px;
       width: 400px;
-      padding: 10px;
+
+      box-shadow: 1px 1px 20px 1px  rgba(76, 77, 77, 0.582);
      
   }
   .caras{
     display: grid;
     grid-area: M;
-margin-top: 30px;
-width: 96%;
+margin-top: 80px;
+max-width:99%;
+margin-left: 5px;
   }
     .humor1{
       display:grid;
-     
+    max-width:99%;
+    margin-left: 5px;
       grid-area: M;
       background-color: rgb(179, 174, 174);
     }
  
-     p.todos {
-        font-family: 'B612', sans-serif;
-    }
+    
 
     .filtros-humor {
 
@@ -73,9 +75,9 @@ width: 96%;
         margin-left: 20px;
         font-size: 30px;
         font-family: 'B612', sans-serif;
-        background-color: rgba(238, 96, 16, 0.86);
-        border-radius: 20px;
-   
+        background-color: rgba(212, 16, 238, 0.86);
+        border-radius: 15px;
+   border: ridge;
     }
     
     select {
@@ -91,7 +93,7 @@ width: 96%;
     }
     
     button {
-        background-color: rgba(238, 96, 16, 0.86);
+        background-color: rgba(169, 59, 233, 0.86);
         color: #fff;
         border: #fff solid 3px;
         margin: 10px auto;
@@ -103,92 +105,104 @@ width: 96%;
 p.todos{
   font-family: 'B612', sans-serif;
   font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
 }
 
      p.todos{
         background-color: #A640CA;
-        width: 75px;
-        height: 45px;
+        
+        height: 35px;
         transition: all 0.25s;
-padding: 2px;
+        padding: 5px;
         border-radius: 15px;
         color: #fff;
     }
 p.todos:hover{
-        background-color: #A640CA;
+        background-color: #524955;
         color: #fff;
-       
+
     }
     .item1{
       display:grid;
       grid-area: J;
-    
-      margin-left: 10px;
-     
-
+    width: 73px;
+      margin-left: 12px;
     }
     .item2{
       display:grid;
       grid-area: J;
-     
-      margin-left: 110px;
+      width: 73px;
+      margin-left: 118px;
     }
     .item3{
       display:grid;
       grid-area: J;
-      margin-left: 220px;
-  
+      margin-left: 225px;
+      width: 75px;
     }
     .item4{
       display:grid;
       grid-area:J;
-      
+      width: 73px; 
       margin-left: 330px;
     }
     .item5{
       display:grid;
       grid-area:J;
       margin-left: 420px;
-
+      width: 73px;
     }
     .item6{
       display:grid;
       grid-area: J;
-margin-left: 530px;
+margin-left: 535px;
+width: 77px;
     }
     .item7{
       display:grid;
       grid-area: T;
-      margin-left: 10px;
+      margin-left: 20px;
+      width: 78px;
     }
     .item8{
       display:grid;
       grid-area: T;
       margin-left: 130px;
+      width: 80px;
     }
     .item9{
       display:grid;
       grid-area: T;
       margin-left: 220px;
+      width: 80px;
     }
     .item10{
       display:grid;
       grid-area: P;
-
+      width: 78px;
     }
     .item11{
       display:grid;
       grid-area: P;
       margin-left: 110px;
+      width: 75px;
     }
     .item12{
       display:grid;
       grid-area: P;
       margin-left: 210px;
+      width: 75px;
     }
     .item13{
       display:grid;
       grid-area: P;   
-       margin-left: 330px;
+      margin-left: 310px;
+       width: 75px;
+      
   
+    }
+    .vazio{
+      background-color: rgba(240, 248, 255, 0);
+      height: 100px;
     }

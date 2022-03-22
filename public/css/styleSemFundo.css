@@ -1,6 +1,6 @@
 
 * {
-    font-family: 'Roboto', sans-serif;
+  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,20 +9,14 @@ html{
 
     height: 100%;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background-image: url(/img/fundo.png);
 
-}
 
 .header {
     /* position: fixed; */
+    font-family: 'Athiti', sans-serif;
     width: 100%;
     background-color: rgba(215, 211, 240, 0.794);
-    box-shadow:  3px 10px 8px  rgba(53, 54, 54, 0.74);
+    box-shadow: 1px 2px 10px 1px  rgba(81, 82, 82, 0.534);
     height: 100px;
     margin-bottom: 2%;
 }
@@ -59,7 +53,7 @@ div .button {
     color: rgb(3, 0, 0);
     border: 1px solid rgb(12, 11, 11);
     border-radius: 20px;
-    font-family: Athiti;
+    font-family: 'Athiti', sans-serif;
     transition: all 0.25s;
 }
 
@@ -72,7 +66,7 @@ div .button {
     margin-top: auto;
     width: 100%;
     background-color: rgba(215, 211, 240, 0.794);
-    box-shadow:  30px 10px 8px 20px rgba(53, 54, 54, 0.74);
+    box-shadow: 2px 3px 20px 3px  rgba(53, 54, 54, 0.74);
     height: 120px;
     bottom: 0;
 }
@@ -89,7 +83,7 @@ div .button {
     text-decoration: none;
     letter-spacing: 1px;
     padding: 0 30px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .nav-footer a {
@@ -107,12 +101,12 @@ div .button {
 }
 
 .rede-social {
-    padding: 30px;
-    margin-left: auto;
+ padding-left: 0ch;
+    margin-left: 1px;
 }
 
 .rede-social a{
-    padding: 20px;
+    padding: 10px;
 }
 
 .rede-social a > img {
@@ -124,7 +118,6 @@ div .button {
 .rede-social a > img:hover {
     bottom: 8px;
 }
-
 
 @media (max-width: 1150px) {
 

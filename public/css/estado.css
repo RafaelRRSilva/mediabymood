@@ -1,0 +1,208 @@
+
+
+      .geral{
+        display: flex;
+        background-color: rgba(210, 241, 214, 0.815);
+width: 100%;
+      }
+
+      .conteudo{
+        display: grid;
+        grid-template-areas:
+      'A A A A'
+      'H H H C'
+      'M M M M'
+      'J T E P';
+
+      width: 100%;
+      background-color:rgba(161, 159, 159, 0.37);
+  }
+    
+    /* SOMENTE UMA COR DE FUNDO NOS DIVS DA COLUNA DA ESQUERDA, PARA VER QUE AS IMAGENS NÃO ESTÃO NA MESMA PROPORÇÃO DOS BLOCOS */
+   
+    .banerfundo{
+        display: grid;
+          grid-area: A;
+        width: fit-content;
+        box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
+        }
+
+     
+ 
+   
+    .filtros{
+      display: grid;
+      grid-area:H ;
+      margin-top: 30px;
+
+    }
+    
+    .msg-inicial{
+      /* font-size: 40px; */
+      font-size: 30px;
+      font-family: 'B612', sans-serif;
+      color: rgb(85, 84, 84);
+      background-color: rgba(228, 211, 240, 0.794);
+       margin-top: 30px;
+      display: grid;
+      grid-area: C;
+      border-radius: 10px;
+      width: 400px;
+
+      box-shadow: 1px 1px 20px 1px  rgba(76, 77, 77, 0.582);
+     
+  }
+  .caras{
+    display: grid;
+    grid-area: M;
+margin-top: 80px;
+max-width:99%;
+margin-left: 5px;
+  }
+    .humor1{
+      display:grid;
+    max-width:99%;
+    margin-left: 5px;
+      grid-area: M;
+      background-color: rgb(179, 174, 174);
+    }
+ 
+    
+
+    .filtros-humor {
+
+        width: 800px;
+        margin-left: 20px;
+        font-size: 30px;
+        font-family: 'B612', sans-serif;
+        background-color: rgba(212, 16, 238, 0.86);
+        border-radius: 15px;
+   border: ridge;
+    }
+    
+    select {
+        max-width: 200px;
+        margin: 10px;
+        height: 10%;
+        max-height: 40px;
+        border-radius: 25px;
+        border: none;
+        text-align: center;
+        font-family: 'Baumans', cursive;
+        font-size: 18px;
+    }
+    
+    button {
+        background-color: rgba(169, 59, 233, 0.86);
+        color: #fff;
+        border: #fff solid 3px;
+        margin: 10px auto;
+        font-size: 36px;
+        border-radius: 20px;
+        width: 300px;
+        font-family: 'B612', sans-serif;
+    }
+p.todos{
+  font-family: 'B612', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+     p.todos{
+        background-color: #A640CA;
+        
+        height: 35px;
+        transition: all 0.25s;
+        padding: 5px;
+        border-radius: 15px;
+        color: #fff;
+    }
+p.todos:hover{
+        background-color: #524955;
+        color: #fff;
+
+    }
+    .item1{
+      display:grid;
+      grid-area: J;
+    width: 73px;
+      margin-left: 12px;
+    }
+    .item2{
+      display:grid;
+      grid-area: J;
+      width: 73px;
+      margin-left: 118px;
+    }
+    .item3{
+      display:grid;
+      grid-area: J;
+      margin-left: 225px;
+      width: 75px;
+    }
+    .item4{
+      display:grid;
+      grid-area:J;
+      width: 73px; 
+      margin-left: 330px;
+    }
+    .item5{
+      display:grid;
+      grid-area:J;
+      margin-left: 420px;
+      width: 73px;
+    }
+    .item6{
+      display:grid;
+      grid-area: J;
+margin-left: 535px;
+width: 77px;
+    }
+    .item7{
+      display:grid;
+      grid-area: T;
+      margin-left: 20px;
+      width: 78px;
+    }
+    .item8{
+      display:grid;
+      grid-area: T;
+      margin-left: 130px;
+      width: 80px;
+    }
+    .item9{
+      display:grid;
+      grid-area: T;
+      margin-left: 220px;
+      width: 80px;
+    }
+    .item10{
+      display:grid;
+      grid-area: P;
+      width: 78px;
+    }
+    .item11{
+      display:grid;
+      grid-area: P;
+      margin-left: 110px;
+      width: 75px;
+    }
+    .item12{
+      display:grid;
+      grid-area: P;
+      margin-left: 210px;
+      width: 75px;
+    }
+    .item13{
+      display:grid;
+      grid-area: P;   
+      margin-left: 310px;
+       width: 75px;
+      
+  
+    }
+    .vazio{
+      background-color: rgba(240, 248, 255, 0);
+      height: 100px;
+    }

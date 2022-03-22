@@ -18,8 +18,10 @@ const controller = {
 
   contato: (req,res) => {
     res.render('contato');
+  },
+  como: (req,res) => {
+    res.render('comofunciona');
   }
-
 }
 
 module.exports = controller;

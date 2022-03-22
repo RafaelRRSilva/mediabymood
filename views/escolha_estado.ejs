@@ -5,25 +5,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/escolha-estado.css" />
+
     <title>MediabyMood</title>
 
     <!-- fontes B612, Baumans e Athiti -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Athiti&family=B612&family=Baumans&family=Roboto&display=swap"
-        rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styleSemFundo.css">
+    <link rel="stylesheet" href="/css/estado.css">
 </head>
 
 <body>
-    <main class="main-escolha-estado">
-        <div class="humor-msg">
-            <p>
-                Olá, <strong> Usuário </strong>! Selecione um humor para receber uma
-                indicação aleatória de acordo com essa emoção
-            </p>
-        </div>
+    <%- include('./partials/header') %>
+    <main>
+        <div class="geral" >
+            <div class="conteudo" >
+                <div class="banerfundo">
+                    <img class="fundo" src="/img/fundomenor.png" alt="">
+                 </div>
+                 <div class="msg-inicial">
+                    <p>
+                     Olá, <strong> Usuário </strong>! Selecione um humor para receber uma
+                     indicação aleatória de acordo com essa emoção
+                    </p>
+                </div>
+     <div class="filtros">
         <section>
             <form class="filtros-humor">
                 <select name="plataforma" id="plataforma">
@@ -48,60 +54,75 @@
                 <select name="classificacao" id="classificacao">
                     <option selected disabled>Classificação</option>
                 </select>
-                <select name="?" id="?">
-                    <option selected disabled></option>
+                <select name="Nacionalidade" id="pais">
+                    <option selected disabled>Nacionalidade</option>
                 </select>
                 <button id="button">Gerar escolha!</button>
             </form>
-
-            <article class="humores">
-                <div>
-                    <img src="/img/humores/Triunfo.svg" alt="triunfo" />
-                    <p class="triunfo">Triunfo</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Medo.svg" alt="medo" />
-                    <p>Medo</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Raiva.svg" alt="raiva" />
-                    <p>Raiva</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Surpresa.svg" alt="surpresa" />
-                    <p>Surpresa</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Nostalgia.svg" alt="nostalgia" />
-                    <p>Nostalgia</p>
-                </div>
-                <div>
-                    <img src="/img/humores/Admiração.svg" alt="admiração" />
-                    <p>Admiração</p>
-                </div>
-            </article>
         </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="logo">
-                <img src="/img/logo01(branco).png" alt="MediabyMood" />
-            </div>
-            <div class="nav-footer">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Contato</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                </ul>
-            </div>
-            <div class="rede-social">
-                <a href=""><img src="/img/Facebook.png" alt="Facebook" /></a>
-                <a href=""><img src="/img/Instagram.png" alt="Instagram" /></a>
-                <a href=""><img src="/img/Twitter.png" alt="Twitter" /></a>
-                <a href=""><img src="/img/Whatsapp.png" alt="Whatsapp" /></a>
+
+       
+     </div>
+    <div class="caras"> <img class="humor1" src="/img/humores/linha.png" alt="triunfo" /></div>
+      
+        <div class="item1">
+            
+            <p class="todos">Triunfo</p>
+              </div>
+            <div class="item2">
+             
+             <p class="todos">Triste</p>
+               </div>
+              <div class="item3">
+                  <p class="todos">Tranquilo</p>
+                </div>
+             <div class="item4">
+             
+               <p class="todos">Raiva</p>
+             </div>
+                   <div class="item5">
+              
+                     <p class="todos">Medo</p>
+                   </div>
+                        <div class="item6">
+                         <p class="todos">Nostalgia</p>
+                        </div>
+                        <div class="item7">
+                           
+                            <p class="todos">Entediado</p>
+                        </div>
+                        <div class="item8">
+                           
+                            <p class="todos">Alegre</p>
+                        </div>
+                        <div class="item9">
+                           
+                            <p class="todos">Apaixonado</p>
+                        </div>
+                        <div class="item10">
+                           
+                            <p class="todos">Encantado</p>
+                        </div>
+                        <div class="item11">
+                           
+                            <p class="todos">Corajoso</p>
+                        </div>
+                        <div class="item12">
+                           
+                            <p class="todos">Surpreso</p>
+                        </div>
+                        <div class="item13">
+                           
+                            <p class="todos">Curioso</p>
+                        </div>
+     <div class="vazio"> </div>
+                    </div>
             </div>
         </div>
-    </footer>
+    </main>
+
+
+    <%- include('./partials/footer') %>
 </body>
 
 </html>

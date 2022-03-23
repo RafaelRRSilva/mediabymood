@@ -10,7 +10,7 @@
         display: grid;
         grid-template-areas:
       'A A A A'
-      'H H H C'
+      'H H D C'
       'M M M M'
       'J T E P';
 
@@ -45,10 +45,10 @@
       background-color: rgba(228, 211, 240, 0.794);
        margin-top: 30px;
       display: grid;
-      grid-area: C;
+      grid-area: D;
       border-radius: 10px;
       width: 400px;
-
+margin-left: -100px;
       box-shadow: 1px 1px 20px 1px  rgba(76, 77, 77, 0.582);
      
   }
@@ -56,8 +56,8 @@
     display: grid;
     grid-area: M;
 margin-top: 80px;
-max-width:99%;
-margin-left: 5px;
+max-width: fit-content;
+
   }
     .humor1{
       display:grid;
@@ -127,12 +127,14 @@ p.todos:hover{
       display:grid;
       grid-area: J;
     width: 73px;
+    height: 35px;
       margin-left: 12px;
     }
     .item2{
       display:grid;
       grid-area: J;
       width: 73px;
+      height: 35px;
       margin-left: 118px;
     }
     .item3{
@@ -140,6 +142,7 @@ p.todos:hover{
       grid-area: J;
       margin-left: 225px;
       width: 75px;
+      height: 35px;
     }
     .item4{
       display:grid;
@@ -152,55 +155,102 @@ p.todos:hover{
       grid-area:J;
       margin-left: 420px;
       width: 73px;
+      height: 35px;
     }
     .item6{
       display:grid;
       grid-area: J;
 margin-left: 535px;
 width: 77px;
+height: 35px;
     }
     .item7{
       display:grid;
       grid-area: T;
-      margin-left: 20px;
+      margin-left: -100px;
       width: 78px;
+      height: 35px;
     }
     .item8{
       display:grid;
       grid-area: T;
-      margin-left: 130px;
+      margin-left: -10px;
       width: 80px;
+      height: 35px;
     }
     .item9{
       display:grid;
       grid-area: T;
-      margin-left: 220px;
+      margin-left: 80px;
       width: 80px;
+      height: 35px;
     }
     .item10{
       display:grid;
       grid-area: P;
       width: 78px;
+      height: 35px;
+      margin-left: -270px;
     }
     .item11{
       display:grid;
       grid-area: P;
-      margin-left: 110px;
+      margin-left: -165px;
       width: 75px;
+      height: 35px;
     }
     .item12{
       display:grid;
       grid-area: P;
-      margin-left: 210px;
+      margin-left: -60px;
       width: 75px;
+      height: 35px;
     }
     .item13{
       display:grid;
       grid-area: P;   
-      margin-left: 310px;
+      margin-left: 35px;
        width: 75px;
-      
-  
+       height: 35px;
+
+    }
+
+    .explica-raiva{
+      display:grid;
+      grid-area: J; 
+      width:300px;
+      height: 300px;
+  margin-left: 10px;
+  margin-top: 100px;
+    }
+    .raiva{
+      width:300px;
+      height: 300px;
+    }
+    .explica-nostalgia{
+      display:grid;
+      grid-area: J; 
+      width:300px;
+      height: 300px;
+   margin-left: 460px;
+     margin-top: 80px;
+    }
+    .nostalgia{
+      width:300px;
+    height: 300px;
+    }
+
+    .explica-curioso{
+      display:grid;
+      grid-area: P; 
+      width:300px;
+      height: 300px;
+    margin-top:100px ;
+margin-left: -280px;
+    }
+    .curioso{
+      width:300px;
+    height: 300px;
     }
     .vazio{
       background-color: rgba(240, 248, 255, 0);

@@ -1,28 +1,23 @@
 
-  .main{
-   
-    background-color: rgba(245, 235, 245, 0.815);
-}
-    .vivido{
+    .geral{
       display: flex;
       background-color: rgba(245, 235, 245, 0.815);
-     
+    
     }
 
     
 
     .conteudo{
-    
-  
+
       display: grid;
       grid-template-areas:
       'A A A A'
       'B H H C'
-      'M O O D'
+      'M H H D'
       'E F G N';
-      grid-gap: 1px;
+     
    
-      width: 100%;
+      max-width: fit-content;
       background-color:rgba(245, 235, 245, 0.815);
   }
   
@@ -33,9 +28,9 @@
 .banner{
   display: grid;
     grid-area: A;
-max-width: fit-content;
-
-  margin-top: 0px;
+    width: 100%;
+    height: 300px;
+    box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
 
   }
 
@@ -54,32 +49,40 @@ margin-left: 100px;
 border-radius: 15px;
 }
   .term{
-    
-  }
-.texto-msg{
-
   display: grid;
-  background-color:rgba(245, 235, 245, 0.815);
-  margin-top: 50px;  
-  grid-area: H;
-    width: 500px;
-    height: 160px; 
+  grid-area:A ;
+  height: 120px;
+  margin-top: 320px;
+  margin-left: 300px;
   }
 
-  .Item2{
+.item{
     display: grid;
-    grid-area: O;
+    grid-area: H;
     background-color: rgba(245, 235, 245, 0.815);
-    font-family: 'Roboto', sans-serif;
+    margin-right: 500px;
+    margin-bottom: 500px;
+    width: 500px;
+    height: 400px;
  
+}
+.nossa{
+  font-family: 'Athiti', sans-serif;
+    color: #000;
+  display: grid;
+  grid-area: H;
+  font-size: 25px;
+  width: 500px;
+  height: 500px;
+  margin-right: 500px;
+  margin-bottom: 500px;
 }
 
 
   .b-cadastro {
     display: grid;
-    grid-area: E;
-    justify-content: center;
-    align-items: center;
+    grid-area: F;
+
     font-size: 36px;
     font-family: 'Baumans', 'cursive';
     text-align: center;
@@ -100,15 +103,14 @@ margin-left: 10px;
   }
   .b-estado {
     display: grid;
-    grid-area: N;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+    grid-area: G;
+  
+  
     font-size: 25px;
     font-family: 'Baumans', 'cursive';
     text-align: center;
   
-margin-right: 30px;
+
     width: 250px;
     height: 60px;
     border-radius: 30px;

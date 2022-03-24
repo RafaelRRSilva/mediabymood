@@ -5,7 +5,6 @@
     
     }
 
-    
 
     .conteudo{
 
@@ -13,7 +12,7 @@
       grid-template-areas:
       'A A A A'
       'B H H C'
-      'M H H D'
+      'M L L D'
       'E F G N';
      
    
@@ -24,7 +23,13 @@
   /* SOMENTE UMA COR DE FUNDO NOS DIVS DA COLUNA DA ESQUERDA, PARA VER QUE AS IMAGENS NÃO ESTÃO NA MESMA PROPORÇÃO DOS BLOCOS */
  
 
-
+.item1{
+  display: grid;
+grid-area: A;
+width: 100%;
+    height: 300px;
+    box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
+}
 .banner{
   display: grid;
     grid-area: A;
@@ -36,90 +41,151 @@
 
 
 
-.como{
+.quer{
 display: grid;
-grid-area: A;
-font-family: 'Athiti', sans-serif;
-font-size: 25px;
-color: rgb(255, 248, 248);
-background-color: rgba(85, 82, 82, 0.582);
-width: 500px;
+grid-area:A ;
+
+background: rgba(241, 203, 219, 0.356);
+ background: radial-gradient(circle, rgba(244, 232, 237, 0.753) 0%, rgba(156, 161, 167, 0.541) 100%);
+ box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
+ width: 500px;
 height: 200px;
 margin-left: 100px;
-border-radius: 15px;
+margin-top: 50px;
+border-radius: 60px 80px 15px 60px;
+border: solid rgba(41, 40, 40, 0.589);
 }
-  .term{
+.saber{
+  margin-left: 40px;
   display: grid;
-  grid-area:A ;
-  height: 120px;
-  margin-top: 320px;
-  margin-left: 300px;
-  }
-
-.item{
-    display: grid;
-    grid-area: H;
-    background-color: rgba(245, 235, 245, 0.815);
-    margin-right: 500px;
-    margin-bottom: 500px;
-    width: 500px;
-    height: 400px;
- 
+grid-area:A ;
+font-family: 'Athiti', sans-serif;
+font-size: 45px;
+color: rgb(41, 39, 39);
 }
+
+
+
 .nossa{
+
   font-family: 'Athiti', sans-serif;
-    color: #000;
   display: grid;
   grid-area: H;
+  background-color: rgba(226, 106, 250, 0.445);
   font-size: 25px;
-  width: 500px;
-  height: 500px;
-  margin-right: 500px;
-  margin-bottom: 500px;
+  width: 600px;
+  height: 400px;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 60px 80px 15px 60px;
+  border: solid rgba(94, 93, 93, 0.589);
+  box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
+}
+.missao{
+  margin-top: 30px;
 }
 
+.cadastro{
+  display: grid;
+  grid-area: F;
+  font-size: 36px;
+  font-family: 'Baumans', 'cursive';
+  height: 60px;
+  width: 250px;
+  margin-top: 120px;
+  margin-left:-100px ;
 
+  
+}
   .b-cadastro {
     display: grid;
     grid-area: F;
-
-    font-size: 36px;
-    font-family: 'Baumans', 'cursive';
     text-align: center;
-   margin-bottom: 50px;
-margin-left: 10px;
     width: 250px;
-    height: 68px;
+    height: 60px;
     border-radius: 30px;
     background-color: rgba(107, 54, 190, 0.904);
   color: #fff;
     text-decoration: none;
-
+    
+  
     transition: all 0.25s;
   }
   
   .button-cadastro:hover {
     background-color: rgb(173, 10, 110);
   }
-  .b-estado {
+  .estado {
     display: grid;
     grid-area: G;
-  
-  
-    font-size: 25px;
+    font-size: 36px;
     font-family: 'Baumans', 'cursive';
     text-align: center;
-  
-
-    width: 250px;
+    width: 270px;
     height: 60px;
     border-radius: 30px;
     background-color: rgba(107, 54, 190, 0.904);
-  text-decoration: none;
-color:#fff;
+    margin-top: 120px;
+  
+  }
+  .b-estado{
+    display: grid;
+    grid-area: G;
+    font-family: 'Baumans', 'cursive';
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
     transition: all 0.25s;
+   
+    
   }
   
   .button-estado:hover {
     background-color: rgb(173, 10, 110);
+  }
+  .explica-raiva{
+    display:grid;
+    grid-area: M; 
+    width:300px;
+    height: 300px;
+margin-left: 10px;
+margin-top: 100px;
+  }
+  .raiva{
+    width:300px;
+    height: 300px;
+  }
+  .explica-nostalgia{
+    display:grid;
+    grid-area: L; 
+    width:300px;
+    height: 300px;
+ margin-left: 90px;
+   margin-top: 100px;
+  }
+  .nostalgia{
+    width:300px;
+  height: 300px;
+  }
+
+  .explica-curioso{
+    display:grid;
+    grid-area: D; 
+    width:300px;
+    height: 300px;
+  margin-top:120px ;
+margin-left: -260px;
+  }
+  .curioso{
+    width:300px;
+  height: 300px;
+  }
+  .vazio{
+    background-color: aliceblue;
+    display: grid;
+    grid-area: N;
+    width: 100%;
+    height: 80px;
+    margin-top:200px ;
   }

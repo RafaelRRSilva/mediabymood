@@ -10,9 +10,9 @@
         display: grid;
         grid-template-areas:
       'A A A A'
-      'H H D C'
       'M M M M'
-      'J T E P';
+      'J T E P'
+      'H H D C';
 
       width: 100%;
       background-color:rgba(161, 159, 159, 0.37);
@@ -41,16 +41,16 @@
       /* font-size: 40px; */
       font-size: 30px;
       font-family: 'B612', sans-serif;
-      color: rgb(85, 84, 84);
-      background-color: rgba(228, 211, 240, 0.794);
-       margin-top: 30px;
+      color: rgb(12, 11, 11);
+      background-color: rgba(231, 208, 247, 0.555);
+   margin-top: 15px;
       display: grid;
-      grid-area: D;
+      grid-area: A;
       border-radius: 10px;
-      width: 400px;
-margin-left: -100px;
+      width: 500px;
+height: 200px;
       box-shadow: 1px 1px 20px 1px  rgba(76, 77, 77, 0.582);
-     
+    margin-left: 30px; 
   }
   .caras{
     display: grid;

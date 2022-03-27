@@ -9,7 +9,8 @@ main {
 .logo-grande img{
   max-height: 240px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+
 }
 
 form {
@@ -20,9 +21,11 @@ form {
   width: 80vw;
   max-width: 720px;
   height: 430px;
+  margin-bottom: 50px;
   /* min-width: 400px; */
   display: flex;
   flex-direction: column;
+  border: solid 2px rgba(128, 128, 128, 0.589);
 }
 
 .texto-form {
@@ -103,7 +106,7 @@ form {
 
 span > button {
   border: none;
-  background-color: rgba(238, 96, 16, 0.86);
+  background-color: rgba(238, 16, 190, 0.86);
   margin-right: 5px;
   cursor: pointer;
 }

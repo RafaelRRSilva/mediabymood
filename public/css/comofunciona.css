@@ -1,8 +1,7 @@
 
     .geral{
       display: flex;
-      background-color: rgba(245, 235, 245, 0.815);
-    
+      background-color: rgba(210, 241, 214, 0.651);
     }
 
 
@@ -11,13 +10,12 @@
       display: grid;
       grid-template-areas:
       'A A A A'
-      'B H H C'
+      'H H H H'
       'M L L D'
       'E F G N';
      
-   
-      max-width: fit-content;
-      background-color:rgba(245, 235, 245, 0.815);
+      width: 100%;
+      background-color:rgba(161, 159, 159, 0.37);
   }
   
   /* SOMENTE UMA COR DE FUNDO NOS DIVS DA COLUNA DA ESQUERDA, PARA VER QUE AS IMAGENS NÃO ESTÃO NA MESMA PROPORÇÃO DOS BLOCOS */
@@ -45,21 +43,22 @@ width: 100%;
 display: grid;
 grid-area:A ;
 
-background: rgba(241, 203, 219, 0.356);
- background: radial-gradient(circle, rgba(244, 232, 237, 0.753) 0%, rgba(156, 161, 167, 0.541) 100%);
+background: rgba(255, 255, 255, 0.753);
+
+ 
  box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
- width: 500px;
+ width: 550px;
 height: 200px;
 margin-left: 100px;
 margin-top: 50px;
-border-radius: 60px 80px 15px 60px;
+border-radius: 10px 100px 10px 10px;
 border: solid rgba(41, 40, 40, 0.589);
 }
 .saber{
   margin-left: 40px;
   display: grid;
 grid-area:A ;
-font-family: 'Athiti', sans-serif;
+font-family: 'B612', sans-serif;
 font-size: 45px;
 color: rgb(41, 39, 39);
 }
@@ -68,32 +67,36 @@ color: rgb(41, 39, 39);
 
 .nossa{
 
-  font-family: 'Athiti', sans-serif;
+  
   display: grid;
   grid-area: H;
-  background-color: rgba(226, 106, 250, 0.445);
+  background-color: rgba(107, 54, 190, 0.904);
   font-size: 25px;
-  width: 600px;
-  height: 400px;
-  margin-top: 100px;
-  padding: 20px;
+  width: 900px;
+  height: 250px;
+  margin-top: 60px;
+ margin-left: 180px;
   border-radius: 60px 80px 15px 60px;
   border: solid rgba(94, 93, 93, 0.589);
   box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
 }
 .missao{
-  margin-top: 30px;
+  font-family: 'B612', sans-serif;
+  margin-top: 20px;
+  margin-left: 50px;
+  color: #fff;
 }
 
 .cadastro{
   display: grid;
   grid-area: F;
   font-size: 36px;
-  font-family: 'Baumans', 'cursive';
+
   height: 60px;
   width: 250px;
   margin-top: 120px;
-  margin-left:-100px ;
+  
+  width: 250px;
 
   
 }
@@ -101,14 +104,14 @@ color: rgb(41, 39, 39);
     display: grid;
     grid-area: F;
     text-align: center;
-    width: 250px;
-    height: 60px;
+    font-family: 'B612', sans-serif;
     border-radius: 30px;
     background-color: rgba(107, 54, 190, 0.904);
   color: #fff;
     text-decoration: none;
+padding: 4px;
     
-  
+border: solid 2px rgba(238, 234, 234, 0.685);
     transition: all 0.25s;
   }
   
@@ -119,25 +122,26 @@ color: rgb(41, 39, 39);
     display: grid;
     grid-area: G;
     font-size: 36px;
-    font-family: 'Baumans', 'cursive';
+   
     text-align: center;
-    width: 270px;
+    width: 300px;
     height: 60px;
     border-radius: 30px;
     background-color: rgba(107, 54, 190, 0.904);
     margin-top: 120px;
-  
+    border: solid 2px rgba(238, 234, 234, 0.685);
   }
   .b-estado{
     display: grid;
     grid-area: G;
-    font-family: 'Baumans', 'cursive';
+    font-family: 'B612', sans-serif;
     text-align: center;
     font-size: 30px;
     color: #fff;
     text-decoration: none;
     transition: all 0.25s;
-   
+   padding: 6px;
+ 
     
   }
   
@@ -150,11 +154,11 @@ color: rgb(41, 39, 39);
     width:300px;
     height: 300px;
 margin-left: 10px;
-margin-top: 100px;
+margin-top: 120px;
   }
   .raiva{
     width:300px;
-    height: 300px;
+    height: 310px;
   }
   .explica-nostalgia{
     display:grid;
@@ -164,9 +168,18 @@ margin-top: 100px;
  margin-left: 90px;
    margin-top: 100px;
   }
+  .ra{
+    font-family: 'B612', sans-serif;
+  font-size: 25px;
+  margin-left: 40px;
+  }
   .nostalgia{
     width:300px;
-  height: 300px;
+  height: 310px;
+  }
+  .no{
+    font-family: 'B612', sans-serif;
+    font-size: 25px; 
   }
 
   .explica-curioso{
@@ -174,15 +187,20 @@ margin-top: 100px;
     grid-area: D; 
     width:300px;
     height: 300px;
-  margin-top:120px ;
+  margin-top:130px ;
 margin-left: -260px;
   }
   .curioso{
     width:300px;
-  height: 300px;
+  height: 290px;
+  }
+  .cur{
+    font-family: 'B612', sans-serif;
+    font-size: 25px; 
   }
   .vazio{
-    background-color: aliceblue;
+    background-color: rgba(210, 241, 214, 0.815);
+    background-color:rgba(161, 159, 159, 0.027);
     display: grid;
     grid-area: N;
     width: 100%;

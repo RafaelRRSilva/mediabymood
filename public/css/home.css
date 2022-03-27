@@ -16,7 +16,7 @@ border: solid rgba(245, 245, 220, 0.418);
 
   width: 1095px;
   height: 191px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .msg-home h1{
@@ -25,7 +25,7 @@ border: solid rgba(245, 245, 220, 0.418);
   font-size: 62px;
   font-style: italic;  
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 25px;
 }
 
 .button-cadastro {
@@ -44,13 +44,14 @@ border: solid rgba(255, 255, 255, 0.561);
   text-decoration: none;
   color: white;
   transition: all 0.25s;
+  margin-left: -200px;
 }
 .button-cadastro:hover {
   background-color: rgb(241, 89, 247);
 }
 .cadastro{
   margin-bottom: -70px;
-  margin-left: -800px;
+  margin-left: 200px;
   
 }
 .button-comofunciona {
@@ -58,6 +59,7 @@ border: solid rgba(255, 255, 255, 0.561);
   justify-content: center;
   align-items: center;
   font-size: 36px;
+  margin-top: 8px;
   font-family: 'Baumans', 'cursive';
   text-align: center;
   padding-top: 0;

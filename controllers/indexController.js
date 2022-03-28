@@ -21,7 +21,36 @@ const controller = {
   },
   como: (req,res) => {
     res.render('comofunciona');
-  }
+  },
+form:(req,res) => {
+  res.render('formulario');
+},
+
+postForm: async (req, res) => {
+
+  const { filme} = req.body;
+
+  const novo = await NovoFilme.findOne({
+    where:{
+      filme:filme
+    }
+  })
+  .catch(console.trace)
+
+
+  
+
+    return res.render('formulario');
+
+  
+
+  req.session.novo = novo;
+
+  res.redirect('/primeiro_acesso')
 }
+
+
+}
+
 
 module.exports = controller;

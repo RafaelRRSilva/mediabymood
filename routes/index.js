@@ -9,5 +9,8 @@ router.get('/escolha_estado', UsuarioLogado, indexController.estadoDeHumor);
 router.get('/indicacao', UsuarioLogado, indexController.indicacao);
 router.get('/contato', indexController.contato);
 router.get('/comofunciona', indexController.como);
+router.get('/formulario', indexController.form);
+router.post('/formulario', indexController.postForm);
+
 
 module.exports = router;

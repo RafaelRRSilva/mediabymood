@@ -7,7 +7,7 @@ main {
 
 .form{
     display: flex;
-    background-color: rgba(238, 96, 16, 0.86);
+ background-color: rgba(107, 54, 190, 0.904);
     width: 700px;
     height: 580px;
     margin-bottom: 20px;
@@ -30,7 +30,7 @@ label {
 input {
     /* height: 40px; */
     /* border-radius: 30px; */
-    background-color: rgba(238, 96, 16, 0.86);
+    background-color: rgba(168, 122, 243, 0.904);
     height: 52px;
     border-radius: 17px;
     padding: 8px;
@@ -49,7 +49,7 @@ input {
 
 .button-registro {
     display: flex;
-    background-color: rgba(238, 96, 16, 0.86);
+    background-color: rgba(168, 122, 243, 0.904);
     border: solid white 2px;
     height: 52px;
     width: 300px;

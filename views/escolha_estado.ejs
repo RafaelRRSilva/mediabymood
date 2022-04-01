@@ -1,128 +1,113 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<%- include('./partials/head') %>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <body>
+        <%- include('./partials/header') %>
 
-    <title>MediabyMood</title>
+            <main>
+                <div class="geral">
+                    <div class="conteudo">
 
-    <!-- fontes B612, Baumans e Athiti -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="/css/styleSemFundo.css">
-    <link rel="stylesheet" href="/css/estado.css">
-</head>
+                        <div class="msg-inicial">
+                            <p class="men">
+                                Olá, <strong> Usuário </strong>! Como você está se sentindo hoje?<br>
+                                Selecione um humor para receber uma
+                                indicação aleatória de acordo com essa emoção
+                            </p>
+                        </div>
+                        <!-- <div class="filtros">
+                        <section>
+                            <form class="filtros-humor">
+                                <select name="plataforma" id="plataforma">
+                                    <option selected disabled>Plataforma</option>
+                                    <option value="netflix">Netflix</option>
+                                    <option value="amazon">Amazon Prime</option>
+                                    <option value="disney">Disney Plus</option>
+                                    <option value="hbo">HBO Max</option>
+                                </select>
+                                <select name="genero" id="genero">
+                                    <option selected disabled>Gênero</option>
+                                    <option value="acao">Ação</option>
+                                    <option value="comedia">Comedia</option>
+                                    <option value="romance">Romance</option>
+                                </select>
+                                <select name="ano" id="ano">
+                                    <option selected disabled>Ano de lançamento</option>
+                                </select>
+                                <select name="avaliacao" id="avaliacao">
+                                    <option selected disabled>Avaliação</option>
+                                </select>
+                                <select name="classificacao" id="classificacao">
+                                    <option selected disabled>Classificação</option>
+                                </select>
+                                <select name="Nacionalidade" id="pais">
+                                    <option selected disabled>Nacionalidade</option>
+                                </select>
+                                <button id="button">Gerar escolha!</button>
+                            </form>
+                        </section>
 
-<body>
-    <%- include('./partials/header') %>
-    <main>
-        <div class="geral" >
-            <div class="conteudo" >
-               
-                 <div class="msg-inicial">
-                    <p class="men">
-                     Olá, <strong> Usuário </strong>! Como você está se sentindo hoje?<br>
-                     Selecione um humor para receber uma
-                     indicação aleatória de acordo com essa emoção
-                    </p>
-                </div>
-     <div class="filtros">
-        <section>
-            <form class="filtros-humor">
-                <select name="plataforma" id="plataforma">
-                    <option selected disabled>Plataforma</option>
-                    <option value="netflix">Netflix</option>
-                    <option value="amazon">Amazon Prime</option>
-                    <option value="disney">Disney Plus</option>
-                    <option value="hbo">HBO Max</option>
-                </select>
-                <select name="genero" id="genero">
-                    <option selected disabled>Gênero</option>
-                    <option value="acao">Ação</option>
-                    <option value="comedia">Comedia</option>
-                    <option value="romance">Romance</option>
-                </select>
-                <select name="ano" id="ano">
-                    <option selected disabled>Ano de lançamento</option>
-                </select>
-                <select name="avaliacao" id="avaliacao">
-                    <option selected disabled>Avaliação</option>
-                </select>
-                <select name="classificacao" id="classificacao">
-                    <option selected disabled>Classificação</option>
-                </select>
-                <select name="Nacionalidade" id="pais">
-                    <option selected disabled>Nacionalidade</option>
-                </select>
-                <button id="button">Gerar escolha!</button>
-            </form>
-        </section>
 
-       
-     </div>
-    <div class="caras"> <img class="humor1" src="/img/humores/linha.png" alt="triunfo" /></div>
-      
-        <div class="item1">
-            
-            <p class="todos">Triunfo</p>
-              </div>
-            <div class="item2">
-             
-             <p class="todos">Triste</p>
-               </div>
-              <div class="item3">
-                  <p class="todos">Tranquilo</p>
-                </div>
-             <div class="item4">
-             
-               <p class="todos">Raiva</p>
-             </div>
-                   <div class="item5">
-              
-                     <p class="todos">Medo</p>
-                   </div>
+                    </div> -->
+                        <div class="caras"> <img class="humor1" src="/img/humores/linha.png" alt="triunfo" /></div>
+
+                        <div class="item1">
+
+                            <p class="todos">Triunfo</p>
+                        </div>
+                        <div class="item2">
+
+                            <p class="todos">Triste</p>
+                        </div>
+                        <div class="item3">
+                            <p class="todos">Tranquilo</p>
+                        </div>
+                        <div class="item4">
+
+                            <p class="todos">Raiva</p>
+                        </div>
+                        <div class="item5">
+
+                            <p class="todos">Medo</p>
+                        </div>
                         <div class="item6">
-                         <p class="todos">Nostalgia</p>
+                            <p class="todos">Nostalgia</p>
                         </div>
                         <div class="item7">
-                           
+
                             <p class="todos">Entediado</p>
                         </div>
                         <div class="item8">
-                           
+
                             <p class="todos">Alegre</p>
                         </div>
                         <div class="item9">
-                           
+
                             <p class="todos">Apaixonado</p>
                         </div>
                         <div class="item10">
-                           
+
                             <p class="todos">Encantado</p>
                         </div>
                         <div class="item11">
-                           
+
                             <p class="todos">Corajoso</p>
                         </div>
                         <div class="item12">
-                           
+
                             <p class="todos">Surpreso</p>
                         </div>
                         <div class="item13">
-                           
+
                             <p class="todos">Curioso</p>
                         </div>
-           <div class="vazio"></div>            
-       
-    </div>
-            </div>
-        </div>
-    </main>
+                        <div class="vazio"></div>
 
+                    </div>
+                </div>
+                </div>
+            </main>
 
-    <%- include('./partials/footer') %>
-</body>
+            <%- include('./partials/footer') %>
+    </body>
 
-</html>
+    </html>

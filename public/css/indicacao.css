@@ -7,12 +7,13 @@ main {
 /* Indicação */
 
 .indicacao_conteiner {
-  background-color:crimson;
+  background-color:rgba(237, 237, 237, 0.95);
   width: 1080px;
   /* height: 658px; */
   height: 558px;
-  border-radius: 10px;
+  border-radius: 16px;
   margin: 10px;
+  padding: 1.5%;
   display: grid;
   grid-template-columns: 1fr 4.5fr;
   grid-template-rows: 1fr 3fr 2fr;
@@ -32,16 +33,23 @@ main {
 
 .filme_info_geral {
   grid-area: info;
-  background-color: aqua;
+  /* background-color: aqua; */
+  color: #ee6010;
   padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.filme_info_geral > article:last-child {
+  /* background-color: #ee6010; */
+  margin-right: 25%;
+}
+
 .filme_resumo {
   grid-area: resumo;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  color: #ee6010;
   padding: 5px;
 }
 
@@ -50,21 +58,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   padding: 5px;
 }
 
 .btn_pergunta > div {
-  background-color: brown;
-  text-align: center;
+  font-family: 'B612', 'sans-serif';
+  font-size: 32px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ee6010;
   width: 150px;
   height: 85px;
+  border-radius: 16px;
 }
 
 .btn_escala {
   grid-area: esc;
-  background-color: bisque;
+  /* background-color: bisque; */
   padding: 5px;
   display: flex;
   position: relative;
@@ -90,6 +103,12 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.btn_escala label {
+  /* background-color: #ee6010; */
+  display: block;
+  margin: 10px;
 }
 
 #btn_01 {
@@ -187,11 +206,11 @@ main {
 }
 
 .btn_escala > hr {
-  border: solid white 5px;
+  border: solid white 4px;
   position: absolute;
   width: 75%;
   margin-left: 12%;
-  top: 36%;
+  top: 35%;
 }
 
 /* Barra de humor */

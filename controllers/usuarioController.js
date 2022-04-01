@@ -50,7 +50,8 @@ module.exports = {
 
     const usuario = await Usuario.findOne({
       where:{
-        email:email
+        email:email,
+        senha:senha
       }
     })
     .catch(console.trace)

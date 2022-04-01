@@ -13,13 +13,13 @@ const validacoes = [
 
     check('email')
         .notEmpty().withMessage('O campo e-mail deve ser preenchido').bail()
-        .isEmail().withMessage('Precisa ser um e-mail válido').bail()
-        .custom(value => {
-            let usuario = Usuario.findAll({where: {email: value}});
-              if (usuario) {
-                return Promise.reject('E-mail já cadastrado');
-              }
-          }),
+        .isEmail().withMessage('Precisa ser um e-mail válido').bail(),
+        // .custom(value => {
+        //     let usuario = Usuario.findAll({where: {email: value}});
+        //       if (usuario) {
+        //         return Promise.reject('E-mail já cadastrado');
+        //       }
+        //   })
 
     check('senha')
         .notEmpty().withMessage('O campo de senha precisa ser preenchido'),

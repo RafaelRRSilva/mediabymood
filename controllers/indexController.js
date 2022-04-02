@@ -35,7 +35,7 @@ postForm: async (req, res) => {
       filme:filme
     }
   })
-  .catch(console.trace)
+
 
 
   

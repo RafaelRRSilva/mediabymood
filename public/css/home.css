@@ -44,14 +44,14 @@ border: solid rgba(255, 255, 255, 0.561);
   text-decoration: none;
   color: white;
   transition: all 0.25s;
-  margin-left: -200px;
+
 }
 .button-cadastro:hover {
   background-color: rgb(241, 89, 247);
 }
 .cadastro{
   margin-bottom: -70px;
-  margin-left: 200px;
+  margin-left:-230px;
   
 }
 .button-comofunciona {

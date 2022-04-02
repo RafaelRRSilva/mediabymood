@@ -11,23 +11,26 @@ module.exports = (sequelize, DataTypes) => {
         nome: {
           type: DataTypes.STRING(120),
           allowNull: false
-        },
-        email: {
-          type: DataTypes.STRING(120),
-          allowNull: false,
-          unique: true
-        },
-        senha: {
-          type: DataTypes.STRING(240),
-          allowNull: false
         }
       },
       {
-        tableName: 'usuarios',
+        tableName: 'humores',
         timestamps: false,
         freezeTableName: true
       }
     )
-  
+
+    humor.associate = (models) => {
+      humor.belongsToMany(models.Filme,
+        {
+          as: 'filme',
+          through: 'filmes_has_humores',
+          foreignKey: 'humores_id',
+          otherKey: 'filmes_id',
+          timestamps: false
+        }
+      )
+    }
+
     return humor;
   }

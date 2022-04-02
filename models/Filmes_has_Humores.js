@@ -23,7 +23,9 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
       freezeTableName: true
     }
-  )
+  );
+
+
 
   return filmes_has_humores
 }

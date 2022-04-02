@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
           autoIncrement: true,
           allowNull: false
         },
-        tilulo: {
+        titulo: {
           type: DataTypes.STRING(100),
           allowNull: false,
           unique: true

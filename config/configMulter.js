@@ -12,4 +12,4 @@ const configMulter = {
       }
   })  
 }
-module.exports= configMulter
+module.exports = configMulter

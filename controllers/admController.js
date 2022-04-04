@@ -1,4 +1,4 @@
-const {Filme } = require('../models');
+const {filme} = require('../models');
 const admController = {
     form: (req, res) => {
         res.render('formulario');
@@ -19,13 +19,13 @@ const admController = {
             //     imagem:"/img/"+imagem
             // })
             const novoFilme = new Filme();
-            novoFilme.titulo ="filme";
+            novoFilme.titulo = "filmes"
 
-            novoFilme.ano = 2020
-            novoFilme.resumo = "lalala"
-            novoFilme.duracao = 90
-            novoFilme.imagem = "/img/" + imagem
-            await novoFilme.save()
+            novofilme.ano = 2020
+            novofilme.resumo = "lalala"
+            novofilme.duracao = 90
+            novofilme.imagem = "/img/" + imagem
+            await novofilme.save()
             return res.redirect('/formulario');
 
         } catch (error) {
@@ -34,4 +34,4 @@ console.trace(error);
 
     }
 }
-module.exports = admController;
+module.exports= admController;

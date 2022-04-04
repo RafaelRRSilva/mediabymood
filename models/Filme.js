@@ -35,7 +35,19 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
         freezeTableName: true
       }
-    )
-  
+    );
+
+    filme.associate = (models) => {
+      filme.belongsToMany(models.Humor,
+        {
+          as: 'humor',
+          through: 'filmes_has_humores',
+          foreignKey: 'filmes_id',
+          otherKey: 'humores_id',
+          timestamps: false
+        }
+      )
+    }
+
     return filme
   }

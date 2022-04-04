@@ -9,7 +9,7 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
 
-    await queryInterface.removeColumn('usuarios', 'e-mail', {});
+    await queryInterface.removeColumn('usuarios', 'email', {});
     await queryInterface.removeColumn('usuarios', 'senha', {});
 
   },

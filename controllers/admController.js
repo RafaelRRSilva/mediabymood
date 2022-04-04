@@ -1,12 +1,12 @@
-const {filme} = require('../models');
+const {Filme} = require('../models');
 const admController = {
-    form: (req, res) => {
-        res.render('formulario');
+   form: (req, res) => {
+         res.render('formulario');
     },
 
     postForm: async (req, res) => {
         try {
-            const { nome, Plataforma, humores } = req.body;
+            const { nome, Plataforma,duracao, humores,ano,resumo } = req.body;
 
             const imagem = req.file.filename;
             console.log(req.body, req.file);
@@ -18,12 +18,13 @@ const admController = {
             //     duracao:90,
             //     imagem:"/img/"+imagem
             // })
-            const novoFilme = new Filme();
-            novoFilme.titulo = "filmes"
-
-            novofilme.ano = 2020
-            novofilme.resumo = "lalala"
-            novofilme.duracao = 90
+            const novofilme = new Filme();
+            novofilme.titulo = nome
+            novofilme.humores = humores
+            novofilme.Plataforma = Plataforma
+            novofilme.ano = ano
+            novofilme.resumo = resumo
+            novofilme.duracao = duracao
             novofilme.imagem = "/img/" + imagem
             await novofilme.save()
             return res.redirect('/formulario');

@@ -10,8 +10,8 @@
       display: grid;
       grid-template-areas:
       'A A A A'
-      'H C B J'
-      'M L L D'
+      'H C C C'
+      'M M L L'
       'E F G N';
      
       width: 100%;
@@ -73,9 +73,9 @@ color: rgb(41, 39, 39);
   background-color: rgba(107, 54, 190, 0.904);
   font-size: 25px;
   width: 200px;
-  height: 250px;
-  margin-top: 60px;
- margin-left: 180px;
+  height: 150px;
+  margin-top: 40px;
+ margin-left: 80px;
   border-radius: 15px;
   border: solid rgba(94, 93, 93, 0.589);
   box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
@@ -87,24 +87,28 @@ color: rgb(41, 39, 39);
   grid-area: C;
   background-color: rgba(107, 54, 190, 0.904);
   font-size: 25px;
-  width: 200px;
+  width: 445px;
   border-radius: 15px;
+  margin-left: 180px;
+  height: 180px;
+  margin-top: 60px;
+ 
 }
 .item4{
   color: aliceblue;
   font-family: 'B612', sans-serif;
   display: grid;
-  grid-area: B;
+  grid-area: M;
   background-color: rgba(107, 54, 190, 0.904);
   font-size: 25px;
-  width: 200px;
+  width: 250px;
   border-radius: 15px;
 }
 .item5{
   color: aliceblue;
   font-family: 'B612', sans-serif;
   display: grid;
-  grid-area: J;
+  grid-area: L;
   background-color: rgba(107, 54, 190, 0.904);
   font-size: 25px;
   border-radius: 15px;
@@ -173,38 +177,23 @@ border: solid 2px rgba(238, 234, 234, 0.685);
   }
   .explica-raiva{
     display:grid;
-    grid-area: M; 
-    width:300px;
-    height: 300px;
-margin-left: 10px;
+    grid-area: C; 
+    width:200px;
+    height: 200px;
+margin-left:370px;
 margin-top: 120px;
   }
   .raiva{
-    width:300px;
-    height: 310px;
+    width:230px;
+    height: 240px;
   }
-  .explica-nostalgia{
-    display:grid;
-    grid-area: L; 
-    width:300px;
-    height: 300px;
- margin-left: 90px;
-   margin-top: 100px;
-  }
+  
   .ra{
     font-family: 'B612', sans-serif;
   font-size: 25px;
   margin-left: 40px;
   }
-  .nostalgia{
-    width:300px;
-  height: 310px;
-  }
-  .no{
-    font-family: 'B612', sans-serif;
-    font-size: 25px; 
-    margin-top: -10px;
-  }
+ 
 
   .explica-curioso{
     display:grid;

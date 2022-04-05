@@ -25,7 +25,7 @@ const admController = {
             novofilme.ano = ano
             novofilme.resumo = resumo
             novofilme.duracao = duracao
-            novofilme.imagem = "/img/" + imagem
+            novofilme.imagem = "/img/cadastro" + imagem
             await novofilme.save()
             return res.redirect('/formulario');
 

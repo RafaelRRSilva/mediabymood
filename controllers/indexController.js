@@ -46,7 +46,7 @@ postForm: async (req, res) => {
 
   req.session.novo = novo;
 
-  res.redirect('/primeiro_acesso')
+  res.redirect('/comofunciona');
 }
 
 

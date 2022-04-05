@@ -10,7 +10,7 @@
       display: grid;
       grid-template-areas:
       'A A A A'
-      'H H H H'
+      'H C B J'
       'M L L D'
       'E F G N';
      
@@ -65,26 +65,49 @@ color: rgb(41, 39, 39);
 
 
 
-.nossa{
-
-  
+.item2{
+  color: aliceblue;
+  font-family: 'B612', sans-serif;
   display: grid;
   grid-area: H;
   background-color: rgba(107, 54, 190, 0.904);
   font-size: 25px;
-  width: 900px;
+  width: 200px;
   height: 250px;
   margin-top: 60px;
  margin-left: 180px;
-  border-radius: 60px 80px 15px 60px;
+  border-radius: 15px;
   border: solid rgba(94, 93, 93, 0.589);
   box-shadow: 1px 3px 20px 3px  rgba(53, 54, 54, 0.74);
 }
-.missao{
+.item3{
+  color: aliceblue;
   font-family: 'B612', sans-serif;
-  margin-top: 20px;
-  margin-left: 50px;
-  color: #fff;
+  display: grid;
+  grid-area: C;
+  background-color: rgba(107, 54, 190, 0.904);
+  font-size: 25px;
+  width: 200px;
+  border-radius: 15px;
+}
+.item4{
+  color: aliceblue;
+  font-family: 'B612', sans-serif;
+  display: grid;
+  grid-area: B;
+  background-color: rgba(107, 54, 190, 0.904);
+  font-size: 25px;
+  width: 200px;
+  border-radius: 15px;
+}
+.item5{
+  color: aliceblue;
+  font-family: 'B612', sans-serif;
+  display: grid;
+  grid-area: J;
+  background-color: rgba(107, 54, 190, 0.904);
+  font-size: 25px;
+  border-radius: 15px;
 }
 
 .cadastro{

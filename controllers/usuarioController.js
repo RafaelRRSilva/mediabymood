@@ -65,7 +65,7 @@ module.exports = {
 
     req.session.usuario = usuario;
 
-    res.redirect('/primeiro_acesso')
+    res.redirect('/comofunciona')
   }
 
   // primeiro_acesso: (req,res) => {

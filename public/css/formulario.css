@@ -1,32 +1,35 @@
 #nav-adm{
     display: flex;
-    background-color: rgba(114, 51, 114, 0.86);
-    width: 560px;
-    margin-left: 20px;
+	background-color: rgba(175, 91, 171, 0.86);
+    width: 180px;
+    margin-left: 60px;
+	border-radius: 10px;
+	
 }
 #nav-adm div{
     padding: 10px;
-    font-size: 2rem;
+    font-size: 30px;
 }
 #nav-adm div span{
-    font-size: 0.8rem;
+  font-size: 30px;
     display: block;
 }
 #nav-adm ul{
     list-style: none;
-    padding: 0;
+    padding: 5;
     margin: 0;
     display: flex;
 }
 
 #nav-adm ul li {
     display: block;
+	margin-left: 15px;
 }
 
 #nav-adm ul li a{
     display: flex;
-    padding: 20px;
-    font-size: 1.5rem;
+    padding: 25px;
+font-size: 35px;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -45,10 +48,11 @@
 }
 #formulario {
 	width: 480px;
-	margin: 20vh auto;
+margin-left: 400px;
 	background-color: rgba(175, 91, 171, 0.86);
 	color: #FFF;
 	padding: 50px;
+	border-radius: 10px;
 }
 
 #formulario label {
@@ -56,6 +60,7 @@
 	margin-bottom: 20px;
 	position: relative;
     padding: 5px;
+
 }
 
 #formulario label input {

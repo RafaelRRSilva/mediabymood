@@ -4,7 +4,7 @@ const crypto = require ('crypto');
  
 const configMulter = {
   storage: multer.diskStorage({
-      destination: path.join(__dirname,'..', 'public','img'),
+      destination: path.join(__dirname,'..', 'public','img','posters'),
       filename: (req, file,callback) => {
           const hash = crypto.randomBytes(8).toString('hex');
           const filename = hash + '-' + file.originalname;

@@ -6,6 +6,18 @@
 	border-radius: 10px;
 	
 }
+
+ 
+
+#Humores{
+	display: flex;
+	padding: 5px;
+	border: none;
+	margin-top: 10px;
+	font-size: 30px;
+	width: 800px;
+	
+}
 #nav-adm div{
     padding: 10px;
     font-size: 30px;
@@ -46,67 +58,40 @@ font-size: 35px;
     text-decoration: none;
     color: #E0E0E0;
 }
-#formulario {
+
+.geral{
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.108);
+}
+
+.conteudo{
+
+	display: grid;
+	grid-template-areas:
+	'A A A A'
+	'B B B B'
+	'C C C C'
+	'D D D D';
+   
 	width: 480px;
-margin-left: 400px;
+
+	margin-left: 400px;
 	background-color: rgba(175, 91, 171, 0.86);
 	color: #FFF;
 	padding: 50px;
 	border-radius: 10px;
 }
-
-#formulario label {
-	display: block;
-	margin-bottom: 20px;
-	position: relative;
-    padding: 5px;
-
+.nome{
+	display: grid;
+	grid-area: A;
+}
+.plataforma{
+	display: grid;
+	grid-area:A ;
 }
 
-#formulario label input {
-	display: block;
-	padding: 5px;
-	border: none;
-	margin-top: 10px;
-	font-size: 1rem;
-	width: 100%;
-}
 
-#formulario label {
-	width: 100%;
-	margin-top: 10px;
-	display: block;
-	cursor: pointer;
-}
-
-#formulario label input[type="file"]{
-	display: none;
-}
-
-#formulario label div{
-	width: 100%;
-	display: block;
-	font-size: 1rem;
-	background-color: rgba(143, 54, 138, 0.86);
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	position: absolute;
-	bottom: 0;
-	cursor: pointer;
-	text-align: center;
-}
-
-#formulario button{
-	display: block;
-	font-size: 1rem;
-	background-color: rgba(143, 54, 138, 0.86);
-	color: white;
-	border: none;
-	padding:  20px;
-	width: 100px;
-    margin-left: 120px;
-}
-.imagem{
-   padding: 20px;
+.duracao{
+	display: grid;
+	grid-area: C;
 }

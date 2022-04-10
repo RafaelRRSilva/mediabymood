@@ -16,7 +16,8 @@ const controller = {
   indicacao: async (req, res) => {
 
     // Capturando id da URL
-    let id_humor = req.params.id_humor
+    let id_humor = req.params.id_humor;
+    let niv_humor = req.params.niv_humor;
 
     // Objeto trazido do BD com id do humor passado pela URL
     let busca = await Humor.findAll({
@@ -29,6 +30,10 @@ const controller = {
 
     // Capturando o array de filmes
     let filmesBusca = busca[0].toJSON();
+
+    // Filtrando array de filmes segundo nível do humor
+    let filmesPorNivel = filmesBusca.filme
+    console.log(filmesBusca.filme)
 
     // Montando objeto com id e nome do humor selecionado
     let {id, nome} = filmesBusca;

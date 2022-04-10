@@ -56,17 +56,13 @@
     </form> -->
 
     <div class="indicacao_conteiner">
-      <img src="/img/posters/filme_poster_teste.jpg" alt="Anger Management poster">
+      <img src="/<%= filme_aleatorio.imagem %>" alt="Anger Management poster">
       <section class="filme_info_geral">
-          <article><strong>Título: </strong>Anger Management</article>
-          <article><strong>Ano: </strong>2003</article>
-          <article><strong>Duração: </strong>1hrs e 46min</article>
+          <article><strong>Título: </strong> <%= filme_aleatorio.titulo %> </article>
+          <article><strong>Ano: </strong><%= filme_aleatorio.ano %></article>
+          <article><strong>Duração: </strong><%= filme_aleatorio.duracao %></article>
       </section>
-      <section class="filme_resumo"><strong>Resumo: </strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci impedit aperiam animi dolorem cum itaque, reiciendis maiores eveniet porro asperiores illum. Itaque illo quos inventore beatae atque ut quisquam neque soluta corporis eum velit odit, cupiditate iste expedita non sint reprehenderit cum ad reiciendis qui debitis. Corrupti earum repudiandae optio inventore, consequatur at. Hic, porro quidem. Atque consectetur labore ipsa quasi, non omnis est quidem quibusdam eos facilis, veniam commodi. Nisi id rem dicta? Porro assumenda odit sed quia! Quidem repellendus dolor esse illo iste vel consequatur repudiandae rerum quam dolore. Eos rerum culpa et sit, asperiores repudiandae reiciendis laborum?
-      <br>
-      <br>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias amet dolorum eaque, eligendi eos libero repellat! Distinctio, saepe atque itaque aut reiciendis porro suscipit, veritatis vero quaerat eum velit iste?
-      </section>
+      <section class="filme_resumo"><strong>Resumo: </strong> <%= filme_aleatorio.resumo %> </section>
       <section class="btn_pergunta">
           <div>E aí...?</div>
       </section>

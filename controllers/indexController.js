@@ -16,39 +16,33 @@ const controller = {
   indicacao: async (req, res) => {
 
     // Capturando id da URL
-    let humor_sel = req.params.id_humor
+    let id_humor = req.params.id_humor
 
-    // Importação de Models
-    let filmes = await Filme.findAll(
-      {
-        include: 'humor'
-      }
-    )
-
-    let humores = await Humor.findAll(
-      {
-        /*
+    // Objeto trazido do BD com id do humor passado pela URL
+    let busca = await Humor.findAll({
+        include: "filme",
         where: {
-          id: humor_sel
-        },
-        */
-        include: 'filme'
+          id: id_humor
+        }
       }
     );
 
-    // Selecionando array de humores segundo o req.params
-    let filmes_do_humor = humores[humor_sel - 1]
+    // Capturando o array de filmes
+    let filmesBusca = busca[0].toJSON();
 
-    console.log(humores)
+    // Montando objeto com id e nome do humor selecionado
+    let {id, nome} = filmesBusca;
+    nome = nome[0].toUpperCase() + nome.slice(1);
+    let infoHumor = {id, nome};
+    console.log(infoHumor)
 
     // Número aleatorio dentro de humor selecionado
-    let num_alea = Math.floor(Math.random()* filmes_do_humor.filme.length);
+    let num_alea = Math.floor(Math.random()* filmesBusca.filme.length)
 
-    // Escolha do filme de forma aleatória
-    let filme_aleatorio = filmes_do_humor.filme[num_alea].toJSON();
+    let filme_aleatorio = filmesBusca.filme[num_alea]
 
-    // Envio das informações para a view
-    res.render("indicacao", {filme_aleatorio});
+    res.render("indicacao", {filme_aleatorio, infoHumor});
+
   },
 
   contato: (req, res) => {

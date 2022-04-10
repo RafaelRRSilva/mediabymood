@@ -27,6 +27,11 @@ const controller = {
 
     let humores = await Humor.findAll(
       {
+        /*
+        where: {
+          id: humor_sel
+        },
+        */
         include: 'filme'
       }
     );
@@ -34,7 +39,7 @@ const controller = {
     // Selecionando array de humores segundo o req.params
     let filmes_do_humor = humores[humor_sel - 1]
 
-    console.log(filmes_do_humor)
+    console.log(humores)
 
     // Número aleatorio dentro de humor selecionado
     let num_alea = Math.floor(Math.random()* filmes_do_humor.filme.length);

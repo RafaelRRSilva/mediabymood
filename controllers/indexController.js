@@ -17,6 +17,7 @@ const controller = {
 
     // let humor_selecionado = req.params.id_humor
 
+    // Importação de Models
     let filmes = await Filme.findAll(
       {
         include: 'humor'
@@ -29,9 +30,14 @@ const controller = {
       }
     )
 
-    let filme_aleatorio = filmes[0].toJSON();
-    console.log(humores[0].toJSON())
+    // Número aleatorio dentro de humor selecionado
+    let num_alea = Math.floor(Math.random()* humores[0].filme.length);
+    console.log(num_alea)
 
+    // Escolha do filme de forma aleatória
+    let filme_aleatorio = humores[0].filme[num_alea].toJSON();
+
+    // Envio das informações para a view
     res.render("indicacao", {filme_aleatorio});
   },
 

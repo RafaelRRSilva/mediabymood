@@ -7,7 +7,7 @@ router.get('/', indexController.home);
 router.get('/primeiro_acesso', UsuarioLogado, indexController.primeiro_acesso);
 router.get('/escolha_estado', UsuarioLogado, indexController.estadoDeHumor);
 // router.get('/indicacao', UsuarioLogado, indexController.indicacao);
-router.get('/indicacao', indexController.indicacao);
+router.get('/indicacao/:id_humor?', indexController.indicacao);
 router.get('/contato', indexController.contato);
 router.get('/comofunciona', indexController.como);
 router.get('/formulario', indexController.form);

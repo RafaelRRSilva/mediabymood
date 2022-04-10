@@ -1,4 +1,4 @@
-const {sequelize, Filme, Humor} = require('../models');
+const {Filme, Humor} = require('../models');
 
 const controller = {
   home: (req, res) => {
@@ -15,10 +15,22 @@ const controller = {
 
   indicacao: async (req, res) => {
 
-    let filmes = await Filme.findAll()
+    // let humor_selecionado = req.params.id_humor
+
+    let filmes = await Filme.findAll(
+      {
+        include: 'humor'
+      }
+    )
+
+    let humores = await Humor.findAll(
+      {
+        include: 'filme'
+      }
+    )
 
     let filme_aleatorio = filmes[0].toJSON();
-    console.log(filme_aleatorio)
+    console.log(humores[0].toJSON())
 
     res.render("indicacao", {filme_aleatorio});
   },

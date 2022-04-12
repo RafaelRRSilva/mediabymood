@@ -9,15 +9,8 @@
 
  
 
-#Humores{
-	display: flex;
-	padding: 5px;
-	border: none;
-	margin-top: 10px;
-	font-size: 30px;
-	width: 800px;
-	
-}
+
+
 #nav-adm div{
     padding: 10px;
     font-size: 30px;
@@ -70,10 +63,10 @@ font-size: 35px;
 	grid-template-areas:
 	'A A A A'
 	'B B B B'
-	'C C C C'
+	'F F U U'
 	'D D D D';
    
-	width: 480px;
+	width: 600px;
 
 	margin-left: 400px;
 	background-color: rgba(175, 91, 171, 0.86);
@@ -85,13 +78,78 @@ font-size: 35px;
 	display: grid;
 	grid-area: A;
 }
+
+.resumo{
+	display: grid;
+	grid-area: B;
+	height: 30px;
+	width: 150px;
+	margin-top: 30px;
+	margin-left: 1px;
+}
+.re{
+	display: grid;
+	grid-area: B;
+	height: 200px;
+	width: 200px;
+}
+.sub{
+	margin-top: 230px;
+	display: grid;
+	grid-area: B;
+	width: 80px;
+	height: 40px;
+	margin-left: 40px;
+}
 .plataforma{
 	display: grid;
 	grid-area:A ;
+	margin-top: -80px;
+	margin-left: 280px;
 }
-
-
+.ano{
+	display: grid;
+	grid-area: D;
+	margin-top: 30px;
+	margin-left: -230px;
+}
 .duracao{
 	display: grid;
-	grid-area: C;
+	grid-area: D;
+	margin-top: 1200px;
+	margin-left: -500px
+}
+.foto{
+	display: grid;
+	grid-area: D;
+	margin-top: 100px;
+	margin-left: -250px;
+
+}
+.salvar{
+	display: grid;
+	grid-area: D;
+	margin-top: 500px;
+	margin-left: -400px;
+	height: 100px;
+}
+
+.humo{
+	display: grid;
+	grid-area: F;
+	margin-top: 300px;
+	font-size: 25px;
+
+}
+.humo2{
+	display: grid;
+	grid-area: U;
+	margin-left: 300px;
+	margin-top: -600px;
+	font-size: 25px;
+}
+.hu{
+	font-size: 40px;
+padding: 10px;
+text-decoration: underline;
 }

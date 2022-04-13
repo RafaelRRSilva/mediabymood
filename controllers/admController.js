@@ -34,5 +34,7 @@ console.trace(error);
         }
 
     }
+    
+   
 }
 module.exports= admController;

@@ -15,6 +15,8 @@ router.get('/contato', indexController.contato);
 router.get('/comofunciona', indexController.como);
 router.get('/formulario', admController.form);
 router.post('/formulario',upload, admController.postForm);
+router.get('/lista', indexController.listarFilmes);
+
 
 
 module.exports = router;

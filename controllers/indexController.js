@@ -1,3 +1,4 @@
+const {Filme}= require ('../models')
 const controller = {
 
   home: (req,res) => {
@@ -30,7 +31,7 @@ postForm: async (req, res) => {
 
   const { filme} = req.body;
 
-  const novo = await NovoFilme.findOne({
+  const novo = await Filme.findOne({
     where:{
       filme:filme
     }
@@ -47,7 +48,13 @@ postForm: async (req, res) => {
   req.session.novo = novo;
 
   res.redirect('/comofunciona');
-}
+},
+listarFilmes: async(req, res)=>{
+  const todosOsFilmes= await Filme.findAll() 
+  return res.render('lista', {filmesCadastrados:todosOsFilmes});
+ },
+
+
 
 
 }

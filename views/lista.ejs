@@ -4,7 +4,10 @@
     <p><%= umFilme.duracao %></p>
     <p><%= umFilme.resumo %></p>
     <img src="<%= umFilme.imagem %>" alt="">  
-    
+    <form action="/apagarfilme/<%=umFilme.id%>" method="POST">
+
+        <button type="submit">apagar</button>
+    </form>
 
 
 

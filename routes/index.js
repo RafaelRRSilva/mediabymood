@@ -16,6 +16,7 @@ router.get('/comofunciona', indexController.como);
 router.get('/formulario', admController.form);
 router.post('/formulario',upload, admController.postForm);
 router.get('/lista', indexController.listarFilmes);
+router.post('/apagarfilme/:idfilme', admController.apagar);
 
 
 

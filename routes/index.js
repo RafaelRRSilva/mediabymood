@@ -16,7 +16,13 @@ router.get('/comofunciona', indexController.como);
 router.get('/formulario', admController.form);
 router.post('/formulario',upload, admController.postForm);
 router.get('/lista', indexController.listarFilmes);
-router.post('/apagarfilme/:idfilme', admController.apagar);
+router.get('/search', indexController.search);
+router.get('/lista/:idfilme',indexController.findByID);
+router.get('/lista/editar/:id', indexController.editar);
+router.put('/lista/editar/:id', indexController.update);
+
+
+//router.post('/apagarfilme/:idfilme', admController.apagar);
 
 
 

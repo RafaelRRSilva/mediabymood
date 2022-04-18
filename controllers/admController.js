@@ -34,9 +34,7 @@ console.trace(error);
         }
 
     },
-    apagar: (req, res)=>{
-        res.send (`apagando o filme pelo id ${req.params.idfilme}`)
-    }
-
+  
+   
 }
 module.exports= admController;

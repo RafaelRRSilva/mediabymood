@@ -1,14 +1,23 @@
+<form action="/lista/search" class="b_busca" method="GET">
+    <input type="text" class="barrabusca" name="barra">
+    <button type="submit" class="busca">Buscar Filme</button>
+</form>
 <% filmesCadastrados.forEach(umFilme=>{ %>
     <p><%= umFilme.titulo %></p>
     <p><%= umFilme.ano %></p>
     <p><%= umFilme.duracao %></p>
     <p><%= umFilme.resumo %></p>
     <img src="<%= umFilme.imagem %>" alt="">  
+    <div> <%=umFilme_id%>  </div>
+    <div><a href="/lista/<%= umFilme.id%>" class="listar"> ver</a></div>
     <form action="/apagarfilme/<%=umFilme.id%>" method="POST">
 
         <button type="submit">apagar</button>
     </form>
 
+    <form action="/editar/<%=umFilme.id%>" method="POST">
+        <button type="submit">editar</button>
+        </form>
 
 
     <% }) %> 

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const operacionalController= require ('../controllers/operacionalController')
 const indexController = require('../controllers/indexController');
 const admController = require('../controllers/admController');
 const UsuarioLogado = require('../middlewares/UsuarioLogado');
@@ -16,10 +17,10 @@ router.get('/comofunciona', indexController.como);
 router.get('/formulario', admController.form);
 router.post('/formulario',upload, admController.postForm);
 router.get('/lista', indexController.listarFilmes);
-router.get('/search', indexController.search);
-router.get('/lista/:idfilme',indexController.findByID);
-router.get('/lista/editar/:id', indexController.editar);
-router.put('/lista/editar/:id', indexController.update);
+
+
+router.get('/lista/editar/:id', operacionalController.edit);
+router.put('/lista/editar/:id', operacionalController.update);
 
 
 //router.post('/apagarfilme/:idfilme', admController.apagar);

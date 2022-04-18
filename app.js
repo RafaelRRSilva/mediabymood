@@ -7,7 +7,7 @@ const session = require('express-session');
 const createError = require('http-errors');
 
 // Importando o roteador
-const rotasIndex = require('./routes/index');
+const rotasGeral = require('./routes/geral');
 const rotasUsuario = require('./routes/usuario');
 
 // Criar servidor

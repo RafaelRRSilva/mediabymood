@@ -16,11 +16,10 @@ router.get('/contato', indexController.contato);
 router.get('/comofunciona', indexController.como);
 router.get('/formulario', admController.form);
 router.post('/formulario',upload, admController.postForm);
-router.get('/lista', indexController.listarFilmes);
 
 
-router.get('/lista/editar/:id', operacionalController.edit);
-router.put('/lista/editar/:id', operacionalController.update);
+
+
 
 
 //router.post('/apagarfilme/:idfilme', admController.apagar);

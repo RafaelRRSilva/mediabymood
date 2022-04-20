@@ -2,14 +2,15 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
+const method= require ('method-override')
 
 // Importando o CreateError
 const createError = require('http-errors');
 
 // Importando o roteador
-const rotasGeral = require('./routes/geral');
+const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
-
+const rotasOperacoes = require ('./routes/operacoes');
 // Criar servidor
 const app = express();
 
@@ -23,10 +24,11 @@ app.use(express.urlencoded({extended:false}));
 
 // Configurando o Secret da Session
 app.use(session({secret:"SEGREDO"}))
-
+app.use(method('_method'));
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/', rotasUsuario);
+app.use ('/', rotasOperacoes);
 
 
 app.use(function (req, res, next) {

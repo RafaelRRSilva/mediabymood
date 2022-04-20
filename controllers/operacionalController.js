@@ -3,39 +3,55 @@ const {Filme}= require ('../models');
 const Sequelize= require('sequelize');
 const Op = Sequelize.Op
 const operacionalController={
-   search:async(req, res)=>{
+   
+    search:async(req, res)=>{
     const {key} = req.query;
-    const filmesCadastrados= await Filme.Findall({
+    const filme= await Filme.findAll({
         where:{
-         tituto:{
+         titulo:{
              [Op.like]:`%${key}%`
          }
         }
     });
-    return res.render ('/lista',{filmesCadastrados})
+    return res.render ('lista',{filmesCadastrados:filme})
     },
     edit: async(req, res)=>{
         const {id} = req.params;
-        const filmes= await Filme.findByPk(id);
-        return res.render ('/editar',{filmes})
+        const filme= await Filme.findByPk(id);
+        return res.render ('editar',{filme})
     },
     update:async(req, res)=>{
 const {id} = req.params;
-const {filmes, humores}= req.body;
-const resultado = await Filme.update({
-    filmes,
-    humores
-},
-{
+const {filme}= req.body;
+console.log(req.body)
+// const filmesCadastrados = await Filme.update({
+//     titulo:filme
+    
+// },
+// {
+//     where:{
+//         id:id,
+//         // id_humores:id
+//     }
+
+
+// })
+const meuFilme= await Filme.findOne({
     where:{
-        id_filmes:id,
-        id_humores:id
+        id
     }
-
-
 })
- console.log(resultado)
-    return res.redirect("/geral")
+meuFilme.titulo= filme
+meuFilme.ano = ano
+meuFilme.Plataforma= Plataforma
+meuFilme.humores = humores
+await meuFilme.save()
+    return res.redirect("/lista")
+},
+delete:async(req,res)=>{
+const {filmes_id} = await Filme.destroy({ where: { id:  `${filmes_id}`} });
+return res.redirect("lista")
 }
+
 }
  module.exports = operacionalController;

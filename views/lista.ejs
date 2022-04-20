@@ -1,28 +1,32 @@
-<%- include('./partials/head') %>
-<body>
 <%- include('./partials/header') %>
-<form action="/search" class="busc" method="GET">
-    <input type="text" class="bsc" name="key" >
-    <button type="submit" class="bb">buscar</button>
-</form>
+<link rel="stylesheet" href="css/styleSemFundo.css">
+<link rel="stylesheet" href="css/lista.css">
+
+
+<div class="busc">
+<form action="/search" method="GET">
+    <input type="text" id="busca" name="key" >
+    <button class="bt" type="submit">busca</button>
+    </form>
+</div>
+
+
+
+
 <% filmesCadastrados.forEach(umFilme=>{ %>
-    <p><%= umFilme.titulo %></p>
-    <p><%= umFilme.ano %></p>
-    <p><%= umFilme.duracao %></p>
-    <p><%= umFilme.resumo %></p>
-    <img src="<%= umFilme.imagem %>" alt="">  
+    <p class="todos"><%= umFilme.titulo %></p>
+    <p class="todos"><%= umFilme.ano %></p>
+    <p class="todos"><%= umFilme.duracao %></p>
+    <p class="todos"><%= umFilme.resumo %></p>
+    <img  class="todos"src="<%= umFilme.imagem %>" alt="">  
   
-   <a href="/lista/<%= umFilme.titulo%>" class="listar"> ver</a>
-    <form action="/apagarfilme/<%=umFilme.id%>" method="POST">
+   
+    <form action="/apagar/<%=umFilme.id%>" method="POST">
         <button type="submit">apagar</button>
     </form>
-        <form action="/editar/:id<%=umFilme.id%>" method="POST">
+        <form action="/editar/<%=umFilme.id%>" method="PUT">
             <button type="submit">editar</button>
             </form>
-      
+            
+                <% }) %> 
 
-    
-
-
-    <% }) %> 
-</body>

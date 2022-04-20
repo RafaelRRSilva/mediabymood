@@ -1,23 +1,101 @@
-
 <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
-   <form action="/:id/editar<%= umFilme.id %>?_method=PUT" method="POST">
-<label for="titulo">Titulo</label>
-<input type="text" class="nome" id="titulo" value="<%= umFilme.titulo %>">
-<label for="ano">Ano</label>
-<input type="text" class="ano" id="ano" value="<%= umFilme.ano %>">
-<label for="duracao">Duração</label>
-<input type="text" class="duracao" id="duracao" value="<%= umFilme.duracao %>">
-<label for="resumo">Resumo</label>
-<input type="text" class="duracao" id="duracao" value="<%= umFilme.resumo %>">
-<label for="humor">Humores</label>
-<input type="text" class="humor" id="humor" value="<%= umFilme.humor %>">
-<label for="plataforma">Plataforma</label>
-<input type="text" class="plataforma" id="plataforma" value="<%= umFilme.plataforma %>">
-<label for="imagem">Imagem</label>
-<input type="image" class="imagem" id="imagem" value="<%= umFilme.imagem %> ">
-<img src="<%= umFilme.imagem %>" alt="">  
-</form>
+    <link rel="stylesheet" href="/css/formulario.css">
+    
+    <nav id="nav-adm">
+       
+        <ul>
+            <li><a href="/">Home</a></li>
+            </ul>
+    </nav>
+   <div class="geral">
+       <div class="conteudo">
+    <form id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT" enctype="multipart/form-data">
+       <div class="nome">
+        <label>
+             <p class="no">
+             Nome:</p>
+            <input type="text" name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
+        </label>
+    </div>
+    <div class="plataforma">
+        <label>
+            <p class="pla">
+            Plataforma:</p>
+            <input type="text" name="Plataforma" id="Plataforma" placeholder="Plataforma ">
+           
+            </label>
+    </div>
+    <div class="resumo">
+        <label class="re">
+            <p class="re"> Resumo:</p>
+            <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
+            
+                <input class="sub" type="submit" value="Submit">
+          
+               
+        </label>
+    </div>
+            <div class="humo">
+           <p class="hu"> Humores:</p>
+            <label class="caixa1" for="Triunfo">Triunfo</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Triunfo" value="Triunfo">
+            <label class="caixa1" for="Triste">Triste</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Triste" value="Triste">
+            <label class="caixa1" for="Tranquilo">Tranquilo</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Tranquilo" value="Tranquilo">
+            <label class="caixa1" for="Raiva">Raiva</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Raiva" value="Raiva">
+            <label class="caixa1" for="Medo">Medo</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Medo" value="Medo">
+            <label class="caixa1" for="Nostalgia">Nostalgia</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Nostalgia" value="Nostalgia">
+            <label class="caixa1" for="Entediado">Entediado</label>
+            <input class="caixa1" type="checkbox" name="Humores" id="Entediado" value="Entediado">
+            </div>
+            <div class="humo2">
+            <label class="caixa" for="Alegre">Alegre</label>
+            <input class="caixa" type="checkbox" name="Humores" id="Alegre" value="Alegre">
+            <label class="caixa" for="Apaixonado">Apaixonado</label>
+            <input class="caixa" type="checkbox" name="Humores" id="Apaixonado" value="Apaixonado">
+            <label class="caixa" for="Encantado">Encantado</label>
+            <input class="caixa" type="checkbox" name="humor" id="10" value="Encantado">
+            <label class="caixa" for="Corajoso">Corajoso</label>
+            <input class="caixa" type="checkbox" name="Humores" id="Corajoso" value="Corajoso">
+            <label class="caixa" for="Surpreso">Surpreso</label>
+            <input class="caixa" type="checkbox" name="Humores" id="Surpreso" value="Surpreso">
+            <label class="caixa" for="Curioso">Curioso</label>
+            <input class="caixa" type="checkbox" name="Humores" id="Curioso" value="Curioso">
+</div></div>
+<br>
+<div class="duracao">
 
-    <% }) %> 
+<label>
+          <p class="dur">  Duração:</p>
+            <input type="number" name="duracao" id="duracao"   placeholder="duração">
+        </label>
+           <div class="ano">
+        <label>
+        <p class="an">  Ano:</p>  
+            <input type="number" name="ano" id="ano"   placeholder="ano">
+        </label>
+    </div> 
+           <div class="foto">
+    <label>
+            <br>
+          <p class="ft">  Foto:</p>
+           
+            <div class="imagem">Clique para selecione imagem</div>
+            <input accept="image/*" type="file" name="img" id="img">
+        </label>
+    </div> 
+       <div class="salvar">
+    <button type="submit">Salvar</button>
+</div>
+    </form>
+
+    </div>
+</div>
+</body>
+</html>

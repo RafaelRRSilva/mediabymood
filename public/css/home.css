@@ -8,30 +8,32 @@ main {
 
 .msg-home {
   font-family: 'B612', sans-serif;
-background: rgba(241, 203, 219, 0.356);
-background: radial-gradient(circle, rgba(244, 232, 237, 0.753) 0%, rgba(156, 161, 167, 0.541) 100%);
-
-border-radius: 20px 80px 20px 80px;
-border: solid rgba(245, 245, 220, 0.418);
-
+  background: rgba(241, 203, 219, 0.356);
+  background: radial-gradient(circle, rgba(244, 232, 237, 0.753) 0%, rgba(156, 161, 167, 0.541) 100%);
+  border-radius: 20px 80px 20px 80px;
+  border: solid rgba(245, 245, 220, 0.418);
   width: 1095px;
-  height: 191px;
+  /* height: 191px; */
+  height: 210px;
   margin-bottom: 50px;
 }
 
-.msg-home h1{
+.msg-home h1 {
+  display: flex;
   color: white;
   text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.75);
   font-size: 62px;
-  font-style: italic;  
+  font-style: italic;
   font-weight: bold;
-  margin-left: 25px;
+  margin-top: 25px;
+  justify-content: center;
 }
 
 .button-cadastro {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   font-size: 36px;
   font-family: 'Baumans', 'cursive';
   text-align: center;
@@ -40,20 +42,23 @@ border: solid rgba(245, 245, 220, 0.418);
   height: 68px;
   border-radius: 30px;
   background-color: rgba(107, 54, 190, 0.904);
-border: solid rgba(255, 255, 255, 0.561);
+  border: solid rgba(255, 255, 255, 0.561);
   text-decoration: none;
   color: white;
   transition: all 0.25s;
 
 }
+
 .button-cadastro:hover {
   background-color: rgb(241, 89, 247);
 }
-.cadastro{
+
+.cadastro {
   margin-bottom: -70px;
-  margin-left:-230px;
-  
+  margin-left: -230px;
+
 }
+
 .button-comofunciona {
   display: flex;
   justify-content: center;
@@ -72,19 +77,20 @@ border: solid rgba(255, 255, 255, 0.561);
   color: white;
   transition: all 0.25s;
 }
+
 .button-comofunciona:hover {
   background-color: rgb(241, 89, 247);
 }
-.comofunciona{
+
+.comofunciona {
   width: 15px;
   margin-left: 200px;
   margin-bottom: 250px;
 }
 
 
-@media(max-width:390px){
+@media(max-width:390px) {
   body {
     width: 50%;
   }
 }
-

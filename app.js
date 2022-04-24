@@ -21,7 +21,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 // Configurando o Secret da Session
-app.use(session({secret:"SEGREDO"}))
+app.use(session({
+    secret:"SEGREDO"
+}))
 
 // Definição de rotas
 app.use('/', rotasIndex);

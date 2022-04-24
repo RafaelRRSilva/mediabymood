@@ -1,4 +1,5 @@
 const {Filme, Humor} = require('../models');
+const session = require('express-session')
 
 const controller = {
   home: (req, res) => {
@@ -19,9 +20,12 @@ const controller = {
     let id_humor = req.params.id_humor;
     let niv_humor = req.params.niv_humor;
 
+    // Capturando info do usuario
+    console.log(req.session.usuario)
+
     // Objeto trazido do BD com id do humor passado pela URL
     let busca = await Humor.findAll({
-        include: "filme",
+        include: ["filme", "nivel"],
         where: {
           id: id_humor
         }
@@ -32,8 +36,9 @@ const controller = {
     let filmesBusca = busca[0].toJSON();
 
     // Filtrando array de filmes segundo nível do humor
-    let filmesPorNivel = filmesBusca.filme
-    console.log(filmesBusca.filme)
+    let buscaPorNivel = filmesBusca.nivel.filter(f => f.nivel == 3)
+    let filmesDoNivel = await Filme.findByPk(buscaPorNivel[0].filmes_id)
+    console.log(filmesDoNivel.toJSON())
 
     // Montando objeto com id e nome do humor selecionado
     let {id, nome} = filmesBusca;

@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
       filme.hasMany(models.Filmes_has_Humores,
         {
           foreignKey: 'filmes_id',
-          as: 'nível'
+          as: 'nivel'
         })
     }
 

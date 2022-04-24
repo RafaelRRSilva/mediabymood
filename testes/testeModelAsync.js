@@ -5,7 +5,7 @@ let id_humor = 3
 
 let busca = async () => {
   let promise = await Humor.findAll({
-    include: "filme",
+    include: ["filme", "nivel"],
     where: {
       id: id_humor
     }

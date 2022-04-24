@@ -282,7 +282,11 @@ main {
   color: #ee6010;
 }
 
-.modal_indicacao > button {
+.modal_indicacao a {
+  text-decoration: none;
+}
+
+.modal_indicacao button {
   display: block;
   margin: 10px auto;
   justify-content: center;

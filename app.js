@@ -8,6 +8,7 @@ const createError = require('http-errors');
 // Importando o roteador
 const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
+const rotasIndicacao = require('./routes/indicacao')
 
 // Criar servidor
 const app = express();
@@ -28,6 +29,7 @@ app.use(session({
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/', rotasUsuario);
+app.use('/indicacao', rotasIndicacao)
 
 
 app.use(function (req, res, next) {

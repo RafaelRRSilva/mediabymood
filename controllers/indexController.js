@@ -1,4 +1,4 @@
-const {Filme, Humor} = require('../models');
+const {Filme, Humor, Filmes_has_Usuarios} = require('../models');
 const session = require('express-session')
 
 const controller = {
@@ -50,6 +50,8 @@ const controller = {
     let num_alea = Math.floor(Math.random()* filmesBusca.filme.length)
 
     let filme_aleatorio = filmesBusca.filme[num_alea]
+
+    // Gerar registro em usuarios filmes_has_usuarios
 
     res.render("indicacao", {filme_aleatorio, infoHumor});
 

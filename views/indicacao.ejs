@@ -87,6 +87,26 @@
       <div>Escolher outro estado de humor</div>
     </div>
 
+        <!-- Modal de "Resetar lista de filmes" -->
+        <% if(modal) {%>
+            <style>
+                .modal_fundo {
+                    display: block;
+                }
+                .modal_indicacao {
+                    display: block;
+                }
+            </style>
+        <% } %>
+
+        <div class="modal_fundo"></div>
+        <div class="modal_indicacao">
+            <h3>Oba!</h3>
+            <p>Você já viu todos os filmes que temos para indicar <br>
+            Quer resetar tua lista de visualização?</p>
+            <button>Quero!</button>
+        </div>
+
     </main>
 
     <%- include('./partials/footer') %>

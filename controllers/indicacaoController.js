@@ -52,8 +52,12 @@ const controller = {
 
     //let registro_filme_usuario = await Filmes_has_Usuarios.create({});
 
-    res.render("indicacao", {filme_aleatorio, infoHumor, modal:false});
+    res.render("indicacao", {filme_aleatorio, infoHumor, modal:true});
 
+  },
+
+  resetar: (req, res) => {
+    res.redirect('/')
   }
 };
 

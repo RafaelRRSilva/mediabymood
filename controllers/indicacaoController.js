@@ -25,7 +25,7 @@ const controller = {
     let filmesBusca = busca[0].toJSON();
 
     // Filtrando array de filmes segundo nível do humor
-    let buscaPorNivel = filmesBusca.nivel.filter(f => f.nivel == 3)
+    let buscaPorNivel = filmesBusca.nivel
     let filmesDoNivel = await Filme.findByPk(buscaPorNivel[0].filmes_id)
     //console.log(filmesDoNivel.toJSON())
 

@@ -21,7 +21,7 @@
     <img  class="todos"src="<%= umFilme.imagem %>" alt="">  
   
    
-    <form action="/apagar/<%=umFilme.id%>" method="POST">
+    <form action="/apagar/<%=umFilme.id%>?_method=DELETE" method="POST">
         <button type="submit">apagar</button>
     </form>
         <form action="/editar/<%=umFilme.id%>" method="PUT">

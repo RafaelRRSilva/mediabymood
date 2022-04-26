@@ -1,12 +1,14 @@
-const {Filme} = require('../models');
+const { Filme, Humor } = require('../models');
+
 const admController = {
-   form: (req, res) => {
-         res.render('formulario');
+    form: async (req, res) => {
+        let humores = await Humor.findAll()
+        res.render('formulario',{humores});
     },
 
     postForm: async (req, res) => {
         try {
-            const { nome, Plataforma,duracao, humores,ano,resumo } = req.body;
+            const { nome, Plataforma, duracao, humores, ano, resumo } = req.body;
 
             const imagem = req.file.filename;
             console.log(req.body, req.file);
@@ -30,11 +32,11 @@ const admController = {
             return res.redirect('/formulario');
 
         } catch (error) {
-console.trace(error);
+            console.trace(error);
         }
 
     },
-  
-   
+
+
 }
-module.exports= admController;
+module.exports = admController;

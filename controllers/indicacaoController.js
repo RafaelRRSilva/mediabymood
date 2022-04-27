@@ -52,23 +52,28 @@ const controller = {
 
     //let registro_filme_usuario = await Filmes_has_Usuarios.create({});
 
-    res.render("indicacao", {filme_aleatorio, infoHumor, modal:true});
+    res.render("indicacao", {filme_aleatorio, infoHumor, modal:false});
 
   },
 
-  resetar: (req, res) => {
+  resetar: async (req, res) => {
 
-    // if(req.session != undefined) {
-    //   let infoUsuario = req.session.usuario
+    if(req.session != undefined) {
+      let infoUsuario = req.session.usuario
+      let idHumor = req.params.id
 
-    //   Filmes_has_Usuarios.destroy({
-    //     where: {usuarios_id:infoUsuario.id}
-    //   })
+      await Filmes_has_Usuarios.destroy({
+        where: {usuarios_id:infoUsuario.id}
+      }).catch((err) => {
+        console.log(err)
+      })
 
-    //   res.send('/indicacao/'+idHumor)
-    // }
+      res.redirect('/indicacao/'+idHumor)
+    } else {
+      res.send("Precisa ter um usuário logado")
+    }
 
-    console.log("O id do humor é " + req.params.id)
+    // console.log("O id do humor é " + req.params.id)
   }
 };
 

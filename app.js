@@ -8,7 +8,7 @@ const createError = require('http-errors');
 // Importando o roteador
 const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
-const rotasIndicacao = require('./routes/indicacao')
+const rotasIndicacao = require('./routes/indicacaoRouter')
 
 // Criar servidor
 const app = express();

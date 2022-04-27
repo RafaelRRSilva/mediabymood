@@ -2,7 +2,7 @@ const {Filme, Humor, Filmes_has_Usuarios} = require('../models');
 const session = require('express-session')
 
 const controller = {
-  indicacao: async (req, res) => {
+  indicar: async (req, res) => {
 
     // Capturando id da URL
     let id_humor = req.params.id_humor;

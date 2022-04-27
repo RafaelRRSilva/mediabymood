@@ -1,10 +1,12 @@
-const { Filme, Humor } = require('../models');
-
+const { Filme} = require('../models');
+const {Humor} = require('../models');
 const admController = {
+    
     form: async (req, res) => {
         let humores = await Humor.findAll()
         res.render('formulario',{humores});
     },
+   
 
     postForm: async (req, res) => {
         try {
@@ -22,7 +24,7 @@ const admController = {
             // })
             const novofilme = new Filme();
             novofilme.titulo = nome
-            novofilme.humores = humores
+            novofilme.humor = humores
             novofilme.Plataforma = Plataforma
             novofilme.ano = ano
             novofilme.resumo = resumo
@@ -36,6 +38,7 @@ const admController = {
         }
 
     },
+    
 
 
 }

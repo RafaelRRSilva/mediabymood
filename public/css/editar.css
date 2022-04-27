@@ -1,0 +1,63 @@
+#nav-adm{
+    display: flex;
+	background-color: rgba(175, 91, 171, 0.86);
+    width: 180px;
+    margin-left: 60px;
+	border-radius: 10px;
+	
+}
+#nav-adm ul{
+    list-style: none;
+    padding: 5;
+    margin: 0;
+    display: flex;
+}
+
+#nav-adm ul li {
+    display: block;
+	margin-left: 15px;
+}
+
+#nav-adm ul li a{
+    display: flex;
+    padding: 25px;
+font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: rgb(238, 231, 231);
+}
+
+
+
+.geral {
+    display: flex;
+    background-color: rgba(210, 241, 214, 0.815);
+    width: 100%;
+    margin-top: -22px;
+  }
+  
+  .conteudo {
+    display: grid;
+    grid-template-areas:
+      'A A G G'
+      'M M N N'
+      'J J J P'
+      'H H H H';
+    width: 100%;
+    background-color: rgba(161, 159, 159, 0.37);
+  }
+  .fornome{
+      display: grid;
+      grid-area: A;
+  }
+  .plat{
+      display: grid;
+      grid-area: A;
+    
+  }
+  .resm{
+      display: grid;
+      grid-area: M;
+  }
+  

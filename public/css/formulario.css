@@ -41,16 +41,8 @@ font-size: 35px;
     color: rgb(238, 231, 231);
 }
 
-#nav-adm ul li.selected a{
-    
-    color: rgb(238, 231, 231);
-}
 
-#nav-adm ul li a:hover{
-    background-color: rgba(0,0,0,0.5);
-    text-decoration: none;
-    color: #E0E0E0;
-}
+
 
 .geral{
 	display: flex;

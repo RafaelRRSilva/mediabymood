@@ -58,19 +58,17 @@ const controller = {
 
   resetar: (req, res) => {
 
-    let idHumor = req.params.id;
+    // if(req.session != undefined) {
+    //   let infoUsuario = req.session.usuario
 
-    if(req.session != undefined) {
-      let infoUsuario = req.session.usuario
+    //   Filmes_has_Usuarios.destroy({
+    //     where: {usuarios_id:infoUsuario.id}
+    //   })
 
-      Filmes_has_Usuarios.destroy({
-        where: {usuarios_id:infoUsuario.id}
-      })
+    //   res.send('/indicacao/'+idHumor)
+    // }
 
-      res.send('/indicacao/'+idHumor)
-    }
-
-    // res.redirect('/')
+    console.log("O id do humor é " + req.params.id)
   }
 };
 

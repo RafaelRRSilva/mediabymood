@@ -40,19 +40,30 @@ const controller = {
 
     let filme_aleatorio = filmesBusca.filme[num_alea]
 
+    // Criando toggle para modal
+    let modal = false;
+
     // Gerar registro em usuarios filmes_has_usuarios
     if(infoUsuario != undefined){
+
       let filmes_id = filme_aleatorio.id;
       let usuarios_id = infoUsuario.id;
       console.log({filmes_id, usuarios_id, avaliacao: 0})
       await Filmes_has_Usuarios.create({filmes_id, usuarios_id, avaliacao: 0})
+      .catch((err)=>{
+        modal = true;
+        console.log("O erro está aqui: "+ err);
+        console.log(modal);
+      })
+
     } else {
       console.log('Não tem usuário logado')
     }
 
     //let registro_filme_usuario = await Filmes_has_Usuarios.create({});
 
-    res.render("indicacao", {filme_aleatorio, infoHumor, modal:false});
+
+    res.render("indicacao", {filme_aleatorio, infoHumor, modal});
 
   },
 

@@ -1,4 +1,5 @@
 const { Filme } = require('../models');
+const {Humor} = require('../models');
 
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op
@@ -18,7 +19,8 @@ const operacionalController = {
     edit: async (req, res) => {
         const { id } = req.params;
         const filme = await Filme.findByPk(id);
-        return res.render('editar', { filme })
+        let humores = await Humor.findAll()
+        return res.render('editar', { filme, humores })
     },
     update: async (req, res) => {
         const { id } = req.params;

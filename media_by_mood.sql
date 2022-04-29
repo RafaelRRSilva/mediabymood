@@ -36,10 +36,10 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `media_by_mood`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(120) NOT NULL,
-  `e-mail` VARCHAR(120) NOT NULL,
+  `email` VARCHAR(120) NOT NULL,
   `senha` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `e-mail_UNIQUE` (`e-mail`),
+  UNIQUE INDEX `email_UNIQUE` (`email`),
   UNIQUE INDEX `senha_UNIQUE` (`senha`))
 ENGINE = InnoDB;
 

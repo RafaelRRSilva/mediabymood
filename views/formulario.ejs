@@ -19,31 +19,23 @@
             <input type="text" name="nome" id="nome" placeholder="Digite o nome do filme ou da série">
         </label>
     </div>
-    <div class="plataforma">
-        <label>
-            <p class="pla">
-            Plataforma:</p>
-            <input type="text" name="Plataforma" id="Plataforma" placeholder="Plataforma ">
-           
-            </label>
-    </div>
+    
+
     <div class="resumo">
         <label class="re">
             <p class="re"> Resumo:</p>
             <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
-            
-                
-          
-               
+
         </label>
     </div>
             <div class="humo">
            <p class="hu"> Humores:</p>
             <% for(let h of humores){%>
                 <div>
-                    <label class="caixa1" for="Triunfo"><%= h.nome %></label>
                     <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>" value="<%= h.id %>">
-                    <input type="number" name="humor_<%= h.id %>" placeholder="nivel">
+                    <label class="caixa1" for="<%= h.nome %>"><%= h.nome %></label>
+                    
+                    
                 </div>
             <% } %> 
            

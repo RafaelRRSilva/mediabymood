@@ -52,6 +52,39 @@
                     <input type="number" name="ano" id="ano"   placeholder="ano">
                 </label>
             </div>
+        <form  id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT" enctype="multipart/form-data">
+       <div class="fornome">
+        <label>
+             <p class="no">
+             Nome:</p>
+            <input type="text" value="<%= filme.titulo %> " name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
+        </label>
+        </div>
+  
+     <div class="resum">
+        <label class="re">
+            <p class="re"> Resumo:</p>
+            <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
+
+        </label>
+     </div>
+     <% for(let h of humores){%>
+        <div>
+            <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>" 
+            value="<%= h.id %>" 
+            <% filme.humor.forEach(humorCadastrado => { %>
+             <% if (h.nome===humorCadastrado.nome){ %>
+                checked
+                <% } %>  
+            <% }) %>
+            >
+            <label class="caixa1" for="<%= h.nome %>"><%= h.nome %></label>
+
+        </div>
+    <% } %> 
+   
+<br>
+            <div class="duracao">
 
             <div class="foto">
                 <label>

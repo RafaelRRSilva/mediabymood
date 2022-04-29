@@ -1,5 +1,5 @@
 const { Filme} = require('../models');
-const {Humor} = require('../models');
+const {Humor,Filmes_has_Humores} = require('../models');
 const admController = {
     
     form: async (req, res) => {
@@ -10,7 +10,7 @@ const admController = {
 
     postForm: async (req, res) => {
         try {
-            const { nome, Plataforma, duracao, humores, ano, resumo } = req.body;
+            const { nome, duracao, Humores, ano, resumo } = req.body;
 
             const imagem = req.file.filename;
             console.log(req.body, req.file);
@@ -24,13 +24,28 @@ const admController = {
             // })
             const novofilme = new Filme();
             novofilme.titulo = nome
-            novofilme.humor = humores
-            novofilme.Plataforma = Plataforma
             novofilme.ano = ano
             novofilme.resumo = resumo
             novofilme.duracao = duracao
             novofilme.imagem = "/img/posters/" + imagem
-            await novofilme.save()
+            const filmeId = await novofilme.save()
+            
+            if (Array.isArray(Humores)){
+                Humores.forEach(async humor=>{
+                await Filmes_has_Humores.create({
+                filmes_id:filmeId.id,
+                humores_id:humor,
+                nivel:1
+                })
+                })
+            } else {
+                await Filmes_has_Humores.create({
+                    filmes_id:filmeId.id,
+                    humores_id:Humores,
+                    nivel:1
+                    })
+            }
+
             return res.redirect('/formulario');
 
         } catch (error) {

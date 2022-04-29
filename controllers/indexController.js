@@ -48,7 +48,10 @@ postForm: async (req, res) => {
   res.redirect('/comofunciona');
 },
 listarFilmes: async(req, res)=>{
-  const filme = await Filme.findAll() 
+  const filme = await Filme.findAll({
+    include:['humor']
+  }) 
+  console.log(filme[0].dataValues)
   return res.render('lista', {filmesCadastrados:filme});
  
 }

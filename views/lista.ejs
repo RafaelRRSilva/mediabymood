@@ -1,34 +1,34 @@
 <%- include('./partials/header') %>
-<link rel="stylesheet" href="css/styleSemFundo.css">
-<link rel="stylesheet" href="css/lista.css">
-
+<link rel="stylesheet" href="css/styleSemFundo.css" />
+<link rel="stylesheet" href="css/lista.css" />
 
 <div class="busc">
-<form action="/search" method="GET">
-    <input type="text" id="busca" name="key" >
+  <form action="/search" method="GET">
+    <input type="text" id="busca" name="key" />
     <button class="bt" type="submit">busca</button>
-    </form>
+  </form>
 </div>
 
+<% filmesCadastrados.forEach(umFilme =>{ %>
+<p class="todos">Titulo: <%= umFilme.titulo %></p>
+<p class="todos"><%= umFilme.ano %></p>
+<p class="todos"><%= umFilme.duracao %></p>
+<p class="todos"><%= umFilme.resumo %></p>
+<% umFilme.humor.forEach(h => { %>
+ <p class="todos"><%= h.nome %> </p>
+<% }) %>
+<img class="todos" src="<%= umFilme.imagem %>" alt="" />
 
+<form action="/apagar/<%=umFilme.id%>?_method=DELETE" method="POST">
+  <button type="submit">apagar</button>
+</form>
+<form action="/editar/<%=umFilme.id%>" method="PUT">
+  <button type="submit">editar</button>
+</form>
+<div>
+  <form action="/lista/" method="GET">
+    <label name="Humores"></label>
+  </form>
+</div>
 
-
-<% filmesCadastrados.forEach(umFilme=>{ %>
-    <p class="todos"><%= umFilme.titulo %></p>
-    <p class="todos"><%= umFilme.ano %></p>
-    <p class="todos"><%= umFilme.duracao %></p>
-    <p class="todos"><%= umFilme.resumo %></p>
-    <p class="todos"><%= umFilme.Plataforma %></p>
-    <p class="todos"><%= umFilme.humor %></p>
-    <img  class="todos"src="<%= umFilme.imagem %>" alt="">  
-  
-   
-    <form action="/apagar/<%=umFilme.id%>?_method=DELETE" method="POST">
-        <button type="submit">apagar</button>
-    </form>
-        <form action="/editar/<%=umFilme.id%>" method="PUT">
-            <button type="submit">editar</button>
-            </form>
-            
-                <% }) %> 
-
+<% }) %>

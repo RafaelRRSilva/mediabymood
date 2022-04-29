@@ -18,44 +18,32 @@
         <label>
              <p class="no">
              Nome:</p>
-            <input type="text" name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
+            <input type="text" value="<%= filme.titulo %> " name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
         </label>
         </div>
-    <div class="plat">
-        <label>
-            <p class="pla">
-            Plataforma:</p>
-            <input type="text" name="Plataforma" id="Plataforma" placeholder="Plataforma ">
-           
-            </label>
-    </div>
+  
      <div class="resum">
         <label class="re">
             <p class="re"> Resumo:</p>
             <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
-            
-          
-               
+
         </label>
      </div>
-            <div class="humos">
-            <p class="hu"> Humores:</p>
-            <br>
-            <label  for="Triunfo">Triunfo</label>
-            <input  type="checkbox" name="Humores" id="Triunfo" value="Triunfo">
-            
-            <label  for="Triste">Triste</label>
-            <input  type="checkbox" name="Humores" id="Triste" value="Triste">
-           
-            <label  for="Medo">Medo</label>
-            <input  type="checkbox" name="Humores" id="Medo" value="Medo">
+     <% for(let h of humores){%>
+        <div>
+            <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>" 
+            value="<%= h.id %>" 
+            <% filme.humor.forEach(humorCadastrado => { %>
+             <% if (h.nome===humorCadastrado.nome){ %>
+                checked
+                <% } %>  
+            <% }) %>
+            >
+            <label class="caixa1" for="<%= h.nome %>"><%= h.nome %></label>
 
-            <label  for="Alegre">Alegre</label>
-            <input  type="checkbox" name="Humores" id="Alegre" value="Alegre">
-
-            <label  for="Apaixonado">Apaixonado</label>
-            <input  type="checkbox" name="Humores" id="Apaixonado" value="Apaixonado">
-            </div>
+        </div>
+    <% } %> 
+   
 <br>
             <div class="duracao">
 

@@ -8,6 +8,7 @@ router.get('/search', operacionalController.search);
 router.get('/editar/:id', operacionalController.edit);
 router.put('/editar/:id',multer, operacionalController.update);
 router.delete('/apagar/:id', operacionalController.delete);
+
 router.get('/lista', indexController.listarFilmes);
 
 

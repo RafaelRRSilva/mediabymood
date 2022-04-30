@@ -1,4 +1,4 @@
-const {Filme, Humor, Filmes_has_Usuarios} = require('../models');
+const {Filme, Humor, Filmes_has_Usuarios, Filmes_has_Humores} = require('../models');
 const session = require('express-session')
 
 const controller = {
@@ -10,7 +10,14 @@ const controller = {
 
     // Capturando info do usuario
     let infoUsuario = req.session.usuario
-    console.log(infoUsuario)
+    //console.log(infoUsuario)
+
+    // Trazendo os filmes já visualizados pelo usuário
+    let buscaFilmeUsuario = await Filmes_has_Usuarios.findAll({
+      where: {
+        usuarios_id: infoUsuario.id
+      }
+    })
 
     // Objeto trazido do BD com id do humor passado pela URL
     let busca = await Humor.findAll({
@@ -23,6 +30,7 @@ const controller = {
 
     // Capturando o array de filmes
     let filmesBusca = busca[0].toJSON();
+    console.log(filmesBusca)
 
     // Filtrando array de filmes segundo nível do humor
     let buscaPorNivel = filmesBusca.nivel
@@ -40,6 +48,10 @@ const controller = {
 
     let filme_aleatorio = filmesBusca.filme[num_alea]
 
+    // Adicionando filme aleatório a array de filmes já indicados
+    // filmesJaIndicados.push(filme_aleatorio.id)
+    // console.log(filmesJaIndicados)
+
     // Criando toggle para modal
     let modal = false;
 
@@ -48,7 +60,7 @@ const controller = {
 
       let filmes_id = filme_aleatorio.id;
       let usuarios_id = infoUsuario.id;
-      console.log({filmes_id, usuarios_id, avaliacao: 0})
+      //console.log({filmes_id, usuarios_id, avaliacao: 0})
       await Filmes_has_Usuarios.create({filmes_id, usuarios_id, avaliacao: 0})
       .catch((err)=>{
         modal = true;

@@ -25,7 +25,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-
+  filmes_has_humores.associate = (models) => {
+    filmes_has_humores.belongsTo(models.Filme,
+      {
+        foreignKey: "filmes_id",
+        as: 'filme'
+      })
+  }
 
   return filmes_has_humores
 }

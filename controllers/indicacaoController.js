@@ -1,4 +1,5 @@
 const {Filme, Humor, Filmes_has_Usuarios, Filmes_has_Humores} = require('../models');
+const {Op} = require('sequelize')
 const session = require('express-session')
 
 const controller = {
@@ -12,25 +13,46 @@ const controller = {
     let infoUsuario = req.session.usuario
     //console.log(infoUsuario)
 
+    // Criando toggle para modal
+    let modal = false;
+
+    // Array que conterá os ids dos filmes já exibidos ao usuário
+    let idFilmesExibidos = [];
+
     // Trazendo os filmes já visualizados pelo usuário
-    let buscaFilmeUsuario = await Filmes_has_Usuarios.findAll({
+    let buscaFilmesDoUsuario = await Filmes_has_Usuarios.findAll({
       where: {
         usuarios_id: infoUsuario.id
       }
     })
 
+    // Inserindo ids capturados do DB no array
+    buscaFilmesDoUsuario.forEach(e => {
+      idFilmesExibidos.push(e.filmes_id);
+    });
+    console.log(idFilmesExibidos);
+
     // Objeto trazido do BD com id do humor passado pela URL
     let promise = await Filmes_has_Humores.findAll({
         include: "filme",
         where: {
-          humores_id: id_humor
+          humores_id: id_humor,
+          filmes_id: {
+            [Op.notIn]: idFilmesExibidos
+          }
         }
       }
     );
 
+
     // Capturando o array de filmes
     let filmesBusca = [];
 
+    // Tratando erro quando não tem mais filmes para exibir
+    if (promise.length == 0){
+      filmesBusca = [1];
+      modal = true;
+    }
     promise.forEach(e => {
       filmesBusca.push(e.filme.toJSON());
     })
@@ -59,9 +81,6 @@ const controller = {
     // Adicionando filme aleatório a array de filmes já indicados
     // filmesJaIndicados.push(filme_aleatorio.id)
     // console.log(filmesJaIndicados)
-
-    // Criando toggle para modal
-    let modal = false;
 
     // Gerar registro em usuarios filmes_has_usuarios
     if(infoUsuario != undefined){

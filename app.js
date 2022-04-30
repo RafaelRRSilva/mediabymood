@@ -2,6 +2,9 @@
 const express = require('express');
 const session = require('express-session');
 
+// Importando middleware de autenticação
+const UsuarioLogado = require('./middlewares/UsuarioLogado')
+
 // Importando o CreateError
 const createError = require('http-errors');
 
@@ -29,7 +32,7 @@ app.use(session({
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/', rotasUsuario);
-app.use('/indicacao', rotasIndicacao)
+app.use('/indicacao', UsuarioLogado, rotasIndicacao)
 
 
 app.use(function (req, res, next) {

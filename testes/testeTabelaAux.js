@@ -10,7 +10,19 @@ let busca = async() => {
     }
   })
 
-  console.log(promise[0].toJSON())
+  let filmes = [];
+
+  promise.forEach(element => {
+    filmes.push(element.filme.toJSON())
+  });
+
+  console.log(filmes)
+
+  // console.log(promise.forEach( e => {
+  //   e.filme.toJSON();
+  // }))
+
+  sequelize.close();
 }
 
 busca()

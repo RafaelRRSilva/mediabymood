@@ -20,41 +20,33 @@ const controller = {
     })
 
     // Objeto trazido do BD com id do humor passado pela URL
-    let promise = await Filmes_has_Humores.findAll({
-        include: "filme",
+    let busca = await Humor.findAll({
+        include: ["filme", "nivel"],
         where: {
-          humores_id: id_humor
+          id: id_humor
         }
       }
     );
 
     // Capturando o array de filmes
-    let filmesBusca = [];
-
-    promise.forEach(e => {
-      filmesBusca.push(e.filme.toJSON());
-    })
-    // console.log(filmesBusca)
-
-    // Número aleatorio dentro de humor selecionado
-    let num_alea = Math.floor(Math.random()* filmesBusca.length)
-    let filme_aleatorio = filmesBusca[num_alea]
-    console.log(filme_aleatorio)
+    let filmesBusca = busca[0].toJSON();
+    console.log(filmesBusca)
 
     // Filtrando array de filmes segundo nível do humor
-    // let buscaPorNivel = filmesBusca.nivel
-    // let filmesDoNivel = await Filme.findByPk(buscaPorNivel[0].filmes_id)
+    let buscaPorNivel = filmesBusca.nivel
+    let filmesDoNivel = await Filme.findByPk(buscaPorNivel[0].filmes_id)
     //console.log(filmesDoNivel.toJSON())
 
     // Montando objeto com id e nome do humor selecionado
-    let id = id_humor;
-    let objHumor = await Humor.findByPk(id_humor);
-    let nome = objHumor.nome;
+    let {id, nome} = filmesBusca;
     nome = nome[0].toUpperCase() + nome.slice(1);
     let infoHumor = {id, nome};
     //console.log(infoHumor)
 
+    // Número aleatorio dentro de humor selecionado
+    let num_alea = Math.floor(Math.random()* filmesBusca.filme.length)
 
+    let filme_aleatorio = filmesBusca.filme[num_alea]
 
     // Adicionando filme aleatório a array de filmes já indicados
     // filmesJaIndicados.push(filme_aleatorio.id)
@@ -108,4 +100,4 @@ const controller = {
   }
 };
 
-module.exports = controller;
+// module.exports = controller;

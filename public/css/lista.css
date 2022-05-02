@@ -13,4 +13,16 @@
 
 .todos{
   font-size: 20px;
+  margin-left: 20px;
+}
+.apaga{
+  margin-left: 20px;
+}
+.edita{
+  margin-left: 20px;
+}
+.ima{
+  margin-left: 20px;
+  width: 200px;
+  height: 300px;
 }

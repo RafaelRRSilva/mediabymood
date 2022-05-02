@@ -11,24 +11,27 @@
 
 <% filmesCadastrados.forEach(umFilme =>{ %>
 <p class="todos">Titulo: <%= umFilme.titulo %></p>
-<p class="todos"><%= umFilme.ano %></p>
-<p class="todos"><%= umFilme.duracao %></p>
-<p class="todos"><%= umFilme.resumo %></p>
+<p class="todos">Ano de Lançamento:<%= umFilme.ano %></p>
+<p class="todos">Duração: <%= umFilme.duracao %></p>
+<p class="todos">Resumo: <%= umFilme.resumo %></p>
 <% umFilme.humor.forEach(h => { %>
- <p class="todos"><%= h.nome %> </p>
+ <p class="todos"> Humor: <%= h.nome %> </p>
 <% }) %>
-<img class="todos" src="<%= umFilme.imagem %>" alt="" />
-
+<br>
+<img class="ima" src="<%= umFilme.imagem %>" alt="" />
+<br>
+<br>
 <form action="/apagar/<%=umFilme.id%>?_method=DELETE" method="POST">
-  <button type="submit">apagar</button>
+  
+    <button class="apaga" type="submit">apagar</button>
 </form>
+<br>
 <form action="/editar/<%=umFilme.id%>" method="PUT">
-  <button type="submit">editar</button>
+  <button class="edita" type="submit">editar</button>
 </form>
 <div>
-  <form action="/lista/" method="GET">
-    <label name="Humores"></label>
-  </form>
+    <br>
+  
 </div>
 
 <% }) %>

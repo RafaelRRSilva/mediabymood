@@ -1,101 +1,108 @@
-<%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
-    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="/css/styleSemFundo.css">
+    <link rel="stylesheet" href="/css/editar.css">
     
     <nav id="nav-adm">
        
         <ul>
             <li><a href="/">Home</a></li>
-            </ul>
+        </ul>
+
     </nav>
-   <div class="geral">
-       <div class="conteudo">
-    <form id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT" enctype="multipart/form-data">
-       <div class="nome">
+
+    <div class="geral">
+        <div class="conteudo">
+    
+            <form  id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT" enctype="multipart/form-data">
+                <div class="fornome">
+                    <label>
+                    <p class="no">
+                    Nome:</p>
+                    <input type="text" name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
+                    </label>
+                </div>
+
+                <div class="resum">
+                    <label class="re">
+                        <p class="re"> Resumo:</p>
+                        <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
+                    </label>
+                </div>
+
+                <div class="humo">
+                    <p class="hu"> Humores:</p>
+                     <% for(let h of humores){%>
+                         <div>
+                             <label class="caixa1" for="Triunfo"><%= h.nome %></label>
+                             <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>" value="<%= h.id %>">
+                             <input type="number" name="humor_<%= h.id %>" placeholder="nivel">
+                         </div>
+                     <% } %> 
+    <br>
+                <div class="duracao">
+                    <label>
+                        <p class="dur">  Duração:</p>
+                        <input type="number" name="duracao" id="duracao"   placeholder="duração">
+                    </label>
+
+            <div class="anofilme">
+                <label>
+                    <p class="an">  Ano:</p>
+                    <input type="number" name="ano" id="ano"   placeholder="ano">
+                </label>
+            </div>
+        <form  id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT" enctype="multipart/form-data">
+       <div class="fornome">
         <label>
              <p class="no">
              Nome:</p>
-            <input type="text" name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
+            <input type="text" value="<%= filme.titulo %> " name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
         </label>
-    </div>
-    <div class="plataforma">
-        <label>
-            <p class="pla">
-            Plataforma:</p>
-            <input type="text" name="Plataforma" id="Plataforma" placeholder="Plataforma ">
-           
-            </label>
-    </div>
-    <div class="resumo">
+        </div>
+  
+     <div class="resum">
         <label class="re">
             <p class="re"> Resumo:</p>
             <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
-            
-                <input class="sub" type="submit" value="Submit">
-          
-               
+
         </label>
-    </div>
-            <div class="humo">
-           <p class="hu"> Humores:</p>
-            <label class="caixa1" for="Triunfo">Triunfo</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Triunfo" value="Triunfo">
-            <label class="caixa1" for="Triste">Triste</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Triste" value="Triste">
-            <label class="caixa1" for="Tranquilo">Tranquilo</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Tranquilo" value="Tranquilo">
-            <label class="caixa1" for="Raiva">Raiva</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Raiva" value="Raiva">
-            <label class="caixa1" for="Medo">Medo</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Medo" value="Medo">
-            <label class="caixa1" for="Nostalgia">Nostalgia</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Nostalgia" value="Nostalgia">
-            <label class="caixa1" for="Entediado">Entediado</label>
-            <input class="caixa1" type="checkbox" name="Humores" id="Entediado" value="Entediado">
-            </div>
-            <div class="humo2">
-            <label class="caixa" for="Alegre">Alegre</label>
-            <input class="caixa" type="checkbox" name="Humores" id="Alegre" value="Alegre">
-            <label class="caixa" for="Apaixonado">Apaixonado</label>
-            <input class="caixa" type="checkbox" name="Humores" id="Apaixonado" value="Apaixonado">
-            <label class="caixa" for="Encantado">Encantado</label>
-            <input class="caixa" type="checkbox" name="humor" id="10" value="Encantado">
-            <label class="caixa" for="Corajoso">Corajoso</label>
-            <input class="caixa" type="checkbox" name="Humores" id="Corajoso" value="Corajoso">
-            <label class="caixa" for="Surpreso">Surpreso</label>
-            <input class="caixa" type="checkbox" name="Humores" id="Surpreso" value="Surpreso">
-            <label class="caixa" for="Curioso">Curioso</label>
-            <input class="caixa" type="checkbox" name="Humores" id="Curioso" value="Curioso">
-</div></div>
+     </div>
+     <% for(let h of humores){%>
+        <div>
+            <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>" 
+            value="<%= h.id %>" 
+            <% filme.humor.forEach(humorCadastrado => { %>
+             <% if (h.nome===humorCadastrado.nome){ %>
+                checked
+                <% } %>  
+            <% }) %>
+            >
+            <label class="caixa1" for="<%= h.nome %>"><%= h.nome %></label>
+
+        </div>
+    <% } %> 
+   
 <br>
-<div class="duracao">
+            <div class="duracao">
 
-<label>
-          <p class="dur">  Duração:</p>
-            <input type="number" name="duracao" id="duracao"   placeholder="duração">
-        </label>
-           <div class="ano">
-        <label>
-        <p class="an">  Ano:</p>  
-            <input type="number" name="ano" id="ano"   placeholder="ano">
-        </label>
-    </div> 
-           <div class="foto">
-    <label>
-            <br>
-          <p class="ft">  Foto:</p>
-           
-            <div class="imagem">Clique para selecione imagem</div>
-            <input accept="image/*" type="file" name="img" id="img">
-        </label>
-    </div> 
-       <div class="salvar">
-    <button type="submit">Salvar</button>
-</div>
-    </form>
+            <div class="foto">
+                <label>
+                        <br>
+                        <p class="ft">  Foto:</p>
+                        <div class="imagem">Clique para selecione imagem</div>
+                        <input accept="image/*" type="file" name="img" id="img">
+                    </label>
+                </div>
 
+                <div class="salvar">
+                    <button class="btn-salvar" type="submit">Salvar</button>
+                </div>
+        </form>
     </div>
 </div>
+
+
 </body>
+
 </html>

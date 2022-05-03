@@ -1,6 +1,7 @@
 // const usuarios = require('../database/usuarios.json');
 const {sequelize, Usuario} = require('../models');
 const fs = require('fs');
+const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
 module.exports = {
@@ -25,8 +26,9 @@ module.exports = {
       // console.log(novoUsuario)
 
       let {nome, email, senha} = req.body;
+      const hash= bcrypt.hashSync(senha,10)
       let novoUsuario = await Usuario.create(
-        {nome, email, senha}
+        {nome, email,senha:hash}
       )
 
       res.redirect('/login')
@@ -51,18 +53,25 @@ module.exports = {
     const usuario = await Usuario.findOne({
       where:{
         email:email,
-        senha:senha
+      
       }
     })
-    .catch(console.trace)
+  
 
   
-    if (usuario === undefined) {
+    if (!usuario ) {
 
       return res.render('login', { error: "Login/Senha inválidos" });
 
     }
+    const senhaValida= bcrypt.compareSync(senha,usuario.senha)
+    if (!senhaValida ) {
 
+      return res.render('login', { error: "Login/Senha inválidos" });
+
+    }
+    usuario.senha=undefined
+    delete usuario.senha
     req.session.usuario = usuario;
 
     res.redirect('/comofunciona')

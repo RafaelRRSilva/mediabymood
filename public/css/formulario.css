@@ -58,7 +58,7 @@ font-size: 35px;
 	'F F U U'
 	'D D D D';
    
-	width: 600px;
+	width: 500px;
 
 	margin-left: 400px;
 	background-color: rgba(175, 91, 171, 0.86);
@@ -69,6 +69,7 @@ font-size: 35px;
 .nome{
 	display: grid;
 	grid-area: A;
+	margin-left: 100px;
 }
 
 .resumo{
@@ -76,14 +77,16 @@ font-size: 35px;
 	grid-area: B;
 	height: 30px;
 	width: 150px;
-	margin-top: 30px;
-	margin-left: 1px;
+	margin-top: -180px;
+	margin-left: 10px;
 }
 .re{
 	display: grid;
 	grid-area: B;
 	height: 200px;
 	width: 200px;
+	margin-top: 20px;
+	margin-left: 100px;
 }
 .sub{
 	margin-top: 230px;

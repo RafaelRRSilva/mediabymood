@@ -10,7 +10,7 @@
   grid-template-areas:
     'A A G G'
     'M M M M'
-    'J T E P'
+    'T J J J'
     'H H H H';
   width: 100%;
   background-color: rgba(161, 159, 159, 0.37);
@@ -48,22 +48,9 @@
   margin-top: 13px;
 }
 
-.caras {
-  display: grid;
-  grid-area: M;
-  margin-top: 20px;
-  max-width: fit-content;
-  margin-left: 5px;
 
-}
 
-.humor1 {
-  display: grid;
-  max-width: 99%;
-  margin-left: 5px;
-  grid-area: M;
-  background-color: rgba(179, 174, 174, 0.589);
-}
+
 
 .filtros {
   width: 700px;
@@ -135,7 +122,8 @@ p.todos:hover {
   grid-area: J;
   width: 73px;
   height: 35px;
-  margin-left: 18px;
+  margin-left: 280px;
+  margin-top: -50px;
 }
 
 .item2 {
@@ -143,97 +131,37 @@ p.todos:hover {
   grid-area: J;
   width: 73px;
   height: 35px;
-  margin-left: 125px;
+  margin-left: 420px;
+  margin-top: -50px;
 }
 
 .item3 {
   display: grid;
   grid-area: J;
-  margin-left: 225px;
+  margin-left: 550px;
   width: 75px;
   height: 35px;
+  margin-top: -50px;
 }
 
 .item4 {
   display: grid;
   grid-area: J;
   width: 73px;
-  margin-left: 330px;
+  margin-left: 680px;
+  margin-top: -50px;
 }
 
 .item5 {
   display: grid;
-  grid-area: J;
-  margin-left: 420px;
+  grid-area:J;
+  margin-left:800px;
   width: 73px;
   height: 35px;
+  margin-top: -50px;
 }
 
-.item6 {
-  display: grid;
-  grid-area: J;
-  margin-left: 520px;
-  width: 77px;
-  height: 35px;
-}
 
-.item7 {
-  display: grid;
-  grid-area: T;
-  margin-left: 20px;
-  width: 78px;
-  height: 35px;
-}
-
-.item8 {
-  display: grid;
-  grid-area: T;
-  margin-left: 130px;
-  width: 80px;
-  height: 35px;
-}
-
-.item9 {
-  display: grid;
-  grid-area: E;
-  margin-left: 1px;
-  width: 80px;
-  height: 35px;
-}
-
-.item10 {
-  display: grid;
-  grid-area: E;
-  margin-left: 110px;
-  width: 78px;
-  height: 35px;
-
-}
-
-.item11 {
-  display: grid;
-  grid-area: P;
-  margin-left: -0px;
-  width: 75px;
-  height: 35px;
-}
-
-.item12 {
-  display: grid;
-  grid-area: P;
-  margin-left: 90px;
-  width: 75px;
-  height: 35px;
-}
-
-.item13 {
-  display: grid;
-  grid-area: P;
-  margin-left: 190px;
-  width: 75px;
-  height: 35px;
-
-}
 
 .vazio {
 

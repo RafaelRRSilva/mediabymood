@@ -41,80 +41,103 @@ body{
     display: flex;
 
     width: 100%;
-    height: 80%;
-    margin-top: -22px;
+ 
+ 
   }
 
   .conteudo {
     display: grid;
 	grid-template-areas:
-	'A A A A'
+	'A J J J'
 	'B B B B'
 	'F F U U'
 	'D D D D';
    
-	width: 600px;
-
+	width: 800px;
+    margin-top: -80px;
 	margin-left: 400px;
 	background-color: rgba(175, 91, 171, 0.86);
 	color: #FFF;
-	padding: 20px;
+height: fit-content;
 	border-radius: 10px;
   }
-#formulario{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .fornome{
-    display: flex;
-    font-size: 25px;  
+    display: grid;
+    grid-area: A;
+    margin-top: 30px;
+    margin-left: 20px;
+     
+}
+.nm{
+width: 200px;
+
 }
 
 .resum{
-    display: flex;
+    display: grid;
+    grid-area: J;
     font-size: 25px;  
-    margin-left: 30px;
+    margin-left: 420px;
+    margin-top: -50px;
     
 }
-
+.box{
+    width: 200px;
+    height: 200px;
+}
+.hu{
+	font-size: 25px;
+    margin-left: 20px;
+}
 .humo{
     display: grid;
-	grid-area: F;
-	margin-top: 20px;
+grid-area: B;
+margin-left: 20px;
+
+
 	font-size: 25px;
-    text-align:left;
+    
+}
+.caixa1{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
 }
 
 .duracao{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-area: A;
     font-size: 25px;
+    margin-top: -200px;
+    margin-left: 20px;
 }
 
 .foto{
-    display: flex;
+    display: grid;
+    grid-area: D;
     font-size: 25px;
-    
+    margin-left: 20px;
+    padding: 20px;
 }
 
+
 .salvar{
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    justify-content: center;
-    width: 200px;
-    flex-wrap: wrap;
+  
+    display: grid;
+    grid-area: D;
     
 }
 
 .btn-salvar{
-    display: flex;
-    justify-content: center;
+   
     background-color: black;
     color: #FFF;
     border-radius: 10px;
-    margin-left: 100px;
-    padding-top: 10px;
+    margin-left: 600px;
+    margin-top: -80px;
+  width: 100px;
+  height: 50px;
     
 }

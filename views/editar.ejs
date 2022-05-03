@@ -17,102 +17,68 @@
                 <form id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT"
                     enctype="multipart/form-data">
                     <div class="fornome">
+                        <p class="no">Nome:</p>
+
+                        <input class="nm" type="text" value="<%= filme.titulo %> " name="filme" id="nome">
+
+                        </label>
+                        </div>
+                        <br>
+                        <br>
+    
+
+                      <div class="resum">
+                        <label >
+                        <p class="re"> Resumo:</p>
+                        <input class="box" type="text" value="<%= filme.resumo %>" name="resumo" id="resumo">
+                        </label>
+
+
+                     </div>
+                    <div class="duracao">
                         <label>
-                            <p class="no">
-                                Nome:</p>
-                            <input type="text" name="filme" id="nome" placeholder="Digite o nome do filme ou da série">
+                        <p class="dur"> Duração:</p>
+                        <input type="number" value="<%= filme.duracao%>" name="duracao" id="duracao" >
                         </label>
                     </div>
-
-                    <div class="resum">
-                        <label class="re">
-                            <p class="re"> Resumo:</p>
-                            <input class="re" type="text" name="resumo" id="resumo" placeholder="Resumo">
-                        </label>
-                    </div>
-
-                    <div>
-                        <%= JSON.stringify(filme) %>
-                    </div>
-
-                    <div class="humo">
-                        <p class="hu"> Humores:</p>
-                        <% for(let h of humores){%>
-                            <div>
-                                <label class="caixa1" for="Triunfo">
-                                    <%= h.nome %>
-                                </label>
-                                <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>"
-                                    value="<%= h.id %>">
-                                <input type="number" name="humor_<%= h.id %>" placeholder="nivel">
-                            </div>
-                            <% } %>
-
-                                <!-- TODO: Resolver inconsistência na estrutura do HTML -->
-                                <br>
-                                <div class="duracao">
-                                    <label>
-                                        <p class="dur"> Duração:</p>
-                                        <input type="number" name="duracao" id="duracao" placeholder="duração">
-                                    </label>
-
-                                    <div class="anofilme">
-                                        <label>
-                                            <p class="an"> Ano:</p>
-                                            <input type="number" name="ano" id="ano" placeholder="ano">
-                                        </label>
-                                    </div>
-                                    <form id="formulario" method="POST" action="/editar/<%= filme.id %>?_method=PUT"
-                                        enctype="multipart/form-data">
-                                        <div class="fornome">
-                                            <label>
-                                                <p class="no">
-                                                    Nome:</p>
-                                                <input type="text" value="<%= filme.titulo %> " name="filme" id="nome"
-                                                    placeholder="Digite o nome do filme ou da série">
-                                            </label>
-                                        </div>
-
-                                        <div class="resum">
-                                            <label class="re">
-                                                <p class="re"> Resumo:</p>
-                                                <input class="re" type="text" name="resumo" id="resumo"
-                                                    placeholder="Resumo">
-
-                                            </label>
-                                        </div>
-                                        <% for(let h of humores){%>
-                                            <div>
-                                                <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>"
+                    <br>
+                    <p class="hu">Humores:</p> 
+                    <br>
+                     <% for(let h of humores){%>
+                        <div class="humo">
+                            <label for="<%= h.nome %>">
+                                <%= h.nome %>
+                            </label>
+                            
+                         <input class="caixa1" type="checkbox"  name="Humores" id="<%= h.nome %>"
                                                     value="<%= h.id %>" <% filme.humor.forEach(humorCadastrado=> { %>
-                                                <% if (h.nome===humorCadastrado.nome){ %>
+                         <% if (h.nome===humorCadastrado.nome){ %>
                                                     checked
                                                     <% } %>
                                                         <% }) %>
                                                             >
-                                                            <label class="caixa1" for="<%= h.nome %>">
-                                                                <%= h.nome %>
-                                                            </label>
+                        
 
+                       </div>
+                        <% } %>
+
+
+
+
+                                    <div class="foto">
+                                        <label class="fto">
+                                        <br>
+                                        <p class="ft"> Imagem:</p>
+                                     
+                                        <input accept="image/*" type="file" name="img" id="img">
+                                   
+                                    </label>
+                                        </div>
+
+                                            <div class="salvar">
+                                            <button class="btn-salvar" type="submit">Salvar</button>
                                             </div>
-                                            <% } %>
-
-                                                <br>
-                                                <div class="duracao">
-
-                                                    <div class="foto">
-                                                        <label>
-                                                            <br>
-                                                            <p class="ft"> Foto:</p>
-                                                            <div class="imagem">Clique para selecione imagem</div>
-                                                            <input accept="image/*" type="file" name="img" id="img">
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="salvar">
-                                                        <button class="btn-salvar" type="submit">Salvar</button>
-                                                    </div>
-                                    </form>
+                </form>
                                 </div>
                     </div>
 

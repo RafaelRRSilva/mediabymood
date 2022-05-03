@@ -1,37 +1,31 @@
 module.exports = (sequelize, DataTypes) => {
-  let filmes_has_humores = sequelize.define(
-    'Filmes_has_Humores',
+  let filmes_has_usuarios = sequelize.define(
+    'Filmes_has_Usuarios',
     {
       filmes_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
       },
-      humores_id: {
+      usuarios_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
       },
-      nivel: {
+      avaliacao: {
         type: DataTypes.INTEGER,
         allowNull: false
       }
     },
 
     {
-      tableName: 'filmes_has_humores',
+      tableName: 'filmes_has_usuarios',
       timestamps: false,
       freezeTableName: true
     }
   );
 
-  filmes_has_humores.associate = (models) => {
-    filmes_has_humores.belongsTo(models.Filme,
-      {
-        foreignKey: "filmes_id",
-        as: 'filme'
-      })
-  }
 
-  return filmes_has_humores
+
+  return filmes_has_usuarios
 }

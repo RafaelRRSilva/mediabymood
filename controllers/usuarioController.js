@@ -5,22 +5,17 @@ const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
 module.exports = {
-
   cadastro: (req, res) => {
-
-    res.render('cadastro');
-
+    res.render("cadastro");
   },
 
   store: async (req, res) => {
-
     let errors = validationResult(req);
 
-    console.log('Controller funcionando')
+    console.log("Controller funcionando");
 
     if (errors.isEmpty()) {
-
-      console.log('Sem erros')
+      console.log("Sem erros");
 
       // let novoUsuario = req.body;
       // console.log(novoUsuario)
@@ -32,22 +27,16 @@ module.exports = {
       )
 
       res.redirect('/login')
-
     } else {
-
-      res.render('cadastro', {errors:errors.mapped(), old:req.body})
-
+      res.render("cadastro", { errors: errors.mapped(), old: req.body });
     }
   },
 
   showlogin: (req, res) => {
-
-    res.render('login', { error: null });
-
+    res.render("login", { error: null });
   },
 
   login: async (req, res) => {
-
     const { email, senha } = req.body;
 
     const usuario = await Usuario.findOne({
@@ -55,7 +44,7 @@ module.exports = {
         email:email,
       
       }
-    })
+    }).catch(console.trace);
   
 
   
@@ -88,5 +77,4 @@ module.exports = {
   // indicacao: (req, res) => {
   //   res.render('indicacao');
   // }
-
-}
+};

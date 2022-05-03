@@ -46,7 +46,12 @@ module.exports = (sequelize, DataTypes) => {
           otherKey: 'humores_id',
           timestamps: false
         }
-      )
+      );
+      filme.hasMany(models.Filmes_has_Humores,
+        {
+          foreignKey: 'filmes_id',
+          as: 'nivel'
+        })
     }
 
     return filme

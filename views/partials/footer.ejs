@@ -5,16 +5,25 @@
       </div>
       <div class="nav-footer">
           <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="contato">Contato</a></li>
-              <li><a href="">Sobre nós</a></li>
+              <li><a href="/" class=<%= caminho==="/"?"active":"" %>  >Home</a></li>
+              
+              <li><a href="/comofunciona" class=<%= caminho==="/comofunciona"?"active":"" %> >Como Funciona ?</a></li>
           </ul>
       </div>
+
       <div class="rede-social">
-          <a href=""><img src="/img/facebook2.png" alt="Facebook"></a>
-          <a href=""><img src="/img/instagram2.png" alt="Instagram"></a>
-          <a href=""><img src="/img/twitter2.png" alt="Twitter"></a>
-          <a href=""><img src="/img/whatsaap2.png" alt="Whatsapp"></a>
+
+          <div class="contato">
+              <ul>
+                    <li> <a href="/contato" class=<%= caminho === "/contato"?"active contato":"contato" %> >Contato : </a> </li>
+                </ul>
+            </div>
+
+          <a href="http://www.facebook.com"><img src="/img/facebook2.png" alt="Facebook"></a>
+          <a href="http://www.instagram.com"><img src="/img/instagram2.png" alt="Instagram"></a>
+          <a href="http://www.twitter.com"><img src="/img/twitter2.png" alt="Twitter"></a>
+          <a href="https://web.whatsapp.com"><img src="/img/whatsaap2.png" alt="Whatsapp"></a>
       </div>
   </div>
 </footer>
+<link  rel="stylesheet" href="/css/footer.css">

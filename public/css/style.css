@@ -67,64 +67,6 @@ div .button {
     background-color: rgba(107, 54, 190, 0.904);
 }
 
-.footer {
-    /* position: fixed; */
-    margin-top: auto;
-    width: 100%;
-    background-color: rgba(215, 211, 240, 0.794);
-    box-shadow:  30px 10px 8px 20px rgba(53, 54, 54, 0.74);
-    height: 120px;
-    bottom: 0;
-}
-
-.nav-footer {
-    font-family: 'Athiti', sans-serif;
-    padding-right: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.nav-footer ul li {
-    display: inline-block;
-    text-decoration: none;
-    letter-spacing: 1px;
-    padding: 0 30px;
-    font-size: 30px;
-}
-
-.nav-footer a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    position: relative;
-    bottom: 0;
-    text-shadow: 0 0 0 none;
-    transition: all 0.25s;
-}
-
-.nav-footer a:hover {
-    bottom: 8px;
-    text-shadow: 0 0 8px rgb(7, 0, 0);
-}
-
-.rede-social {
-    padding: 30px;
-    margin-left: auto;
-}
-
-.rede-social a{
-    padding: 20px;
-}
-
-.rede-social a > img {
-    position: relative;
-    bottom: 0;
-    transition: all 0.25s;
-}
-
-.rede-social a > img:hover {
-    bottom: 8px;
-}
-
 
 @media (max-width: 1150px) {
 

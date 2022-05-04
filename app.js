@@ -34,6 +34,7 @@ app.use(session({
 app.use(method('_method'));
 app.use(function(req,res,next){
     res.locals.usuario=req.session.usuario
+    res.locals.caminho=req.path
     next()
 })
 // Definição de rotas

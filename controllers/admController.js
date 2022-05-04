@@ -29,7 +29,7 @@ const admController = {
             novofilme.duracao = duracao
             novofilme.imagem = "/img/posters/" + imagem
             const filmeId = await novofilme.save()
-            
+
             if (Array.isArray(Humores)){
                 Humores.forEach(async humor=>{
                 await Filmes_has_Humores.create({

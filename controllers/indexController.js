@@ -44,7 +44,7 @@ const controller = {
   // },
   postForm: async (req, res) => {
 
-    const { filme} = req.body;
+    const { filme } = req.body;
   
     const novo = await Filme.findOne({
       where:{
@@ -56,16 +56,25 @@ const controller = {
     
   
     req.session.novo = novo;
-  
+
     res.redirect('/comofunciona');
   },
+
   listarFilmes: async(req, res)=>{
+    //let page = req.query.page || 1
+    let { page = 1 } =  req.query;
     const filme = await Filme.findAll({
+      limit: 2,
+      offset: (page-1)  * 2,
       include:['humor']
-    }) 
-    console.log(filme[0].dataValues)
-    return res.render('lista', {filmesCadastrados:filme});
-   
+    })
+    const contagem = await Filme.count()
+    const qntPaginas = Math.ceil(contagem / 2)
+    return res.render('lista', {
+      filmesCadastrados:filme,
+      paginas:qntPaginas
+    });
+
   }
 };
 

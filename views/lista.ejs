@@ -35,3 +35,11 @@
 </div>
 
 <% }) %>
+
+<div class="paginacao">
+  <ul>
+    <% for (let index = 1; index <= paginas; index++){ %>
+      <li class="item-pagina"><a class="item-pagina" href="/lista?page=<%= index %> "><%= index %> </a></li>
+    <% } %>
+  </ul>
+</div>

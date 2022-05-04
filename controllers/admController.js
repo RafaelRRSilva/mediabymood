@@ -45,7 +45,7 @@ const admController = {
                     nivel:1
                     })
             }
-
+            req.app.locals.mensagemCadastroFilme= 'filme cadastrado com sucesso'
             return res.redirect('/formulario');
 
         } catch (error) {

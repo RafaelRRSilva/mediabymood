@@ -64,7 +64,11 @@ module.exports = {
     req.session.usuario = usuario;
 
     res.redirect('/comofunciona')
-  }
+  },
+  logout: async (req,res) => {
+    await req.session.destroy();
+    res.redirect('/');
+}
 
   // primeiro_acesso: (req,res) => {
   //   res.render('primeiro_acesso');
@@ -78,3 +82,4 @@ module.exports = {
   //   res.render('indicacao');
   // }
 };
+

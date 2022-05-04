@@ -32,7 +32,10 @@ app.use(session({
     secret:"SEGREDO"
 }))
 app.use(method('_method'));
-
+app.use(function(req,res,next){
+    res.locals.usuario=req.session.usuario
+    next()
+})
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/', rotasUsuario);

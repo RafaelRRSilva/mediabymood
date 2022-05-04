@@ -9,9 +9,15 @@
             <li><a href="/">Home</a></li>
         </ul>
     </nav>
-   <div class="geral">
-        <div class="conteudo">
-    <form id="formulario" method="POST" action="/formulario" enctype="multipart/form-data">
+    <div class="geral">
+       <div class="conteudo">
+           <div class="msg"> 
+              <% if (locals.mensagemCadastroFilme) { %>
+            <p><%= mensagemCadastroFilme %> </p>   
+              <% } %>
+           </div>
+    
+            <form id="formulario" method="POST" action="/formulario" enctype="multipart/form-data">
        <div class="nome">
         <label>
              <p class="no">
@@ -60,7 +66,7 @@
             <div class="imagem">Clique para selecione imagem</div>
             <input accept="image/*" type="file" name="img" id="img">
         </label>
-    </div> 
+            </div> 
        <div class="salvar">
     <button type="submit">Salvar</button>
 </div>

@@ -3,8 +3,14 @@
       <div class="logo">
           <img src="/img/media1.png" alt="MediabyMood">
       </div>
-      <div class="button">
-          <a href="/login">Entrar</a>
-      </div>
+      <% if (!usuario) { %>
+        <div class="button">
+            <a href="/login">Entrar</a>
+        </div>
+      <% } else { %>
+        <div class="button">
+            <a href="/logout">Sair</a>
+        </div>
+      <% } %> 
   </div>
 </header>

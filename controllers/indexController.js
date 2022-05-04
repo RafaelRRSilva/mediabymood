@@ -52,12 +52,7 @@ const controller = {
       }
     });
       return res.render('formulario');
-  
-    
-  
-    req.session.novo = novo;
 
-    res.redirect('/comofunciona');
   },
 
   listarFilmes: async(req, res)=>{

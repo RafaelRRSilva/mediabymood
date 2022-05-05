@@ -4,8 +4,8 @@
         <%- include('./partials/header') %>
 
             <main>
-<div class="geral">
-<div class="conteudo">
+                <div class="geral">
+                    <div class="conteudo">
 
                         <div class="msg-inicial">
                             <p class="men">
@@ -17,7 +17,7 @@
                         <!-- <div class="filtros">
                         <section>
                             <form class="filtros-humor">
-                               
+
                                 </select>
                                 <select name="nome" id="humores_id">
                                     <option selected disabled>Humor</option>
@@ -27,50 +27,58 @@
                                     <option value="nome" id="4">Triste</option>
                                     <option value="nome" id="5">Triunfo</option>
                                 </select>
-                                
-                                
-                              
+
                                 <button id="button">Gerar escolha!</button>
                             </form>
                         </section>
 
 
                         </div>  -->
-                       
 
-    <div class="item1">
-    <img src="/img/humores/feli.png" alt="">
-    <p class="todos">Alegre</p>
-    </div>
+                        <section class="humores_conteiner">
+                            <% for (let h of arrayHumores) { %>
+                            <a href="/indicacao/<%=h.id%>">
+                                <div>
+                                    <img src="/img/humores/<%=h.nome%>.png" alt="<%=h.nome%>">
+                                    <p class="todos"><%= h.nome[0].toUpperCase() + h.nome.slice(1) %></p>
+                                </div>
+                            </a>
+                            <% } %>
+                        </section>
 
- <div class="item2">
- <img src="/img/humores/apai.png" alt="">
- <p class="todos">Apaixonado</p>
- </div>
-        
-        <div class="item3">
-        
-        <img src="/img/humores/med.png" alt="">
-        <p class="todos">Medo</p>
-        </div>
-                        
-        
-            <div class="item4">
-            <img src="/img/humores/tris.png" alt="">
-            <p class="todos">Triste</p>
-            </div>
-                        
-            
-                <div class="item5">
-                <img src="/img/humores/trium.png" alt="">
-                <p class="todos">Triunfo</p>
-                </div>
-                        
+
+                        <!--
+                        <div class="item1">
+                            <img src="/img/humores/feli.png" alt="">
+                            <p class="todos">Alegre</p>
+                        </div>
+
+                        <div class="item2">
+                            <img src="/img/humores/apai.png" alt="">
+                            <p class="todos">Apaixonado</p>
+                        </div>
+
+                        <div class="item3">
+
+                            <img src="/img/humores/med.png" alt="">
+                            <p class="todos">Medo</p>
+                        </div>
+
+                        <div class="item4">
+                            <img src="/img/humores/tris.png" alt="">
+                            <p class="todos">Triste</p>
+                        </div>
+
+                        <div class="item5">
+                            <img src="/img/humores/trium.png" alt="">
+                            <p class="todos">Triunfo</p>
+                        </div>
+
                         <div class="vazio"></div>
+                        -->
 
-                  
-</div>
-</div>
+                    </div>
+                </div>
             </main>
 
             <%- include('./partials/footer') %>

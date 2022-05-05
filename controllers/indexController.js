@@ -1,4 +1,4 @@
-const {Filme}= require ('../models')
+const {Filme, Humor}= require ('../models')
 const session = require('express-session')
 
 const Sequelize= require('sequelize')
@@ -13,8 +13,21 @@ const controller = {
     res.render("primeiro_acesso");
   },
 
-  estadoDeHumor: (req, res) => {
-    res.render("escolha_estado");
+  estadoDeHumor: async (req, res) => {
+
+    // Capturando humores do BD
+    let promise = await Humor.findAll();
+
+    // Adicionando humores num array com objetos de humores {id, nome}
+    let arrayHumores = [];
+    promise.forEach(e => {
+      arrayHumores.push(e.toJSON());
+    });
+
+    console.log(arrayHumores);
+
+
+    res.render("escolha_estado", {arrayHumores});
   },
 
   contato: (req, res) => {

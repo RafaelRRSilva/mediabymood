@@ -43,6 +43,11 @@ app.use('/', rotasUsuario);
 app.use('/indicacao', UsuarioLogado, rotasIndicacao)
 app.use ('/', rotasOperacoes);
 
+// Definindo erro 404
+app.use((req, res, next) => {
+    res.status(404).render('erro404')
+})
+
 
 app.use(function (req, res, next) {
     next(createError(404));

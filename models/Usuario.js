@@ -20,6 +20,11 @@ module.exports = (sequelize, DataTypes) => {
       senha: {
         type: DataTypes.STRING(240),
         allowNull: false
+      },
+      eh_admin: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+        defaultValue: false
       }
     },
     {

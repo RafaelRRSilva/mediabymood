@@ -26,3 +26,12 @@
   width: 200px;
   height: 300px;
 }
+.paginacao > ul {
+  display: flex;
+ flex-direction: row;
+list-style:none;
+padding: 20px;
+font-size: 30px;
+text-decoration: none;
+}
+

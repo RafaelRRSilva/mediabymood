@@ -10,8 +10,8 @@ const controller = {
     let niv_humor = req.params.niv_humor;
 
     // Capturando filme padrão caso não tiver mais para mostrar
-    let promisePadrão = await Filme.findByPk(1)
-    let filmePadrão = promisePadrão.toJSON();
+    let promisePadrao = await Filme.findByPk(1)
+    let filmePadrao = promisePadrao.toJSON();
 
     // Capturando info do usuario
     let infoUsuario = req.session.usuario
@@ -106,7 +106,7 @@ const controller = {
     //let registro_filme_usuario = await Filmes_has_Usuarios.create({});
 
 
-    res.render("indicacao", {filme_aleatorio, infoHumor, modal, filmePadrão});
+    res.render("indicacao", {filme_aleatorio, infoHumor, modal, filmePadrao});
 
   },
 

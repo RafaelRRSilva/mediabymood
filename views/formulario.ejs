@@ -25,11 +25,12 @@
             <input type="text" name="nome" id="nome" placeholder="Digite o nome do filme ou da série">
         </label>
     </div>
-    
-    <p class="re"> Resumo:</p>
+
+    <p class="ret"> Resumo:</p>
     <div class="resumo">
-        <label class="res">
-           
+
+        <label >
+
             <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
 
         </label>
@@ -43,36 +44,40 @@
 
                 </div>
             <% } %> 
-           
-</div></div>
-<br>
-<div class="duracao">
+    </div>      
 
-<label>
-          <p class="dur">  Duração:</p>
-            <input type="number" name="duracao" id="duracao"   placeholder="duração">
-        </label>
+<br>
+    <div class="duracao">
+
+      <label>
+      <p class="dur">  Duração:</p>
+      <br>
+      <input type="number" name="duracao" id="duracao"   placeholder="duração">
+      </label>
+    </div>
            <div class="ano">
-        <label>
-        <p class="an">  Ano:</p>  
+            <label>
+            <p class="an">  Ano:</p> 
+            <br> 
             <input type="number" name="ano" id="ano"   placeholder="ano">
-        </label>
-    </div> 
-           <div class="foto">
-    <label>
-            <br>
-          <p class="ft">  Foto:</p>
+            </label>
+          </div> 
            
-            <div class="imagem">Clique para selecione imagem</div>
-            <input accept="image/*" type="file" name="img" id="img">
-        </label>
-            </div> 
+  
+            <br>
+          
+         <div class="foto">
+            <label>
+            <div class="ims"><p> Clique e selecione imagem: </p></div>
+               <br>
+            <input class="im" accept="image/*" type="file" name="img" id="img">
+             </label>
+         </div> 
        <div class="salvar">
-    <button type="submit">Salvar</button>
+    <button class="bt" type="submit">Salvar</button>
 </div>
     </form>
 
-    </div>
 </div>
 </body>
 </html>

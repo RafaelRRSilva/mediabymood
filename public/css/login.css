@@ -25,6 +25,7 @@ form {
   /* min-width: 400px; */
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   border: solid 2px rgba(128, 128, 128, 0.589);
 }
 

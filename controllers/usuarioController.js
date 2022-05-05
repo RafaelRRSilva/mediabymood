@@ -1,5 +1,5 @@
 // const usuarios = require('../database/usuarios.json');
-const {sequelize, Usuario} = require('../models');
+const { sequelize, Usuario } = require('../models');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
@@ -20,14 +20,17 @@ module.exports = {
       // let novoUsuario = req.body;
       // console.log(novoUsuario)
 
-      let {nome, email, senha} = req.body;
-      const hash= bcrypt.hashSync(senha,10)
+      let { nome, email, senha } = req.body;
+      const hash = bcrypt.hashSync(senha, 10)
       let novoUsuario = await Usuario.create(
-        {nome, email,senha:hash}
+        { nome, email, senha: hash }
       )
 
       // Criando session do usuario recém cadastrado para conseguir redirecionar sem fazer login
-      req.session.usuario = {nome, email}
+      novoUsuario.senha = undefined
+      delete novoUsuario.senha
+
+      req.session.usuario = novoUsuario
 
       res.redirect('/escolha_estado')
     } else {
@@ -43,26 +46,26 @@ module.exports = {
     const { email, senha } = req.body;
 
     const usuario = await Usuario.findOne({
-      where:{
-        email:email,
-      
+      where: {
+        email: email,
+
       }
     }).catch(console.trace);
-  
 
-  
-    if (!usuario ) {
 
-      return res.render('login', { error: "Login/Senha inválidos" });
 
-    }
-    const senhaValida= bcrypt.compareSync(senha,usuario.senha)
-    if (!senhaValida ) {
+    if (!usuario) {
 
       return res.render('login', { error: "Login/Senha inválidos" });
 
     }
-    usuario.senha=undefined
+    const senhaValida = bcrypt.compareSync(senha, usuario.senha)
+    if (!senhaValida) {
+
+      return res.render('login', { error: "Login/Senha inválidos" });
+
+    }
+    usuario.senha = undefined
     delete usuario.senha
     req.session.usuario = usuario;
 
@@ -71,10 +74,10 @@ module.exports = {
 
     res.redirect('/comofunciona')
   },
-  logout: async (req,res) => {
+  logout: async (req, res) => {
     await req.session.destroy();
     res.redirect('/');
-}
+  }
 
   // primeiro_acesso: (req,res) => {
   //   res.render('primeiro_acesso');

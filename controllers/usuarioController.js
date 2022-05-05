@@ -26,7 +26,10 @@ module.exports = {
         {nome, email,senha:hash}
       )
 
-      res.redirect('/login')
+      // Criando session do usuario recém cadastrado para conseguir redirecionar sem fazer login
+      req.session.usuario = {nome, email}
+
+      res.redirect('/escolha_estado')
     } else {
       res.render("cadastro", { errors: errors.mapped(), old: req.body });
     }
@@ -62,6 +65,9 @@ module.exports = {
     usuario.senha=undefined
     delete usuario.senha
     req.session.usuario = usuario;
+
+    // Verificando infos do usuário na session
+    // console.log(req.session.usuario.toJSON());
 
     res.redirect('/comofunciona')
   },

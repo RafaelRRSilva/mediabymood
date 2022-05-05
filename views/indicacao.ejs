@@ -59,33 +59,33 @@
       <img
 
       <% if (modal) { %>
-        src="/<%= filmePadrão.imagem %>"
+        src="/<%= filmePadrao.imagem %>"
       <% } %>
 
       src="/<%= filme_aleatorio.imagem %>" alt="poster do filme">
       <section class="filme_info_geral">
         <article><strong>Título: </strong>
             <% if (modal) { %>
-                <%= filmePadrão.titulo %>
+                <%= filmePadrao.titulo %>
             <% } %>
             <%= filme_aleatorio.titulo %>
         </article>
         <article><strong>Ano: </strong>
             <% if (modal) { %>
-                <%= filmePadrão.ano %>
+                <%= filmePadrao.ano %>
             <% } %>
             <%= filme_aleatorio.ano %>
         </article>
         <article><strong>Duração: </strong>
             <% if (modal) { %>
-                <%= filmePadrão.duracao %> min
+                <%= filmePadrao.duracao %> min
             <% } %>
             <%= filme_aleatorio.duracao %> min
         </article>
       </section>
       <section class="filme_resumo"><strong>Resumo: </strong>
         <% if (modal) { %>
-            <%= filmePadrão.resumo %>
+            <%= filmePadrao.resumo %>
         <% } %>
         <%= filme_aleatorio.resumo %>
       </section>

@@ -56,13 +56,39 @@
     </form> -->
 
     <div class="indicacao_conteiner">
-      <img src="/<%= filme_aleatorio.imagem %>" alt="poster do filme">
+      <img
+
+      <% if (modal) { %>
+        src="/<%= filmePadrão.imagem %>"
+      <% } %>
+
+      src="/<%= filme_aleatorio.imagem %>" alt="poster do filme">
       <section class="filme_info_geral">
-          <article><strong>Título: </strong> <%= filme_aleatorio.titulo %> </article>
-          <article><strong>Ano: </strong><%= filme_aleatorio.ano %></article>
-          <article><strong>Duração: </strong><%= filme_aleatorio.duracao %> min</article>
+        <article><strong>Título: </strong>
+            <% if (modal) { %>
+                <%= filmePadrão.titulo %>
+            <% } %>
+            <%= filme_aleatorio.titulo %>
+        </article>
+        <article><strong>Ano: </strong>
+            <% if (modal) { %>
+                <%= filmePadrão.ano %>
+            <% } %>
+            <%= filme_aleatorio.ano %>
+        </article>
+        <article><strong>Duração: </strong>
+            <% if (modal) { %>
+                <%= filmePadrão.duracao %> min
+            <% } %>
+            <%= filme_aleatorio.duracao %> min
+        </article>
       </section>
-      <section class="filme_resumo"><strong>Resumo: </strong> <%= filme_aleatorio.resumo %> </section>
+      <section class="filme_resumo"><strong>Resumo: </strong>
+        <% if (modal) { %>
+            <%= filmePadrão.resumo %>
+        <% } %>
+        <%= filme_aleatorio.resumo %>
+      </section>
       <section class="ind_pergunta">
           <div>O que você achou...?</div>
       </section>

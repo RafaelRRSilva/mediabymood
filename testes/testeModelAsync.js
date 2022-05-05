@@ -1,6 +1,21 @@
 const e = require("express");
 const { Filme, Humor, sequelize } = require("../models");
 
+
+let busca = async () => {
+
+  let promisePadrão = await Filme.findByPk(1)
+  let filmePadrão = promisePadrão.toJSON();
+
+  console.log(filmePadrão);
+  sequelize.close();
+
+}
+
+busca();
+
+
+/*
 let busca = async () => {
 
   let promise = await Humor.findAll();
@@ -16,9 +31,7 @@ let busca = async () => {
 }
 
 busca()
-
-
-
+*/
 
 
 

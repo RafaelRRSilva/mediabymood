@@ -253,7 +253,7 @@ main {
 }
 
 .humor_conteiner > img {
-  width: 80%;
+  
 }
 
 .humor_conteiner > p {
@@ -266,8 +266,10 @@ main {
   font-size: 1.5rem;
 }
 
-.humor_conteiner > div {
+.humor_conteiner > a {
   background-color: darkgrey;
+  text-decoration: none;
+  color:rgb(33, 33, 33);
   width: 90%;
   text-align: center;
   padding: 10px 5px;
@@ -275,6 +277,12 @@ main {
   font-family: 'B612', 'sans-serif';
   font-size: 1.25rem;
   cursor: pointer;
+  transition: all 0.25s;
+}
+
+.humor_conteiner > a:hover {
+  background-color: rgb(117, 117, 117);
+  color: #fff;
 }
 
 .modal_fundo {

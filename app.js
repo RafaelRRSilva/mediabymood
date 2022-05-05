@@ -34,6 +34,7 @@ app.use(session({
 app.use(method('_method'));
 app.use(function(req,res,next){
     res.locals.usuario=req.session.usuario
+    res.locals.caminho=req.path
     next()
 })
 // Definição de rotas
@@ -41,6 +42,11 @@ app.use('/', rotasIndex);
 app.use('/', rotasUsuario);
 app.use('/indicacao', UsuarioLogado, rotasIndicacao)
 app.use ('/', rotasOperacoes);
+
+// Definindo erro 404
+app.use((req, res, next) => {
+    res.status(404).render('erro404')
+})
 
 
 app.use(function (req, res, next) {

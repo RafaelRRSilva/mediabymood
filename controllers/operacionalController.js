@@ -82,6 +82,34 @@ const operacionalController = {
         await Filme.destroy({ where: { id:filmes_id } });
         return res.redirect("/lista")
     },
+    valida: async (req, res) => {
+        let errors = validationResult(req);
+    
+        console.log("funcionando");
+    
+        if (errors.isEmpty()) {
+          console.log("Sem erros");
+    
+          // let novoUsuario = req.body;
+          // console.log(novoUsuario)
+    
+          let { nome,resumo,duracao,ano,imagem,humores } = req.body;
+          
+          let novoFilme = await Filme.create(
+            { nome, resumo,duracao,ano,imagem,humores }
+          )
+    
+          // Criando session do usuario recém cadastrado para conseguir redirecionar sem fazer login
+          
+    req.session.filme=novoFilme
+        
+    
+          res.redirect('/formulario')
+        } else {
+          res.render("formulario", { erro: erro.mapped(), old: req.body });
+        }
+      },
+    
 
 
 }

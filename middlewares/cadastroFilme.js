@@ -1,36 +1,36 @@
-const {check} = require('express-validator');
+const { check } = require('express-validator');
 
-const validacoes = [
+const validaForm = [
     check('nome')
         .trim()
         .escape()
         .notEmpty().withMessage('nome do filme precisa ser preenchido').bail()
-        .isLength({min:2, max:50}).withMessage('nome do filme deve ter pelo menos 2 caracteres'),
+        .isLength({ min: 2, max: 50 }).withMessage('nome do filme deve ter pelo menos 2 caracteres'),
 
     check('ano')
-    .trim()
-    .escape()
-    .notEmpty().withMessage('ano do filme precisa ser preenchido').bail()
-    .toInt()
-    .isInt({gt: 1895}).withMessage('ano precisa ser maior que 1895'),
-    
+        .trim()
+        .escape()
+        .notEmpty().withMessage('ano do filme precisa ser preenchido').bail()
+        .toInt()
+        .isInt({ gt: 1895 }).withMessage('ano precisa ser maior que 1895'),
+
     check('duracao')
-    .trim()
-    .escape()
-    .notEmpty().withMessage('duração do filme precisa ser preenchida').bail()
-    .toInt()
-    .isInt ({gt:5}).withMessage('duração precisa ser maior que 5 minutos'),
-    
+        .trim()
+        .escape()
+        .notEmpty().withMessage('duração do filme precisa ser preenchida').bail()
+        .toInt()
+        .isInt({ gt: 5 }).withMessage('duração precisa ser maior que 5 minutos'),
+
     check('resumo')
         .trim()
         .escape()
         .notEmpty().withMessage('resumo do filme precisa ser preenchido').bail()
-        .isLength({min:20, max:800}).withMessage('resumo do filme deve ter pelo menos 20 caracteres'),
+        .isLength({ min: 20, max: 800 }).withMessage('resumo do filme deve ter pelo menos 20 caracteres'),
 
-        check('img')
+    check('img')
 
         .escape()
         .notEmpty().withMessage('imagem do filme precisa ser inserida').bail()
 
-    ];
-    module.exports = validacoes;
+];
+module.exports = validaForm

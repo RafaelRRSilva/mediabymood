@@ -1,5 +1,6 @@
 const { Filme} = require('../models');
 const {Humor,Filmes_has_Humores} = require('../models');
+ const {validationResult} = require('express-validator');
 const admController = {
     
     form: async (req, res) => {
@@ -10,6 +11,10 @@ const admController = {
 
     postForm: async (req, res) => {
         try {
+           let erros = validationResult (req)
+           if (!erros.isEmpty()){
+
+          
             const { nome, duracao, Humores, ano, resumo } = req.body;
 
             const imagem = req.file.filename;
@@ -47,6 +52,9 @@ const admController = {
             }
             req.app.locals.mensagemCadastroFilme= 'filme cadastrado com sucesso'
             return res.redirect('/formulario');
+        }else{
+            res.render("formulario", { errors: erros.mapped(), old: req.body });
+        }
 
         } catch (error) {
             console.trace(error);

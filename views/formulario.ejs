@@ -23,19 +23,24 @@
             <form id="formulario" method="POST" action="/formulario" enctype="multipart/form-data">
        <div class="nome">
         <label>
-             <p class="no">
+             <p class="no"> </label>
              Nome:</p>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome do filme ou da série">
-        </label>
+            <input required type="text" name="nome" id="nome" placeholder="Digite o nome do filme ou da série">
+            <% if (locals.errors && errors.nome) { %>
+                <p class="errMsg"><%= errors.nome.msg %></p>
+            <% } %>
     </div>
 
     <p class="ret"> Resumo:</p>
     <div class="resumo">
 
-        <label >
+        <label >  
 
-            <input class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
-
+            <input required class="re" type="text" name="resumo" id="resumo"  placeholder="Resumo">
+        
+            <% if (locals.errors && errors.resumo) { %>
+                <p class="errMsg"><%= errors.resumo.msg %></p>
+            <% } %>
         </label>
     </div>
             <div class="humo">
@@ -43,6 +48,9 @@
             <% for(let h of humores){%>
                 <div>
                     <input class="caixa1" type="checkbox" name="Humores" id="<%= h.nome %>" value="<%= h.id %>">
+                    <% if (locals.errors && errors.Humores) { %>
+                        <p class="errMsg"><%= errors.Humores.msg %></p>
+                    <% } %>
                     <label class="caixa1" for="<%= h.nome %>"><%= h.nome %></label>
 
                 </div>
@@ -55,15 +63,21 @@
       <label>
       <p class="dur">  Duração:</p>
       <br>
-      <input type="number" name="duracao" id="duracao"   placeholder="duração">
-      </label>
+      <input required  type="number" name="duracao" id="duracao"   placeholder="duração">
+      <% if (locals.errors && errors.duracao) { %>
+        <p class="errMsg"><%= errors.duracao.msg %></p>
+    <% } %>
+    </label>
     </div>
            <div class="ano">
             <label>
             <p class="an">  Ano:</p> 
             <br> 
-            <input type="number" name="ano" id="ano"   placeholder="ano">
-            </label>
+            <input required type="number" name="ano" id="ano"   placeholder="ano">
+            <% if (locals.errors && errors.ano) { %>
+                <p class="errMsg"><%= errors.ano.msg %></p>
+            <% } %>
+        </label>
           </div> 
            
   
@@ -74,7 +88,10 @@
             <div class="ims"><p> Clique e selecione imagem: </p></div>
                <br>
             <input class="im" accept="image/*" type="file" name="img" id="img">
-             </label>
+            <% if (locals.errors && errors.img) { %>
+                <p class="errMsg"><%= errors.img.msg %></p>
+            <% } %>
+        </label>
          </div> 
        <div class="salvar">
     <button class="bt" type="submit">Salvar</button>

@@ -71,8 +71,13 @@ module.exports = {
 
     // Verificando infos do usuário na session
     // console.log(req.session.usuario.toJSON());
-
+    if (usuario.eh_admin) {
+      res.redirect('/formulario')
+    }
+    
+      else {
     res.redirect('/comofunciona')
+    }
   },
   logout: async (req, res) => {
     await req.session.destroy();

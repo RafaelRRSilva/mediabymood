@@ -22,15 +22,17 @@ const validaForm = [
         .isInt({ gt: 5 }).withMessage('duração precisa ser maior que 5 minutos'),
 
     check('resumo')
-        .trim()
+      
         .escape()
         .notEmpty().withMessage('resumo do filme precisa ser preenchido').bail()
         .isLength({ min: 20, max: 800 }).withMessage('resumo do filme deve ter pelo menos 20 caracteres'),
 
     check('img')
+    .escape()
+        .notEmpty().withMessage('imagem do filme precisa ser inserida'),
 
+    check('Humores')
         .escape()
-        .notEmpty().withMessage('imagem do filme precisa ser inserida').bail()
-
+        .notEmpty().withMessage('pelo menos um humor precisa ser selecionado')
 ];
-module.exports = validaForm
+module.exports = validaForm;

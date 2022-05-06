@@ -8,6 +8,11 @@
             <a href="/login">Entrar</a>
         </div>
       <% } else { %>
+        <% if (usuario.eh_admin) { %>
+          <div class="button">
+            <a href="/formulario">Adm</a>
+        </div>
+        <% } %>
         <div class="button">
             <a href="/logout">Sair</a>
         </div>

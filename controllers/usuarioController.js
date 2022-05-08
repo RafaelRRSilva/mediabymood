@@ -10,9 +10,17 @@ module.exports = {
   },
 
   store: async (req, res) => {
-    let errors = validationResult(req);
+    let errors = validationResult(req)
+    let emailCadastrado = await Usuario.findAll({
+      where: {
+        email: req.body.email
+      }
+    })
 
-    console.log("Controller funcionando");
+    // Verificando se e-mail já está cadastrado
+    if(emailCadastrado[0] != undefined) {
+      return res.render("cadastro", { old: req.body, errors: {email: {msg: "Email já cadastrado"}}});
+    }
 
     if (errors.isEmpty()) {
       console.log("Sem erros");
@@ -24,7 +32,7 @@ module.exports = {
       const hash = bcrypt.hashSync(senha, 10)
       let novoUsuario = await Usuario.create(
         { nome, email, senha: hash }
-      )
+      ).catch(err => console.log(err))
 
       // Criando session do usuario recém cadastrado para conseguir redirecionar sem fazer login
       novoUsuario.senha = undefined

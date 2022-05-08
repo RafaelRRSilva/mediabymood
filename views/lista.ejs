@@ -36,6 +36,8 @@
 
 <% }) %>
 
+<% if(paginas != 0) { %>
+
 <div class="paginacao">
   <ul>
     <% for (let index = 1; index <= paginas; index++){ %>
@@ -43,3 +45,5 @@
     <% } %>
   </ul>
 </div>
+
+<% } %>

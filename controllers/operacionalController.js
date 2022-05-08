@@ -16,7 +16,7 @@ const operacionalController = {
             },
             include:['humor']
         });
-        return res.render('lista', { filmesCadastrados: filme })
+        return res.render('lista', { filmesCadastrados: filme, paginas: 0 })
     },
     edit: async (req, res) => {
         const { id } = req.params;

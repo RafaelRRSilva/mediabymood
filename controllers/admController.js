@@ -5,6 +5,7 @@ const admController = {
     
     form: async (req, res) => {
         let humores = await Humor.findAll()
+        console.log(req.session.usuario.eh_admin)
         res.render('formulario',{humores});
     },
    

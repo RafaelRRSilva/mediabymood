@@ -51,7 +51,7 @@ module.exports = {
   },
 
   login: async (req, res) => {
-    const { email, senha } = req.body;
+    const { email, senha, logado } = req.body;
 
     const usuario = await Usuario.findOne({
       where: {
@@ -77,6 +77,10 @@ module.exports = {
     delete usuario.senha
     req.session.usuario = usuario;
 
+    if(logado != undefined) {
+      res.cookie('logado', usuario.email, {maxAge: 600000000})
+    }
+
     // Verificando infos do usuário na session
     // console.log(req.session.usuario.toJSON());
     if (usuario.eh_admin) {
@@ -89,6 +93,9 @@ module.exports = {
   },
   logout: async (req, res) => {
     await req.session.destroy();
+    res.clearCookie("logado");
+
+    console.log(req.cookies);
     res.redirect('/');
   }
 

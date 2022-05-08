@@ -14,7 +14,9 @@ const createError = require('http-errors');
 const rotasIndex = require('./routes/index');
 const rotasUsuario = require('./routes/usuario');
 const rotasOperacoes = require ('./routes/operacoes');
-const rotasIndicacao = require('./routes/indicacaoRouter')
+const rotasIndicacao = require('./routes/indicacaoRouter');
+const CookieLogin = require('./middlewares/CookieLogin');
+const cookieParser = require('cookie-parser');
 
 // Criar servidor
 const app = express();
@@ -37,6 +39,11 @@ app.use(function(req,res,next){
     res.locals.caminho=req.path
     next()
 })
+
+// Definindo a função 'Lembre-se de mim' com cookies
+app.use(cookieParser());
+app.use(CookieLogin);
+
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/', rotasUsuario);

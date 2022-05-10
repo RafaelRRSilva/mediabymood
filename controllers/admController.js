@@ -13,7 +13,9 @@ const admController = {
     postForm: async (req, res) => {
         try {
            let erros = validationResult (req)
-           if (!erros.isEmpty()){
+           console.log(erros.isEmpty())
+       
+           if (erros.isEmpty()){
 
           
             const { nome, duracao, Humores, ano, resumo } = req.body;
@@ -54,6 +56,8 @@ const admController = {
             req.app.locals.mensagemCadastroFilme= 'filme cadastrado com sucesso'
             return res.redirect('/formulario');
         }else{
+            req.app.locals.errors=erros.mapped();
+            return res.redirect('/formulario')
             res.render("formulario", { errors: erros.mapped(), old: req.body });
         }
 

@@ -4,18 +4,19 @@
 
 <div class="busc">
   <form action="/search" method="GET">
-    <input type="text" id="busca" name="key" />
+    <input class="bus" type="text" id="busca" name="key" />
     <button class="bt" type="submit">busca</button>
   </form>
 </div>
 
 <% filmesCadastrados.forEach(umFilme =>{ %>
-<p class="todos">Titulo: <%= umFilme.titulo %></p>
-<p class="todos">Ano de Lançamento:<%= umFilme.ano %></p>
-<p class="todos">Duração: <%= umFilme.duracao %></p>
-<p class="todos">Resumo: <%= umFilme.resumo %></p>
+<p class="titulo">Titulo: <%= umFilme.titulo %></p>
+<br>
+<p class="ano">Ano de Lançamento:<%= umFilme.ano %></p>
+<p class="duracao">Duração em Minutos: <%= umFilme.duracao %></p>
+<p class="resumo">Resumo: <%= umFilme.resumo %></p>
 <% umFilme.humor.forEach(h => { %>
- <p class="todos"> Humor: <%= h.nome %> </p>
+ <p class="humor"> Humor: <%= h.nome %> </p>
 <% }) %>
 <br>
 <img class="ima" src="<%= umFilme.imagem %>" alt="" />

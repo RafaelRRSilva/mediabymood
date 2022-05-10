@@ -8,23 +8,70 @@
 .busc{
  display: flex;
  flex-direction: row-reverse;
- margin-right: 20px;
+justify-content: center;
+margin-top: 30px;
+padding: 20px;
 }
-
-.todos{
+.bus{
+  height: 30px;
+  width: 350px;
+border: solid 1px;
+border-radius: 5px;
+}
+.bt{
+  height: 30px;
+  width: 80px;
+background-color: rgb(205, 113, 219);
+border-radius: 5px;
+}
+.titulo{
+  font-size: 25px;
+  margin-left: 20px;
+  background-color: rgb(238, 206, 243);
+  font-weight: bold;
+}
+.ano{
   font-size: 20px;
   margin-left: 20px;
+  background-color: rgb(238, 206, 243);
+  padding: 8px;
+}
+.duracao{
+  font-size: 20px;
+  margin-left: 20px;
+  background-color: rgb(238, 206, 243);
+  padding: 8px;
+}
+.resumo{
+  font-size: 20px;
+  margin-left: 20px;
+  background-color: rgb(238, 206, 243);
+  padding: 10px;
+}
+.humor{
+  font-size: 20px;
+  margin-left: 20px;
+  background-color: rgb(238, 206, 243);
+  padding: 3px;
+  text-decoration-line: underline;
 }
 .apaga{
-  margin-left: 20px;
+  margin-left: 30px;
+  width: 90px;
+  border-radius: 5px;
+  border: solid 1px;
 }
 .edita{
-  margin-left: 20px;
+  margin-left: 30px;
+width: 90px;
+border-radius: 5px;
+border: solid 1px;
 }
 .ima{
   margin-left: 20px;
   width: 200px;
   height: 300px;
+ 
 }
 .paginacao > ul {
   display: flex;

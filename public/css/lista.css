@@ -80,5 +80,20 @@ list-style:none;
 padding: 20px;
 font-size: 30px;
 text-decoration: none;
+margin-left: 1050px;
+width: 100px;
+}
+.item-pagina{
+  padding: 7px;
+  text-decoration: none;
+  
+}
+.item-paginas{
+  text-decoration: none;
+  background-color: rgb(188, 160, 215);
+}
+.proxima{
+  font-size: 25px;
+  margin-left: 1020px;
 }
 

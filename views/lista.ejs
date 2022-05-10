@@ -38,11 +38,12 @@
 <% }) %>
 
 <% if(paginas != 0) { %>
-
+  <p class="proxima">Próxima Página</p>
 <div class="paginacao">
+  
   <ul>
     <% for (let index = 1; index <= paginas; index++){ %>
-      <li class="item-pagina"><a class="item-pagina" href="/lista?page=<%= index %> "><%= index %> </a></li>
+      <li class="item-paginas"><a class="item-pagina" href="/lista?page=<%= index %> "><%= index %> </a></li>
     <% } %>
   </ul>
 </div>
